@@ -21,7 +21,7 @@ with open(input_filename, 'r', encoding='utf-8') as infile, \
     for line in infile:
         if "凤凰卫视" in line or "凤凰资讯" in line or "TVB翡翠" in line or "TVB明珠" in line or "TVB星河" in line \
                 or "J2" in line or "无线" in line or "有线" in line or "天映" in line or "VIU" in line \
-                or "RTHK" in line or "HOY" in line or "香港卫视" in line or "澳亚" in line or "澳视" in line:
+                or "RTHK" in line or "HOY" in line or "香港卫视" in line:
             out_hk.write(line)  # 写入香港频道文件
         if "民视" in line or "中视" in line or "台视" in line or "华视" in line or "新闻台" in line \
                 or "东森" in line or "龙祥" in line or "公视" in line or "三立" in line or "大爱" in line \
