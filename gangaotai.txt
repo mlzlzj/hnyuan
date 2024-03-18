@@ -194,4 +194,4 @@ CRI环球资讯,https://live-play.cctvnews.cctv.com/cctvaudio/hqzx.m3u8
 VOA环球英语,http://voa-ingest.akamaized.net/hls/live/2035200/161_352R/playlist.m3u8
 CNA亚洲新闻,https://14033.live.streamtheworld.com/938NOW_PREM.aac
 更新时间,#genre#
-2024-03-18 13:13:56,url
+2024-03-18 05:18:22,url
