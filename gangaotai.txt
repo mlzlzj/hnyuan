@@ -47,20 +47,9 @@ TVB星河台,https://edge6a.v2h-cdn.com/xinghe/xinghe.stream/playlist.m3u8
 港台电视RTHK35HD,https://rthktv35-live.akamaized.net/hls/live/2101643/RTHKTV35/stream02/streamPlaylist.m3u8
 有线财经资讯台HD,http://cm61-10-2-143.hkcable.com.hk/live_freedirect/freehd208_h.live/playlist.m3u8
 香港RHK32,https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream5/streamPlaylist.m3u8
-澳视澳门（ IPv6）,http://iptv.hiper25.com:58080/TDM/index.m3u8
-澳亚卫视,http://live.mastvnet.com:800/4rlff1m/live.m3u8
-澳亚卫视,http://live.mastvnet.com:800/4rlff1m/1024/live.m3u8
-澳亚卫视,http://live.mastvnet.com:800/4rlff1m/a/live.m3u8
-澳亚卫视,https://live.mastvnet.com/lsdream/lY44pmm/2000/live.m3u8
 澳门有线 CH1,http://202.175.127.77/live/show/ch1/index.m3u8
 澳门有线 CH3,http://202.175.127.77/live/show/ch3/index.m3u8
 澳门有线新闻,http://202.175.127.77/live/show/ch2/index.m3u8
-澳视澳门,http://61.244.22.5/ch1/ch1.live/playelist.m3u8
-澳视澳门,http://61.244.22.5/ch1/ch1.live/index.m3u8
-澳视葡语,http://61.244.22.5/ch2/ch2.live/index.m3u8
-澳视体育,http://61.244.22.5/ch4/sport_ch4.live/index.m3u8
-澳视资讯,http://61.244.22.5/ch5/info_ch5.live/index.m3u8
-澳视综艺,http://61.244.22.5/ch6/hd_ch6.live/index.m3u8
 凤凰资讯台,https://youtube.livednow.com/stream/0K6C6Rv4RR4_
 天映频道,http://210.210.155.37/session/6883312c-b2d3-11ed-8d27-c81f66f89318/dr9445/h/h14/index.m3u8
 成华有线,https://tv.cry33.com/cdtvflv.php?id=chyx
