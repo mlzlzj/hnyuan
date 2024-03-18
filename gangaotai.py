@@ -43,7 +43,7 @@ with open("gangaotai.txt", "w", encoding="utf-8") as output:
 
     # 写入文件生成日期时间
     now = datetime.now()
-   output.write(f"更新时间,{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
+    output.write(f"更新时间,{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
 
 os.remove("DIYP-v4.txt")
 os.remove("hong_kong_channels.txt")
