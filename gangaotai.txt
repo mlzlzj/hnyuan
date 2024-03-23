@@ -1,4 +1,5 @@
 港澳频道,#genre#
+凤凰资讯,http://117.28.177.45:8605/rtp/239.61.2.183:9086
 TVB翡翠台 4K,http://9528.haycker.eu.org/stream/hk/4k2/master.m3u8?u=admin&p=70db29aeaebf312fd2b93d3d69d99a16ad3319d0b354567f2be5c5e91c6be18b
 凤凰资讯,http://n1.jimgo.win:4022/udp/239.93.1.4:2191
 凤凰资讯,http://112.19.171.156:9999/udp/239.93.0.118:2191
