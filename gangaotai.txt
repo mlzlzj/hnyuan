@@ -60,7 +60,6 @@ TVB星河台,https://edge6a.v2h-cdn.com/xinghe/xinghe.stream/playlist.m3u8
 成华有线,https://tv.cry33.com/cdtvflv.php?id=chyx
 凤凰卫视,http://210.210.155.37/uq2663/h/h157/index2.m3u8
 香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
-RTHK香港电台,https://rthkradiopth-live.akamaized.net/hls/live/2040082/radiopth/master.m3u8
 
 台湾频道,#genre#
 无线新闻台,http://ali.hlspull.yximgs.com/live/huanqiuhklivefhwjpthljjsjsjjbvdljdmnbjhdhyjyjtvbwxxw.flv
@@ -159,3 +158,10 @@ TVBS新闻台,https://youtube.livednow.com/stream/2mCSYvcfhtc
 人间卫视,http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u8
 大立电视,http://www.dalitv.com.tw:4568/live/dali/index.m3u8
 人間衛視,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8
+年代音乐959,https://fanmingming.com/fm?id=2399
+Music876年代音乐电台,https://fanmingming.com/fm?id=1277
+随州新闻台,https://fanmingming.com/fm?id=1529
+南宁990新闻台,https://fanmingming.com/fm?id=1085
+年代音乐1022,https://fanmingming.com/fm?id=1600
+年代音乐889,https://fanmingming.com/fm?id=2397
+年代音乐1032,https://fanmingming.com/fm?id=2398
