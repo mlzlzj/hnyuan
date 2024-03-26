@@ -430,6 +430,6 @@ os.remove("iptv.txt")
 os.remove("cctv.txt")
 os.remove("weishi.txt")
 os.remove("hn.txt")
-# os.remove("qita.txt")
+os.remove("gangaotai.txt")
 
 print("任务运行完毕，分类频道列表可查看文件夹内hunan.txt文件！")
