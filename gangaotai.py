@@ -19,13 +19,13 @@ with open(input_filename, 'r', encoding='utf-8') as infile, \
 
     # 逐行读取需要提取包含关键字的内容
     for line in infile:
-        if "凤凰卫视" in line or "凤凰资讯" in line or "TVB翡翠" in line or "TVB明珠" in line or "TVB星河" in line \
+        if "重温经典" in line or  "凤凰卫视" in line or "凤凰资讯" in line or "TVB翡翠" in line or "TVB明珠" in line or "TVB星河" in line \
                 or "J2" in line or "无线" in line or "有线" in line or "天映" in line or "VIU" in line \
                 or "RTHK" in line or "HOY" in line or "香港卫视" in line:
             out_hk.write(line)  # 写入香港频道文件
-        if "民视" in line or "中视" in line or "台视" in line or "华视" in line or "新闻台" in line \
-                or "东森" in line or "龙祥" in line or "公视" in line or "三立" in line or "大爱" in line \
-                or "年代" in line or "人间卫视" in line or "人間" in line or "大立" in line:
+        if "民视" in line or "中视" in line or "台视" in line or "华视" in line or "新闻台" in line or "动物星球" in line \
+                or "动物频道" in line or "东森" in line or "龙祥" in line or "公视" in line or "三立" in line or "大爱" in line \
+                or "年代新闻" in line or "人间卫视" in line or "人間" in line or "大立" in line or "TVBS" in line or "八大" in line:
             out_tw.write(line)  # 写入台湾频道文件
 
 # 合并香港频道和台湾频道文件
