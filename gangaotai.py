@@ -14,7 +14,7 @@ output_filename_guowai = 'guowai_channels.txt'
 
 with open(input_filename, 'r', encoding='utf-8') as infile, \
         open(output_filename_hong_kong, 'w', encoding='utf-8') as out_hk, \
-        open(output_filename_taiwan, 'w', encoding='utf-8') as out_tw \
+        open(output_filename_taiwan, 'w', encoding='utf-8') as out_tw, \
         open(output_filename_guowai, 'w', encoding='utf-8') as out_gw:
     out_hk.write('港澳频道,#genre#\n')
     out_tw.write('台湾频道,#genre#\n')
