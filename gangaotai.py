@@ -18,7 +18,7 @@ with open(input_filename, 'r', encoding='utf-8') as infile, \
         open(output_filename_guowai, 'w', encoding='utf-8') as out_gw:
     out_hk.write('港澳频道,#genre#\n')
     out_tw.write('台湾频道,#genre#\n')
-    out_tw.write('国外频道,#genre#\n')
+    out_gw.write('国外频道,#genre#\n')
 
     # 逐行读取需要提取包含关键字的内容
     for line in infile:
