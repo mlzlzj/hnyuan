@@ -30,7 +30,7 @@ with open(input_filename, 'r', encoding='utf-8') as infile, \
                 or "动物频道" in line or "东森" in line or "龙祥" in line or "公视" in line or "三立" in line or "大爱" in line \
                 or "年代新闻" in line or "人间卫视" in line or "人間" in line or "大立" in line or "TVBS" in line or "八大" in line:
             out_tw.write(line)  # 写入台湾频道文件
-        if "俄罗斯" in line or "乌克兰" in line or "伊拉克" in line or "泰国" in line or "越南" in line or "美国" in line or "新加坡" in line \
+        if "俄罗斯" in line or "乌克兰" in line or "伊拉克" in line or "泰国" in line or "越南" in line or "美国Folk" in line or "新加坡" in line \
                 or "土耳其" in line or "德国" in line or "智利" in line or "西班牙" in line or "墨西哥" in line or "罗马尼亚" in line \
                 or "半島電視台" in line or "半島新聞台" in line:
             out_gw.write(line)  # 写入国外频道文件
