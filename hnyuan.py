@@ -400,25 +400,25 @@ with open("hn.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
 
-# with open("qita.txt", 'w', encoding='utf-8') as file:
-#     channel_counters = {}
-#     file.write('其他频道,#genre#\n')
-#     for result in results:
-#         channel_name, channel_url, speed = result
-#         if 'CCTV' not in channel_name and '卫视' not in channel_name and '湖南' not in channel_name and '长沙' not in channel_name and '先锋乒羽' not in channel_name and '金鹰' not in channel_name and '快乐购' not in channel_name:
-#             if channel_name in channel_counters:
-#                 if channel_counters[channel_name] >= result_counter:
-#                     continue
-#                 else:
-#                     file.write(f"{channel_name},{channel_url}\n")
-#                     channel_counters[channel_name] += 1
-#             else:
-#                 file.write(f"{channel_name},{channel_url}\n")
-#                 channel_counters[channel_name] = 1
+with open("qita.txt", 'w', encoding='utf-8') as file:
+    channel_counters = {}
+    file.write('其他频道,#genre#\n')
+    for result in results:
+        channel_name, channel_url, speed = result
+        if 'CCTV' not in channel_name and '卫视' not in channel_name and '湖南' not in channel_name and '长沙' not in channel_name and '先锋乒羽' not in channel_name and '金鹰' not in channel_name and '购' not in channel_name and '凤凰' not in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"{channel_name},{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"{channel_name},{channel_url}\n")
+                channel_counters[channel_name] = 1
 
 # 合并自定义频道文件内容
 file_contents = []
-file_paths = ["YD-IPTV.txt", "YD-IPV6.txt", "cctv.txt", "weishi.txt","hn.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt", "YD-IPV6.txt", "cctv.txt", "weishi.txt","hn.txt", "gangaotai.txt", "qita.txt",  "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -440,5 +440,6 @@ os.remove("cctv.txt")
 os.remove("weishi.txt")
 os.remove("hn.txt")
 os.remove("gangaotai.txt")
+os.remove("qita.txt")
 
 print("任务运行完毕，分类频道列表可查看文件夹内hunan.txt文件！")
