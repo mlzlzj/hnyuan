@@ -26,4 +26,4 @@ def txt_to_m3u(input_file, output_file):
 
 
 # 将txt文件转换为m3u文件
-txt_to_m3u('zdy.txt', 'zdy.m3u')
+txt_to_m3u('iptv_list.txt', 'iptv_list.m3u')
