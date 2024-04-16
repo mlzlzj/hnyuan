@@ -13,7 +13,7 @@ def txt_to_m3u(input_file, output_file):
         # 遍历txt文件内容
         for line in lines:
             line = line.strip()
-            if "," in line:
+            if line:
                 # 检查是否是genre行
                 channel_name, channel_url = line.split(',', 1)
                 if channel_url == '#genre#':
