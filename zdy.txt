@@ -1,4 +1,3 @@
-
 热剧连播,#genre#
 【与凤行】,
 与凤行 第01集,https://v10.dious.cc/20240329/lr8dbbBx/index.m3u8
@@ -1368,7 +1367,7 @@
 他是谁-24,https://cdn15.yzzy-online.com/20230403/5577_41eec663/index.m3u8
 
 电影精选,#genre#
-狂犬病-恐怖片,https://v3.dious.cc/20220329/ilUnPxjF/index.m3u8
+狂犬病,https://v3.dious.cc/20220329/ilUnPxjF/index.m3u8
 谍影追凶,https://v10.dious.cc/20240108/3owhUrjz/index.m3u8
 目中无人01,https://yzzy.play-cdn5.com/20220603/21612_3d196e75/index.m3u8
 目中无人02,https://yzzy1.play-cdn1.com/20240210/15952_004b2a47/index.m3u8
@@ -1403,7 +1402,7 @@
 绝地追击,https://vip.ffzy-online6.com/20230923/18977_8858015e/2000k/hls/index.m3u8
 明日战记 粤语,https://vip.lzcdn2.com/20221130/22820_09be4d48/index.m3u8
 
-历年春晚,#genre#
+流金岁月,#genre#
 春晚1983,https://alimov2.a.kwimgs.com/upic/2022/01/31/15/BMjAyMjAxMzExNTU5MTRfNDAzMDAxOTlfNjYyNzMxNjcwMjBfMF8z_b_Beb3bda599f76c60c463c433ca7460153.mp4
 春晚1984,https://alimov2.a.kwimgs.com/upic/2022/01/31/15/BMjAyMjAxMzExNTU5NTRfNDAzMDAxOTlfNjYyNzMyMzg3MTRfMF8z_b_B192356dadbc90d207ba16964d4c2914c.mp4
 春晚1985,https://alimov2.a.kwimgs.com/upic/2022/01/31/16/BMjAyMjAxMzExNjAwMDFfNDAzMDAxOTlfNjYyNzMyNTAwMzJfMF8z_b_Be73c5abcbc0eeb2ec9fce6842e1362a4.mp4
