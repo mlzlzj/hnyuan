@@ -1,145 +1,145 @@
 热剧连播,#genre#
 【与凤行】,
-与凤行 第01集,https://v10.dious.cc/20240329/lr8dbbBx/index.m3u8
-与凤行 第02集,https://v10.dious.cc/20240318/PfbmM3fQ/index.m3u8
-与凤行 第03集,https://v10.dious.cc/20240318/FOqsIvVh/index.m3u8
-与凤行 第04集,https://v10.dious.cc/20240318/kF872NxK/index.m3u8
-与凤行 第05集,https://v10.dious.cc/20240319/Tpb6eoqw/index.m3u8
-与凤行 第06集,https://v10.dious.cc/20240319/Qq1OGXnG/index.m3u8
-与凤行 第07集,https://v10.dious.cc/20240320/N74RFp5W/index.m3u8
-与凤行 第08集,https://v10.dious.cc/20240320/uuCktgwQ/index.m3u8
-与凤行 第09集,https://v10.dious.cc/20240321/ZUBweBm9/index.m3u8
-与凤行 第10集,https://v10.dious.cc/20240321/tMMV92Le/index.m3u8
-与凤行 第11集,https://v10.dious.cc/20240322/C6bCbTld/index.m3u8
-与凤行 第12集,https://v10.dious.cc/20240323/tvf9Y2r3/index.m3u8
-与凤行 第13集,https://v10.dious.cc/20240324/hCTFbVTu/index.m3u8
-与凤行 第14集,https://v10.dious.cc/20240325/3cUvcSlX/index.m3u8
-与凤行 第15集,https://v10.dious.cc/20240325/SU2JwXbC/index.m3u8
-与凤行 第16集,https://v10.dious.cc/20240326/L2ybHJ8k/index.m3u8
-与凤行 第17集,https://v10.dious.cc/20240326/RJe1PQsa/index.m3u8
-与凤行 第18集,https://v10.dious.cc/20240327/yRO1jv5E/index.m3u8
-与凤行 第19集,https://v10.dious.cc/20240327/g82XuSLg/index.m3u8
-与凤行 第20集,https://v10.dious.cc/20240328/78flqJh0/index.m3u8
-与凤行 第21集,https://v10.dious.cc/20240328/LZSv3tMu/index.m3u8
-与凤行 第22集,https://v10.dious.cc/20240329/cArRSoV3/index.m3u8
-与凤行 第23集,https://v10.dious.cc/20240330/QDmY79tj/index.m3u8
-与凤行 第24集,https://v10.dious.cc/20240331/u95QOPku/index.m3u8
-与凤行 第25集,https://v10.dious.cc/20240401/60jgaoNU/index.m3u8
-与凤行 第26集,https://v10.dious.cc/20240401/D9XtluGM/index.m3u8
-与凤行 第27集,https://v10.dious.cc/20240402/nUz4g9RR/index.m3u8
-与凤行 第28集,https://v10.dious.cc/20240402/uQvYoY57/index.m3u8
-与凤行 第29集,https://v10.dious.cc/20240403/IWhLxsdm/index.m3u8
-与凤行 第30集,https://v10.dious.cc/20240403/2T2vhxQw/index.m3u8
+与凤行-第01集,https://v10.dious.cc/20240329/lr8dbbBx/index.m3u8
+与凤行-第02集,https://v10.dious.cc/20240318/PfbmM3fQ/index.m3u8
+与凤行-第03集,https://v10.dious.cc/20240318/FOqsIvVh/index.m3u8
+与凤行-第04集,https://v10.dious.cc/20240318/kF872NxK/index.m3u8
+与凤行-第05集,https://v10.dious.cc/20240319/Tpb6eoqw/index.m3u8
+与凤行-第06集,https://v10.dious.cc/20240319/Qq1OGXnG/index.m3u8
+与凤行-第07集,https://v10.dious.cc/20240320/N74RFp5W/index.m3u8
+与凤行-第08集,https://v10.dious.cc/20240320/uuCktgwQ/index.m3u8
+与凤行-第09集,https://v10.dious.cc/20240321/ZUBweBm9/index.m3u8
+与凤行-第10集,https://v10.dious.cc/20240321/tMMV92Le/index.m3u8
+与凤行-第11集,https://v10.dious.cc/20240322/C6bCbTld/index.m3u8
+与凤行-第12集,https://v10.dious.cc/20240323/tvf9Y2r3/index.m3u8
+与凤行-第13集,https://v10.dious.cc/20240324/hCTFbVTu/index.m3u8
+与凤行-第14集,https://v10.dious.cc/20240325/3cUvcSlX/index.m3u8
+与凤行-第15集,https://v10.dious.cc/20240325/SU2JwXbC/index.m3u8
+与凤行-第16集,https://v10.dious.cc/20240326/L2ybHJ8k/index.m3u8
+与凤行-第17集,https://v10.dious.cc/20240326/RJe1PQsa/index.m3u8
+与凤行-第18集,https://v10.dious.cc/20240327/yRO1jv5E/index.m3u8
+与凤行-第19集,https://v10.dious.cc/20240327/g82XuSLg/index.m3u8
+与凤行-第20集,https://v10.dious.cc/20240328/78flqJh0/index.m3u8
+与凤行-第21集,https://v10.dious.cc/20240328/LZSv3tMu/index.m3u8
+与凤行-第22集,https://v10.dious.cc/20240329/cArRSoV3/index.m3u8
+与凤行-第23集,https://v10.dious.cc/20240330/QDmY79tj/index.m3u8
+与凤行-第24集,https://v10.dious.cc/20240331/u95QOPku/index.m3u8
+与凤行-第25集,https://v10.dious.cc/20240401/60jgaoNU/index.m3u8
+与凤行-第26集,https://v10.dious.cc/20240401/D9XtluGM/index.m3u8
+与凤行-第27集,https://v10.dious.cc/20240402/nUz4g9RR/index.m3u8
+与凤行-第28集,https://v10.dious.cc/20240402/uQvYoY57/index.m3u8
+与凤行-第29集,https://v10.dious.cc/20240403/IWhLxsdm/index.m3u8
+与凤行-第30集,https://v10.dious.cc/20240403/2T2vhxQw/index.m3u8
 
 【手术直播间 】,
-手术直播间 第01集,https://v10.dious.cc/20240406/9Vl4acp5/index.m3u8
-手术直播间 第02集,https://v10.dious.cc/20240406/8PdWkK38/index.m3u8
-手术直播间 第03集,https://v10.dious.cc/20240406/grU2T3Fd/index.m3u8
-手术直播间 第04集,https://v10.dious.cc/20240406/hWjdIXyz/index.m3u8
-手术直播间 第05集,https://v10.dious.cc/20240407/qf9JvC37/index.m3u8
-手术直播间 第06集,https://v10.dious.cc/20240407/Hp238NDH/index.m3u8
-手术直播间 第07集,https://v10.dious.cc/20240408/vLs0seuT/index.m3u8
-手术直播间 第08集,https://v10.dious.cc/20240408/QQ4Fv8RP/index.m3u8
-手术直播间 第09集,https://v10.dious.cc/20240409/7dGheZqD/index.m3u8
-手术直播间 第10集,https://v10.dious.cc/20240409/zngB6g2w/index.m3u8
-手术直播间 第11集,https://v10.dious.cc/20240410/R4AG8jzL/index.m3u8
-手术直播间 第12集,https://v10.dious.cc/20240410/DR1MJFoF/index.m3u8
-手术直播间 第13集,https://v10.dious.cc/20240411/AAkhgYoK/index.m3u8
-手术直播间 第14集,https://v10.dious.cc/20240411/tutkz9vW/index.m3u8
-手术直播间 第15集,https://v10.dious.cc/20240412/UuuE8nV9/index.m3u8
-手术直播间 第16集,https://v10.dious.cc/20240412/ItQGSlF9/index.m3u8
-手术直播间 第17集,https://v10.dious.cc/20240413/GWdoX0my/index.m3u8
-手术直播间 第18集,https://v10.dious.cc/20240414/K3fv2IfL/index.m3u8
-手术直播间 第19集,https://v10.dious.cc/20240414/0M5H3Qd0/index.m3u8
-手术直播间 第20集,https://v10.dious.cc/20240415/bGFhV4BE/index.m3u8
+手术直播间-第01集,https://v10.dious.cc/20240406/9Vl4acp5/index.m3u8
+手术直播间-第02集,https://v10.dious.cc/20240406/8PdWkK38/index.m3u8
+手术直播间-第03集,https://v10.dious.cc/20240406/grU2T3Fd/index.m3u8
+手术直播间-第04集,https://v10.dious.cc/20240406/hWjdIXyz/index.m3u8
+手术直播间-第05集,https://v10.dious.cc/20240407/qf9JvC37/index.m3u8
+手术直播间-第06集,https://v10.dious.cc/20240407/Hp238NDH/index.m3u8
+手术直播间-第07集,https://v10.dious.cc/20240408/vLs0seuT/index.m3u8
+手术直播间-第08集,https://v10.dious.cc/20240408/QQ4Fv8RP/index.m3u8
+手术直播间-第09集,https://v10.dious.cc/20240409/7dGheZqD/index.m3u8
+手术直播间-第10集,https://v10.dious.cc/20240409/zngB6g2w/index.m3u8
+手术直播间-第11集,https://v10.dious.cc/20240410/R4AG8jzL/index.m3u8
+手术直播间-第12集,https://v10.dious.cc/20240410/DR1MJFoF/index.m3u8
+手术直播间-第13集,https://v10.dious.cc/20240411/AAkhgYoK/index.m3u8
+手术直播间-第14集,https://v10.dious.cc/20240411/tutkz9vW/index.m3u8
+手术直播间-第15集,https://v10.dious.cc/20240412/UuuE8nV9/index.m3u8
+手术直播间-第16集,https://v10.dious.cc/20240412/ItQGSlF9/index.m3u8
+手术直播间-第17集,https://v10.dious.cc/20240413/GWdoX0my/index.m3u8
+手术直播间-第18集,https://v10.dious.cc/20240414/K3fv2IfL/index.m3u8
+手术直播间-第19集,https://v10.dious.cc/20240414/0M5H3Qd0/index.m3u8
+手术直播间-第20集,https://v10.dious.cc/20240415/bGFhV4BE/index.m3u8
 
 【追风者】，
-追风者 第01集,https://v10.dious.cc/20240321/lhk94KG2/index.m3u8
-追风者 第02集,https://v10.dious.cc/20240321/fEIfYk57/index.m3u8
-追风者 第03集,https://v10.dious.cc/20240321/Am0nKXAZ/index.m3u8
-追风者 第04集,https://v10.dious.cc/20240321/hHmAH9pY/index.m3u8
-追风者 第05集,https://v10.dious.cc/20240322/T2Y4A9pG/index.m3u8
-追风者 第06集,https://v10.dious.cc/20240322/KFXKaIc1/index.m3u8
-追风者 第07集,https://v10.dious.cc/20240323/kLQoMTYl/index.m3u8
-追风者 第08集,https://v10.dious.cc/20240323/5TArBRlB/index.m3u8
-追风者 第09集,https://v10.dious.cc/20240324/i0ZKM31Y/index.m3u8
-追风者 第10集,https://v10.dious.cc/20240324/N716kri7/index.m3u8
-追风者 第11集,https://v10.dious.cc/20240325/6EaiiCMM/index.m3u8
-追风者 第12集,https://v10.dious.cc/20240325/i3tY7VE6/index.m3u8
-追风者 第13集,https://v10.dious.cc/20240326/yaTsZY6l/index.m3u8
-追风者 第14集,https://v10.dious.cc/20240326/6YzxL8Yq/index.m3u8
-追风者 第15集,https://v10.dious.cc/20240327/dMOOZoFd/index.m3u8
-追风者 第16集,https://v10.dious.cc/20240327/N6fhYheN/index.m3u8
-追风者 第17集,https://v10.dious.cc/20240328/nMeW3oYt/index.m3u8
-追风者 第18集,https://v10.dious.cc/20240328/oiFqpwzI/index.m3u8
-追风者 第19集,https://v10.dious.cc/20240329/ZCesfc53/index.m3u8
-追风者 第20集,https://v10.dious.cc/20240329/iPBJPQfz/index.m3u8
-追风者 第21集,https://v10.dious.cc/20240330/Qb7Xbyjs/index.m3u8
-追风者 第22集,https://v10.dious.cc/20240330/raK7xQIb/index.m3u8
-追风者 第23集,https://v10.dious.cc/20240331/2xaLRQdF/index.m3u8
-追风者 第24集,https://v10.dious.cc/20240331/7UxxqNug/index.m3u8
-追风者 第25集,https://v10.dious.cc/20240401/PamUOo5S/index.m3u8
+追风者-第01集,https://v10.dious.cc/20240321/lhk94KG2/index.m3u8
+追风者-第02集,https://v10.dious.cc/20240321/fEIfYk57/index.m3u8
+追风者-第03集,https://v10.dious.cc/20240321/Am0nKXAZ/index.m3u8
+追风者-第04集,https://v10.dious.cc/20240321/hHmAH9pY/index.m3u8
+追风者-第05集,https://v10.dious.cc/20240322/T2Y4A9pG/index.m3u8
+追风者-第06集,https://v10.dious.cc/20240322/KFXKaIc1/index.m3u8
+追风者-第07集,https://v10.dious.cc/20240323/kLQoMTYl/index.m3u8
+追风者-第08集,https://v10.dious.cc/20240323/5TArBRlB/index.m3u8
+追风者-第09集,https://v10.dious.cc/20240324/i0ZKM31Y/index.m3u8
+追风者-第10集,https://v10.dious.cc/20240324/N716kri7/index.m3u8
+追风者-第11集,https://v10.dious.cc/20240325/6EaiiCMM/index.m3u8
+追风者-第12集,https://v10.dious.cc/20240325/i3tY7VE6/index.m3u8
+追风者-第13集,https://v10.dious.cc/20240326/yaTsZY6l/index.m3u8
+追风者-第14集,https://v10.dious.cc/20240326/6YzxL8Yq/index.m3u8
+追风者-第15集,https://v10.dious.cc/20240327/dMOOZoFd/index.m3u8
+追风者-第16集,https://v10.dious.cc/20240327/N6fhYheN/index.m3u8
+追风者-第17集,https://v10.dious.cc/20240328/nMeW3oYt/index.m3u8
+追风者-第18集,https://v10.dious.cc/20240328/oiFqpwzI/index.m3u8
+追风者-第19集,https://v10.dious.cc/20240329/ZCesfc53/index.m3u8
+追风者-第20集,https://v10.dious.cc/20240329/iPBJPQfz/index.m3u8
+追风者-第21集,https://v10.dious.cc/20240330/Qb7Xbyjs/index.m3u8
+追风者-第22集,https://v10.dious.cc/20240330/raK7xQIb/index.m3u8
+追风者-第23集,https://v10.dious.cc/20240331/2xaLRQdF/index.m3u8
+追风者-第24集,https://v10.dious.cc/20240331/7UxxqNug/index.m3u8
+追风者-第25集,https://v10.dious.cc/20240401/PamUOo5S/index.m3u8
 
 【试婚99天】，
-试婚99天 第01集,https://vip.lz-cdn.com/20220322/2290_8d1ca6fb/index.m3u8
-试婚99天 第02集,https://vip.lz-cdn.com/20220322/2291_755cf22a/index.m3u8
-试婚99天 第03集,https://vip.lz-cdn.com/20220322/2292_591c7950/index.m3u8
-试婚99天 第04集,https://vip.lz-cdn.com/20220322/2293_4f4314af/index.m3u8
-试婚99天 第05集,https://vip.lz-cdn.com/20220322/2294_8460e28e/index.m3u8
-试婚99天 第06集,https://vip.lz-cdn.com/20220322/2295_d857cef0/index.m3u8
-试婚99天 第07集,https://vip.lz-cdn.com/20220322/2296_13361772/index.m3u8
-试婚99天 第08集,https://vip.lz-cdn.com/20220322/2297_965b6c68/index.m3u8
-试婚99天 第09集,https://vip.lz-cdn.com/20220322/2298_e258ea91/index.m3u8
-试婚99天 第10集,https://vip.lz-cdn.com/20220322/2299_c1b503e0/index.m3u8
-试婚99天 第11集,https://vip.lz-cdn.com/20220322/2300_5a0afe72/index.m3u8
-试婚99天 第12集,https://vip.lz-cdn.com/20220322/2301_27a4df90/index.m3u8
-试婚99天 第13集,https://vip.lz-cdn.com/20220322/2302_677ee31d/index.m3u8
-试婚99天 第14集,https://vip.lz-cdn.com/20220322/2303_01f348a2/index.m3u8
-试婚99天 第15集,https://vip.lz-cdn.com/20220322/2304_47250a47/index.m3u8
+试婚99天-第01集,https://vip.lz-cdn.com/20220322/2290_8d1ca6fb/index.m3u8
+试婚99天-第02集,https://vip.lz-cdn.com/20220322/2291_755cf22a/index.m3u8
+试婚99天-第03集,https://vip.lz-cdn.com/20220322/2292_591c7950/index.m3u8
+试婚99天-第04集,https://vip.lz-cdn.com/20220322/2293_4f4314af/index.m3u8
+试婚99天-第05集,https://vip.lz-cdn.com/20220322/2294_8460e28e/index.m3u8
+试婚99天-第06集,https://vip.lz-cdn.com/20220322/2295_d857cef0/index.m3u8
+试婚99天-第07集,https://vip.lz-cdn.com/20220322/2296_13361772/index.m3u8
+试婚99天-第08集,https://vip.lz-cdn.com/20220322/2297_965b6c68/index.m3u8
+试婚99天-第09集,https://vip.lz-cdn.com/20220322/2298_e258ea91/index.m3u8
+试婚99天-第10集,https://vip.lz-cdn.com/20220322/2299_c1b503e0/index.m3u8
+试婚99天-第11集,https://vip.lz-cdn.com/20220322/2300_5a0afe72/index.m3u8
+试婚99天-第12集,https://vip.lz-cdn.com/20220322/2301_27a4df90/index.m3u8
+试婚99天-第13集,https://vip.lz-cdn.com/20220322/2302_677ee31d/index.m3u8
+试婚99天-第14集,https://vip.lz-cdn.com/20220322/2303_01f348a2/index.m3u8
+试婚99天-第15集,https://vip.lz-cdn.com/20220322/2304_47250a47/index.m3u8
 
 【胜算】，
-胜算 第01集,https://vip.lz-cdn6.com/20220406/2618_16f27eee/index.m3u8
-胜算 第02集,https://vip.lz-cdn6.com/20220406/2620_e2d5c98e/index.m3u8
-胜算 第03集,https://vip.lz-cdn6.com/20220406/2624_4e5d9c5d/index.m3u8
-胜算 第04集,https://vip.lz-cdn6.com/20220406/2626_539a6daa/index.m3u8
-胜算 第05集,https://vip.lz-cdn6.com/20220406/2627_b731a634/index.m3u8
-胜算 第06集,https://vip.lz-cdn6.com/20220406/2629_589c893e/index.m3u8
-胜算 第07集,https://vip.lz-cdn6.com/20220406/2632_26e314e9/index.m3u8
-胜算 第08集,https://vip.lz-cdn6.com/20220406/2633_34b264cd/index.m3u8
-胜算 第09集,https://vip.lz-cdn6.com/20220406/2634_655ac663/index.m3u8
-胜算 第10集,https://vip.lz-cdn6.com/20220406/2638_e7ef08f1/index.m3u8
-胜算 第11集,https://vip.lz-cdn6.com/20220406/2640_6e7670c9/index.m3u8
-胜算 第12集,https://vip.lz-cdn6.com/20220406/2641_aa2ed528/index.m3u8
-胜算 第13集,https://vip.lz-cdn6.com/20220406/2643_a8b761a9/index.m3u8
-胜算 第14集,https://vip.lz-cdn6.com/20220406/2645_6d600d06/index.m3u8
-胜算 第15集,https://vip.lz-cdn6.com/20220406/2647_a8b3ca69/index.m3u8
-胜算 第16集,https://vip.lz-cdn6.com/20220406/2649_fb3e963d/index.m3u8
-胜算 第17集,https://vip.lz-cdn6.com/20220406/2651_9d83212a/index.m3u8
-胜算 第18集,https://vip.lz-cdn6.com/20220406/2652_726cf111/index.m3u8
-胜算 第19集,https://vip.lz-cdn6.com/20220406/2655_2cbdfbe3/index.m3u8
-胜算 第20集,https://vip.lz-cdn6.com/20220406/2656_31285159/index.m3u8
+胜算-第01集,https://vip.lz-cdn6.com/20220406/2618_16f27eee/index.m3u8
+胜算-第02集,https://vip.lz-cdn6.com/20220406/2620_e2d5c98e/index.m3u8
+胜算-第03集,https://vip.lz-cdn6.com/20220406/2624_4e5d9c5d/index.m3u8
+胜算-第04集,https://vip.lz-cdn6.com/20220406/2626_539a6daa/index.m3u8
+胜算-第05集,https://vip.lz-cdn6.com/20220406/2627_b731a634/index.m3u8
+胜算-第06集,https://vip.lz-cdn6.com/20220406/2629_589c893e/index.m3u8
+胜算-第07集,https://vip.lz-cdn6.com/20220406/2632_26e314e9/index.m3u8
+胜算-第08集,https://vip.lz-cdn6.com/20220406/2633_34b264cd/index.m3u8
+胜算-第09集,https://vip.lz-cdn6.com/20220406/2634_655ac663/index.m3u8
+胜算-第10集,https://vip.lz-cdn6.com/20220406/2638_e7ef08f1/index.m3u8
+胜算-第11集,https://vip.lz-cdn6.com/20220406/2640_6e7670c9/index.m3u8
+胜算-第12集,https://vip.lz-cdn6.com/20220406/2641_aa2ed528/index.m3u8
+胜算-第13集,https://vip.lz-cdn6.com/20220406/2643_a8b761a9/index.m3u8
+胜算-第14集,https://vip.lz-cdn6.com/20220406/2645_6d600d06/index.m3u8
+胜算-第15集,https://vip.lz-cdn6.com/20220406/2647_a8b3ca69/index.m3u8
+胜算-第16集,https://vip.lz-cdn6.com/20220406/2649_fb3e963d/index.m3u8
+胜算-第17集,https://vip.lz-cdn6.com/20220406/2651_9d83212a/index.m3u8
+胜算-第18集,https://vip.lz-cdn6.com/20220406/2652_726cf111/index.m3u8
+胜算-第19集,https://vip.lz-cdn6.com/20220406/2655_2cbdfbe3/index.m3u8
+胜算-第20集,https://vip.lz-cdn6.com/20220406/2656_31285159/index.m3u8
 
 【生死连】，
-生死连 第01集,https://hnzy.bfvvs.com/play/PdyXwjWb/index.m3u8
-生死连 第02集,https://hnzy.bfvvs.com/play/DbD8qvnb/index.m3u8
-生死连 第03集,https://hnzy.bfvvs.com/play/1aKQ8Dnd/index.m3u8
-生死连 第04集,https://hnzy.bfvvs.com/play/YaO8gKNb/index.m3u8
-生死连 第05集,https://hnzy.bfvvs.com/play/5eVQvR1d/index.m3u8
-生死连 第06集,https://hnzy.bfvvs.com/play/QeZ08L6b/index.m3u8
-生死连 第07集,https://hnzy.bfvvs.com/play/Rb4L6B6b/index.m3u8
-生死连 第08集,https://hnzy.bfvvs.com/play/yb8E3Jod/index.m3u8
-生死连 第09集,https://hnzy.bfvvs.com/play/lej8Y35b/index.m3u8
-生死连 第10集,https://hnzy.bfvvs.com/play/penOR3la/index.m3u8
-生死连 第11集,https://hnzy.bfvvs.com/play/Yer9236d/index.m3u8
-生死连 第12集,https://hnzy.bfvvs.com/play/Yer923wd/index.m3u8
-生死连 第13集,https://hnzy.bfvvs.com/play/PdyXw3Vb/index.m3u8
-生死连 第14集,https://hnzy.bfvvs.com/play/1aKQ8nrd/index.m3u8
-生死连 第15集,https://hnzy.bfvvs.com/play/YaO8grgb/index.m3u8
-生死连 第16集,https://hnzy.bfvvs.com/play/5eVQvB5d/index.m3u8
-生死连 第17集,https://hnzy.bfvvs.com/play/QeZ08Jvb/index.m3u8
-生死连 第18集,https://hnzy.bfvvs.com/play/Rb4L672b/index.m3u8
-生死连 第19集,https://hnzy.bfvvs.com/play/yb8E35ld/index.m3u8
-生死连 第20集,https://hnzy.bfvvs.com/play/lej8YlWb/index.m3u8
+生死连-第01集,https://hnzy.bfvvs.com/play/PdyXwjWb/index.m3u8
+生死连-第02集,https://hnzy.bfvvs.com/play/DbD8qvnb/index.m3u8
+生死连-第03集,https://hnzy.bfvvs.com/play/1aKQ8Dnd/index.m3u8
+生死连-第04集,https://hnzy.bfvvs.com/play/YaO8gKNb/index.m3u8
+生死连-第05集,https://hnzy.bfvvs.com/play/5eVQvR1d/index.m3u8
+生死连-第06集,https://hnzy.bfvvs.com/play/QeZ08L6b/index.m3u8
+生死连-第07集,https://hnzy.bfvvs.com/play/Rb4L6B6b/index.m3u8
+生死连-第08集,https://hnzy.bfvvs.com/play/yb8E3Jod/index.m3u8
+生死连-第09集,https://hnzy.bfvvs.com/play/lej8Y35b/index.m3u8
+生死连-第10集,https://hnzy.bfvvs.com/play/penOR3la/index.m3u8
+生死连-第11集,https://hnzy.bfvvs.com/play/Yer9236d/index.m3u8
+生死连-第12集,https://hnzy.bfvvs.com/play/Yer923wd/index.m3u8
+生死连-第13集,https://hnzy.bfvvs.com/play/PdyXw3Vb/index.m3u8
+生死连-第14集,https://hnzy.bfvvs.com/play/1aKQ8nrd/index.m3u8
+生死连-第15集,https://hnzy.bfvvs.com/play/YaO8grgb/index.m3u8
+生死连-第16集,https://hnzy.bfvvs.com/play/5eVQvB5d/index.m3u8
+生死连-第17集,https://hnzy.bfvvs.com/play/QeZ08Jvb/index.m3u8
+生死连-第18集,https://hnzy.bfvvs.com/play/Rb4L672b/index.m3u8
+生死连-第19集,https://hnzy.bfvvs.com/play/yb8E35ld/index.m3u8
+生死连-第20集,https://hnzy.bfvvs.com/play/lej8YlWb/index.m3u8
 
 【盛宠娇妻】，
 《盛宠娇妻》第01集,https://hd.lz-cdn18.com/20230514/2515_eb2edf17/index.m3u8
@@ -164,21 +164,21 @@
 《盛宠娇妻》第20集,https://vip.lzcdn2.com/20230519/26033_39a421f3/index.m3u8
 
 【誓言无声】，
-誓言无声 第01集,https://vip.ffzy-online.com/20230108/47799_3a1e8b2f/index.m3u8
-誓言无声 第02集,https://vip.ffzy-online.com/20230108/47786_e56116f8/index.m3u8
-誓言无声 第03集,https://vip.ffzy-online.com/20230108/47788_d705cabf/index.m3u8
-誓言无声 第04集,https://vip.ffzy-online.com/20230108/47797_d9a66337/index.m3u8
-誓言无声 第05集,https://vip.ffzy-online.com/20230108/47790_44a0ac80/index.m3u8
-誓言无声 第06集,https://vip.ffzy-online.com/20230108/47791_8ee70fc6/index.m3u8
-誓言无声 第07集,https://vip.ffzy-online.com/20230108/47792_1d034c28/index.m3u8
-誓言无声 第08集,https://vip.ffzy-online.com/20230108/47793_5579865c/index.m3u8
-誓言无声 第09集,https://vip.ffzy-online.com/20230108/47794_3bc2d224/index.m3u8
-誓言无声 第10集,https://vip.ffzy-online.com/20230108/47795_641b0258/index.m3u8
-誓言无声 第11集,https://vip.ffzy-online.com/20230108/47796_cf3fc581/index.m3u8
-誓言无声 第12集,https://vip.ffzy-online.com/20230108/47812_67c2236e/index.m3u8
-誓言无声 第13集,https://vip.ffzy-online.com/20230108/47798_7d14bbf1/index.m3u8
-誓言无声 第14集,https://vip.ffzy-online.com/20230108/47800_7ea63ccd/index.m3u8
-誓言无声 第15集,https://vip.ffzy-online.com/20230108/47801_20dd0565/index.m3u8
+誓言无声-第01集,https://vip.ffzy-online.com/20230108/47799_3a1e8b2f/index.m3u8
+誓言无声-第02集,https://vip.ffzy-online.com/20230108/47786_e56116f8/index.m3u8
+誓言无声-第03集,https://vip.ffzy-online.com/20230108/47788_d705cabf/index.m3u8
+誓言无声-第04集,https://vip.ffzy-online.com/20230108/47797_d9a66337/index.m3u8
+誓言无声-第05集,https://vip.ffzy-online.com/20230108/47790_44a0ac80/index.m3u8
+誓言无声-第06集,https://vip.ffzy-online.com/20230108/47791_8ee70fc6/index.m3u8
+誓言无声-第07集,https://vip.ffzy-online.com/20230108/47792_1d034c28/index.m3u8
+誓言无声-第08集,https://vip.ffzy-online.com/20230108/47793_5579865c/index.m3u8
+誓言无声-第09集,https://vip.ffzy-online.com/20230108/47794_3bc2d224/index.m3u8
+誓言无声-第10集,https://vip.ffzy-online.com/20230108/47795_641b0258/index.m3u8
+誓言无声-第11集,https://vip.ffzy-online.com/20230108/47796_cf3fc581/index.m3u8
+誓言无声-第12集,https://vip.ffzy-online.com/20230108/47812_67c2236e/index.m3u8
+誓言无声-第13集,https://vip.ffzy-online.com/20230108/47798_7d14bbf1/index.m3u8
+誓言无声-第14集,https://vip.ffzy-online.com/20230108/47800_7ea63ccd/index.m3u8
+誓言无声-第15集,https://vip.ffzy-online.com/20230108/47801_20dd0565/index.m3u8
 
 【古代战场】,
 古代战场-01,https://yzzy.play-cdn12.com/20230307/20874_b1700291/index.m3u8
