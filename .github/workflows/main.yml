@@ -29,9 +29,7 @@ jobs:
       - name: Run hunan
         run: python ${{ github.workspace }}/hnyuan.py
 
-      - name: Run txt-m3u
-        run: python ${{ github.workspace }}/txt-m3u.py
-            
+                 
       - name: 提交更改
         run: |
           git config --local user.email "mlyuanlang@126.com"
