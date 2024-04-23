@@ -1,6 +1,5 @@
 央卫频道,#genre#
-CCTV4K,http://120.79.4.185/md0423.php?id=cctv4k
-CCTV8K,http://120.79.4.185/md0423.php?id=cctv8k
+
 CCTV1,http://120.79.4.185/md0423.php?id=cctv1
 CCTV2,http://120.79.4.185/md0423.php?id=cctv2
 CCTV3,http://120.79.4.185/md0423.php?id=cctv3
@@ -18,7 +17,9 @@ CCTV13,http://120.79.4.185/md0423.php?id=cctv13
 CCTV14,http://120.79.4.185/md0423.php?id=cctv14
 CCTV15,http://120.79.4.185/md0423.php?id=cctv15
 CCTV16,http://120.79.4.185/md0423.php?id=cctv16
-CCTV16(4k),http://120.79.4.185/md0423.php?id=cctv16-4k
+CCTV16,http://120.79.4.185/md0423.php?id=cctv16-4k
+CCTV4K,http://120.79.4.185/md0423.php?id=cctv4k
+CCTV8K,http://120.79.4.185/md0423.php?id=cctv8k
 CCTV17,http://120.79.4.185/md0423.php?id=cctv17
 CCTV兵器科技,http://120.79.4.185/md0423.php?id=bqkj
 CCTV第一剧场,http://120.79.4.185/md0423.php?id=dyjc
@@ -57,4 +58,4 @@ CCTV卫生健康,http://120.79.4.185/md0423.php?id=wsjk
 四川卫视,http://120.79.4.185/md0423.php?id=scws
 新疆卫视,http://120.79.4.185/md0423.php?id=xjws
 海南卫视,http://120.79.4.185/md0423.php?id=hinws
-兵团卫视,http://120.79.4.185/md0423.php?id=
+兵团卫视,http://120.79.4.185/md0423.php?id=btws
