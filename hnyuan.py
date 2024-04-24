@@ -9,7 +9,6 @@ from datetime import datetime
 import threading
 from queue import Queue
 
-# 扫源
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ibWVpemhvdSI%3D",  # 梅 州
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5rmW5Y2XIg%3D%3D",    # 湖 南
@@ -349,7 +348,7 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
     file.write('央卫频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if 'CCTV' in channel_name or '卫视' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name:
+        if 'CCTV' in channel_name or '卫视' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name or 'CHC' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
