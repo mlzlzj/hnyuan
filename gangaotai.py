@@ -10,12 +10,12 @@ open('DIYP-v4.txt', 'wb').write(r.content)
 input_filename = 'DIYP-v4.txt'
 output_filename_hong_kong = 'hong_kong_channels.txt'
 output_filename_taiwan = 'taiwan_channels.txt'
-# output_filename_guowai = 'guowai_channels.txt'
+output_filename_guowai = 'guowai_channels.txt'
 
 with open(input_filename, 'r', encoding='utf-8') as infile, \
         open(output_filename_hong_kong, 'w', encoding='utf-8') as out_hk, \
         open(output_filename_taiwan, 'w', encoding='utf-8') as out_tw, \
-        # open(output_filename_guowai, 'w', encoding='utf-8') as out_gw:
+        open(output_filename_guowai, 'w', encoding='utf-8') as out_gw:
     out_hk.write('港澳频道,#genre#\n')
     out_tw.write('台湾频道,#genre#\n')
     # out_gw.write('国外频道,#genre#\n')
@@ -30,13 +30,13 @@ with open(input_filename, 'r', encoding='utf-8') as infile, \
                 or "动物频道" in line or "东森" in line or "龙祥" in line or "公视" in line or "三立" in line or "大爱" in line \
                 or "年代新闻" in line or "人间卫视" in line or "人間" in line or "大立" in line or "TVBS" in line or "八大" in line:
             out_tw.write(line)  # 写入台湾频道文件
-        # if "俄罗斯" in line or "乌克兰" in line or "伊拉克" in line or "泰国" in line or "越南" in line or "美国Folk" in line or "新加坡" in line \
-        #         or "土耳其" in line or "德国" in line or "智利" in line or "西班牙" in line or "墨西哥" in line or "罗马尼亚" in line \
-        #         or "半島電視台" in line or "半島新聞台" in line:
-        #     out_gw.write(line)  # 写入国外频道文件
+        if "俄罗斯" in line or "乌克兰" in line or "伊拉克" in line or "泰国" in line or "越南" in line or "美国Folk" in line or "新加坡" in line \
+                or "土耳其" in line or "德国" in line or "智利" in line or "西班牙" in line or "墨西哥" in line or "罗马尼亚" in line \
+                or "半島電視台" in line or "半島新聞台" in line:
+            out_gw.write(line)  # 写入国外频道文件
 # 合并香港频道和台湾频道文件
 file_contents = []
-file_paths = ["hong_kong_channels.txt", "taiwan_channels.txt"]  # 替换为实际的文件路径列表
+file_paths = ["hong_kong_channels.txt", "taiwan_channels.txt", "guowai_channels.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -49,6 +49,6 @@ with open("gangaotai.txt", "w", encoding="utf-8") as output:
 os.remove("DIYP-v4.txt")
 os.remove("hong_kong_channels.txt")
 os.remove("taiwan_channels.txt")
-# os.remove("guowai_channels.txt")
+os.remove("guowai_channels.txt")
 
 print("港澳台频道文件gangaotai.txt生成完毕！")
