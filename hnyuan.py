@@ -258,6 +258,13 @@ with open("iptv.txt", 'w', encoding='utf-8') as file:
 print("频道列表文件iptv.txt获取完成！")
 
 
+# 获取央视频道
+url = 'https://taoiptv.com/source/Yshipin.txt?token=8zlxhttq9h01ahaw'
+r = requests.get(url)
+with open("Yshipin.txt", "wb") as code:
+    code.write(r.content)
+
+
 # 线程安全的队列，用于存储下载任务
 task_queue = Queue()
 
