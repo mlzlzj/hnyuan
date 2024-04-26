@@ -11,12 +11,6 @@ from datetime import datetime
 import eventlet
 eventlet.monkey_patch()
 
-# 获取央视频道
-url = 'https://taoiptv.com/source/Yshipin.txt?token=8zlxhttq9h01ahaw'
-r = requests.get(url)
-with open("Yshipin.txt", "wb") as code:
-    code.write(r.content)
-
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iZ3Vhbmdkb25nIg%3D%3D",    # 广 东
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ic2hlbnpoZW4i",  # 深 圳
