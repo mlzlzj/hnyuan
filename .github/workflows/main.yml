@@ -36,10 +36,7 @@ jobs:
 
       - name: Run gangaotai
         run: python ${{ github.workspace }}/gangaotai.py
-
-      - name: Run YSP
-        run: python ${{ github.workspace }}/YSP.py
-        
+            
       - name: Run hunan
         run: python ${{ github.workspace }}/hnyuan.py
         
