@@ -1,55 +1,41 @@
 import time
+import os
 import concurrent.futures
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import requests
 import re
-import os
+import base64
+from datetime import datetime
 import threading
 from queue import Queue
-from datetime import datetime
-import eventlet
-eventlet.monkey_patch()
+from pypinyin import lazy_pinyin
 
-urls = [
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieXVleWFuZyI%3D",  # 岳 阳
-     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoYW5nc2hhIg%3D%3D",    # 长 沙
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iemh1emhvdSI%3D",  # 株 洲
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iaGVuZ3lhbmci",  # 衡 阳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iY2hlbnpob3Ui",  # 郴 州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieGlhbmd0YW4i",  # 湘 潭
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iY2hhbmdkZSI%3D",  # 常 德
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieWl5YW5nIg%3D%3D",  # 益 阳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieW9uZ3pob3Ui",  # 永 州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iaHVhaWh1YSI%3D",  # 怀 化
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ic2hhb3lhbmci",  # 邵 阳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ibG91ZGki",  # 娄 底
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iemhhbmdqaWFqaWUi",  # 张家界
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5rmW5Y2XIg%3D%3D",    # 湖 南
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iZ3Vhbmdkb25nIg%3D%3D",    # 广 东
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ic2hlbnpoZW4i",  # 深 圳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iZ3Vhbmd6aG91Ig%3D%3D",  # 广 州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ibWVpemhvdSI%3D",  # 梅 州
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'}
+urls = []
+shengshi_names = ["长沙", "株洲", "湘潭", "衡阳", "邵阳", "岳阳", "常德", "张家界", "益阳", "郴州", "永州", "怀化",  "娄底"]
+pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
+print(f'本次查询{shengshi_names}的酒店频道。')
 
-    # "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22guangdong%22",    # 广 东
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22shenzhen%22",  # 深 圳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22guangzhou%22",  # 广 州
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22meizhou%22",  # 梅 州
-    # "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22hunan%22",    # 湖 南
-    # "https://www.zoomeye.org/searchResult?q=city:%22changsha%22",  # 长 沙
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22hengyang%22",  # 衡 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22zhuzhou%22",  # 株 洲
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22yueyang%22",  # 岳 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22loudi%22",  # 娄 底
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22chenzhou%22",  # 郴 州
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22xiangtan%22",  # 湘 潭
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22changde%22",  # 常 德
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22yiyang%22",  # 益 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22yongzhou%22",  # 永 州
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22huaihua%22",  # 怀 化
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22shaoyang%22",  # 邵 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22zhangjiajie%22",  # 张家界
-]
+# 定义运营商的名称和对应的组织名称
+operators = {
+    "中国电信": "Chinanet",
+    "中国联通": "CHINA UNICOM China169 Backbone",
+    "中国移动": "China Mobile Communications Corporation"
+}
+for shengshi in pinyin_names:
+    for operator_name, org_name in operators.items():
+        url = 'https://fofa.info/result?qbase64='
+        # search_txt = f'"iptv/live/zh_cn.js" && country="CN" && region="{shengshi}" && org="{org_name}"'  # 构造查询省字符串
+        search_txt = f'"iptv/live/zh_cn.js" && country="CN" && city="{shengshi}" && org="{org_name}"'  # 构造查询市字符串
+        # 将字符串编码为字节流
+        bytes_string = search_txt.encode('utf-8')
+        # 使用 base64 进行编码
+        encoded_search_txt = base64.b64encode(bytes_string).decode('utf-8')
+        url += encoded_search_txt
+        print(f"正在扫描 {shengshi} {operator_name}地址: ")
+        print(f"{url}")
+        urls.append(url)
+
 
 def modify_urls(url):
     modified_urls = []
@@ -63,7 +49,6 @@ def modify_urls(url):
         modified_ip = f"{ip_address[:-1]}{i}"
         modified_url = f"{base_url}{modified_ip}{port}{ip_end}"
         modified_urls.append(modified_url)
-
     return modified_urls
 
 
@@ -80,26 +65,11 @@ def is_url_accessible(url):
 results = []
 
 for url in urls:
-    # 创建一个Chrome WebDriver实例
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-dev-shm-usage')
-
-    driver = webdriver.Chrome(options=chrome_options)
-    # 使用WebDriver访问网页
-    driver.get(url)  # 将网址替换为你要访问的网页地址
-    time.sleep(10)
-    # 获取网页内容
-    page_content = driver.page_source
-
-    # 关闭WebDriver
-    driver.quit()
-
+    response = requests.get(url, headers=headers, timeout=15)
+    page_content = response.text
     # 查找所有符合指定格式的网址
     pattern = r"http://\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+"  # 设置匹配的格式，如http://8.8.8.8:8888
     urls_all = re.findall(pattern, page_content)
-    # urls = list(set(urls_all))  # 去重得到唯一的URL列表
     urls = set(urls_all)  # 去重得到唯一的URL列表
     x_urls = []
     for url in urls:  # 对urls进行处理，ip第四位修改为1，并去重
@@ -383,19 +353,19 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-    # file.write('其他频道,#genre#\n')
-    # for result in results:
-    #     channel_name, channel_url, speed = result
-    #     if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
-    #         if channel_name in channel_counters:
-    #             if channel_counters[channel_name] >= result_counter:
-    #                 continue
-    #             else:
-    #                 file.write(f"{channel_name},{channel_url}\n")
-    #                 channel_counters[channel_name] += 1
-    #         else:
-    #             file.write(f"{channel_name},{channel_url}\n")
-    #             channel_counters[channel_name] = 1
+    file.write('其他频道,#genre#\n')
+    for result in results:
+        channel_name, channel_url, speed = result
+        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"{channel_name},{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"{channel_name},{channel_url}\n")
+                channel_counters[channel_name] = 1
 
 
 # 合并自定义频道文件内容
@@ -418,7 +388,7 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
 
 
 os.remove("iptv.txt")
-os.remove("iptvlist.txt")
+# os.remove("iptvlist.txt")
 os.remove("gangaotai.txt")
 
 print("任务运行完毕，分类频道列表可查看文件夹内hunan.txt文件！")
