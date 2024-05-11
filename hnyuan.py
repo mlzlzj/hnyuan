@@ -12,7 +12,7 @@ from pypinyin import lazy_pinyin
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'}
 urls = []
-shengshi_names = ["长沙", "株洲", "湘潭", "衡阳", "邵阳", "岳阳", "常德", "张家界", "益阳", "郴州", "永州", "怀化",  "娄底"]
+shengshi_names = ["岳阳", "长沙", "株洲", "湘潭", "衡阳", "邵阳", "常德", "益阳", "郴州", "永州", "怀化",  "娄底"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
 
