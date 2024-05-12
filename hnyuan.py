@@ -475,5 +475,7 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
 os.remove("iptv.txt")
 os.remove("iptvlist.txt")
 os.remove("gangaotai.txt")
+os.remove("cctv.txt")
+os.remove("cctv.m3u")
 
 print("任务运行完毕，分类频道列表可查看文件夹内hunan.txt文件！")
