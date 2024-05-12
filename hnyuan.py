@@ -332,23 +332,23 @@ with open("cctv.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
 
-with open("cctv.m3u", 'w', encoding='utf-8') as file:
-    channel_counters = {}
-    file.write('#EXTM3U\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if 'CCTV' in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"#EXTINF:-1 group-title=\"央视频道\",{channel_name}\n")
-                    file.write(f"{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"#EXTINF:-1 group-title=\"央视频道\",{channel_name}\n")
-                file.write(f"{channel_url}\n")
-                channel_counters[channel_name] = 1
+# with open("cctv.m3u", 'w', encoding='utf-8') as file:
+#     channel_counters = {}
+#     file.write('#EXTM3U\n')
+#     for result in results:
+#         channel_name, channel_url, speed = result
+#         if 'CCTV' in channel_name:
+#             if channel_name in channel_counters:
+#                 if channel_counters[channel_name] >= result_counter:
+#                     continue
+#                 else:
+#                     file.write(f"#EXTINF:-1 group-title=\"央视频道\",{channel_name}\n")
+#                     file.write(f"{channel_url}\n")
+#                     channel_counters[channel_name] += 1
+#             else:
+#                 file.write(f"#EXTINF:-1 group-title=\"央视频道\",{channel_name}\n")
+#                 file.write(f"{channel_url}\n")
+#                 channel_counters[channel_name] = 1
 
 # 线程安全的队列，用于存储下载任务
 task_queue = Queue()
@@ -550,7 +550,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
 
 # 合并所有的txt文件
 file_contents = []
-file_paths = ["cctv.txt", "iptv_list.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt", "cctv.txt", "iptv_list.txt","gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -579,6 +579,6 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
 
 os.remove("iptv.txt")
 os.remove("cctv.txt")
-os.remove("cctv.m3u")
+# os.remove("cctv.m3u")
 
 print("任务运行完毕，分类频道列表可查看文件夹内iptv_list.txt和iptv_list.m3u文件！")
