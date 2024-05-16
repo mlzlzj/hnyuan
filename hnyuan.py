@@ -31,16 +31,7 @@ urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ic2hlbnpoZW4i",  # 深 圳
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iZ3Vhbmd6aG91Ig%3D%3D",  # 广 州
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ibWVpemhvdSI%3D",  # 梅 州
-    # 岳阳中国电信
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Inl1ZXlhbmciICYmIG9yZz0iQ2hpbmFuZXQi",
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Inl1ZXlhbmciICYmIG9yZz0iQ0hJTkEgVU5JQ09NIENoaW5hMTY5IEJhY2tib25lIg==",
-    # 岳阳中国联通
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Inl1ZXlhbmciICYmIG9yZz0iQ2hpbmEgTW9iaWxlIENvbW11bmljYXRpb25zIENvcnBvcmF0aW9uIg==",
-    # 岳阳中国移动
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoYW5nc2hhIiAmJiBvcmc9IkNoaW5hbmV0Ig=="  # 长沙
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoYW5nc2hhIiAmJiBvcmc9IkNISU5BIFVOSUNPTSBDaGluYTE2OSBCYWNrYm9uZSI=",
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoYW5nc2hhIiAmJiBvcmc9IkNoaW5hIE1vYmlsZSBDb21tdW5pY2F0aW9ucyBDb3Jwb3JhdGlvbiI=",
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InpodXpob3UiICYmIG9yZz0iQ2hpbmFuZXQi",
+   
     # # 株洲
     # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InpodXpob3UiICYmIG9yZz0iQ0hJTkEgVU5JQ09NIENoaW5hMTY5IEJhY2tib25lIg==",
     # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InpodXpob3UiICYmIG9yZz0iQ2hpbmEgTW9iaWxlIENvbW11bmljYXRpb25zIENvcnBvcmF0aW9uIg==",
@@ -90,19 +81,19 @@ urls = [
     # "https://www.zoomeye.org/searchResult?q=city%3A%22guangzhou%22",  # 广 州
     # "https://www.zoomeye.org/searchResult?q=city%3A%22meizhou%22",  # 梅 州
     # "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22hunan%22",    # 湖 南
-    # "https://www.zoomeye.org/searchResult?q=city:%22changsha%22",  # 长 沙
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22hengyang%22",  # 衡 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22zhuzhou%22",  # 株 洲
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22yueyang%22",  # 岳 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22loudi%22",  # 娄 底
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22chenzhou%22",  # 郴 州
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22xiangtan%22",  # 湘 潭
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22changde%22",  # 常 德
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22yiyang%22",  # 益 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22yongzhou%22",  # 永 州
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22huaihua%22",  # 怀 化
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22shaoyang%22",  # 邵 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22zhangjiajie%22",  # 张家界
+    "https://www.zoomeye.org/searchResult?q=city:%22changsha%22",  # 长 沙
+    "https://www.zoomeye.org/searchResult?q=city%3A%22hengyang%22",  # 衡 阳
+    "https://www.zoomeye.org/searchResult?q=city%3A%22zhuzhou%22",  # 株 洲
+    "https://www.zoomeye.org/searchResult?q=city%3A%22yueyang%22",  # 岳 阳
+    "https://www.zoomeye.org/searchResult?q=city%3A%22loudi%22",  # 娄 底
+    "https://www.zoomeye.org/searchResult?q=city%3A%22chenzhou%22",  # 郴 州
+    "https://www.zoomeye.org/searchResult?q=city%3A%22xiangtan%22",  # 湘 潭
+    "https://www.zoomeye.org/searchResult?q=city%3A%22changde%22",  # 常 德
+    "https://www.zoomeye.org/searchResult?q=city%3A%22yiyang%22",  # 益 阳
+    "https://www.zoomeye.org/searchResult?q=city%3A%22yongzhou%22",  # 永 州
+    "https://www.zoomeye.org/searchResult?q=city%3A%22huaihua%22",  # 怀 化
+    "https://www.zoomeye.org/searchResult?q=city%3A%22shaoyang%22",  # 邵 阳
+    "https://www.zoomeye.org/searchResult?q=city%3A%22zhangjiajie%22",  # 张家界
 ]
 
 
