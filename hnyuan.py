@@ -249,6 +249,7 @@ for url in urls:
                         name = name.replace("HD", "")
                         name = name.replace("标清", "")
                         name = name.replace("超高", "")
+                        name = name.replace("搞清", "")
                         name = name.replace("频道", "")
                         name = name.replace("-", "")
                         name = name.replace(" ", "")
