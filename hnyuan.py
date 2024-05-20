@@ -53,8 +53,7 @@ with open(file_path,'w',encoding='utf-8')  as file:
     file.write('湖南芒果,#genre#\n')
     file.write(txt_string)
 
-print(f'文件已保存至{file_path},欢迎下次使用！！')
-
+# print(f'文件已保存至{file_path},欢迎下次使用！！')
 
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieXVleWFuZyI%3D",  # 岳 阳
@@ -298,6 +297,8 @@ for url in urls:
                         name = name.replace("CCTV5+赛事", "CCTV5+")
                         name = name.replace("CCTV5+体育", "CCTV5+")
                         name = name.replace("CCTV5赛事", "CCTV5+")
+                        name = name.replace("CCTV5测试", "")
+                        name = name.replace("CCTV9测试", "CCTV5+")
                         name = name.replace("凤凰中文台", "凤凰中文")
                         name = name.replace("凤凰资讯台", "凤凰资讯")
                         name = name.replace("CCTV4K测试）", "CCTV4")
@@ -325,10 +326,11 @@ for url in urls:
                         name = name.replace("湖南电视台", "湖南卫视")
                         name = name.replace("少儿科教", "少儿")
                         name = name.replace("影视剧", "影视")
-
+                        name = name.replace("影迷电影", "CHC电影")
+                        
                         if name and chid and srcid:
                             # 格式化 URL
-                            channel_url = '{name},http://{info}/tsfile/live/{chid}_{srcid}.m3u8?key=txiptv&playlive=1&authid=0'.format(
+                            channel_url = '{name},http://{info}/tsfile/live/{chid}_{srcid}.m3u8'.format(
                                 name=name,
                                 info=info,
                                 chid=chid,
@@ -445,7 +447,7 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
     file.write('央卫频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if 'CCTV' in channel_name or '卫视' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name or 'CHC' in channel_name:
+        if 'CCTV' in channel_name or '卫视' in channel_name or '重温经典' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name or 'CHC' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -460,7 +462,7 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
     # file.write('卫视频道,#genre#\n')
     # for result in results:
     #     channel_name, channel_url, speed = result
-    #     if '卫视' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name:
+    #     if '卫视' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name or '重温经典' in channel_name:
     #         if channel_name in channel_counters:
     #             if channel_counters[channel_name] >= result_counter:
     #                 continue
