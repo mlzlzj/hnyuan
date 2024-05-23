@@ -147,7 +147,7 @@ for channel in channel_dic:
 txt_string = ''.join(txt_lis)
 
 with open(file_path, 'w', encoding='utf-8') as file:
-    file.write('湖南频道,#genre#\n')
+    file.write('湖南芒果,#genre#\n')
     file.write(txt_string)
     print(txt_string)
 print(f'湖南芒果频道列表已保存至{file_path}！')
