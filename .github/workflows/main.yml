@@ -21,7 +21,7 @@ jobs:
           python-version: 3.x
 
       - name: Install dependencies
-        run: pip install selenium requests futures eventlet  pypinyin
+        run: pip install selenium requests futures eventlet  pypinyin  BeautifulSoup
 
       - name: Install Chrome WebDriver
         run: |
