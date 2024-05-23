@@ -8,52 +8,140 @@ import os
 import threading
 from queue import Queue
 from datetime import datetime
+from bs4 import BeautifulSoup
+import random
 import eventlet
 
 eventlet.monkey_patch()
 
-file_path ='mgtv.txt'
-headers={
-    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0'
-}
-proxy= {
-        'http': '111.26.177.28:9091',
+# 爬取代理IP
+def crawl_proxies(start_page, end_page):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
     }
+    proxies = []
+
+    for page in range(start_page, end_page + 1):
+        url = f'http://www.kxdaili.com/dailiip/2/{page}.html'
+        r = requests.get(url, headers=headers)
+        soup = BeautifulSoup(r.text, 'html.parser')
+
+        # 解析代理IP列表
+        for row in soup.find_all('tr'):
+            cols = row.find_all('td')
+            if len(cols) >= 2:
+                try:
+                    proxy = cols[0].text.strip() + ':' + cols[1].text.strip()
+                    proxies.append(proxy)
+                except Exception as e:
+                    print(f"Error parsing proxy on page {page}: {e}")
+
+    return proxies
+
+
+def test_proxy_and_write(proxy, file_path):
+    url = 'http://baidu.com'  # 测试网站
+    proxies = {
+        'http': 'http://' + proxy,
+        'https': 'https://' + proxy
+    }
+    try:
+        response = requests.get(url, proxies=proxies, timeout=10)  # 增加超时时间为10秒
+        if response.status_code == 200:
+            with open(file_path, 'w', encoding='utf-8') as file:  # 使用 'w' 模式覆盖写入（'a' 模式追加写入）
+                file.write(proxy + '\n')
+            return True
+    except requests.exceptions.RequestException as e:
+        print(f"Error testing proxy {proxy}: {e}")
+    return False
+
+
+# 随机选择代理IP
+def get_random_proxy(proxy_pool):
+    if proxy_pool:
+        return random.choice(proxy_pool)
+    else:
+        return None
+
+
+# 构建代理IP池
+def build_proxy_pool(proxies, file_path):
+    proxy_pool = []
+    for proxy in proxies:
+        if test_proxy_and_write(proxy, file_path):
+            proxy_pool.append(proxy)
+    return proxy_pool
+
+
+# 示例使用
+if __name__ == '__main__':
+    start_page = 8
+    end_page = 10  # 最大页数为1-10
+    proxies = crawl_proxies(start_page, end_page)
+    file_path = 'proxy_ip.txt'  # 指定一个文件路径来存储可用代理
+    proxy_pool = build_proxy_pool(proxies, file_path)  # 构建代理池时，同时写入文件
+    random_proxy = get_random_proxy(proxy_pool)
+    if random_proxy:
+        print(f"获取到有效的代理IP: {random_proxy}")
+    else:
+        print("未获取到有效的代理IP.")
+        
+# 使用爬取到的代理ip获取湖南芒果频道列表
+file_path = 'mgtv.txt'
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0'
+}
+if random_proxy:
+    proxy = f'http://{random_proxy}'  # 正确引用有效的代理IP
+else:
+    proxy = None  # 如果没有有效的代理IP，则不设置代理
 url = 'http://mpp.liveapi.mgtv.com/v1/epg/turnplay/getLivePlayUrlMPP?version=PCweb_1.0&platform=1&buss_id=2000001&channel_id='
-channel_dic ={
-    '湖南经视':['280','hn01'],
-    '湖南都市':['346','hn02'],
-    '湖南电视剧':['484','hn03'],
-    '湖南电影':['221','hn04'],
-    '湖南爱晚':['261','hn05'],
-    '湖南国际':['229','hn06'],
-    '湖南娱乐':['344','hn07'],
-    '快乐购':['267','hn08'],
-    '茶频道':['578','hn09'],
-    '金鹰纪实':['316','hn10'],
-    '金鹰卡通':['287','hn11'],
-    '快乐垂钓':['218','hn12'],
-    '先锋乒羽':['329','hn13'],
-    '长沙新闻':['269','hn14'],
-    '长沙政法':['254','hn15'],
-    '长沙女性':['230','hn16'],
+channel_dic = {
+    '湖南经视': ['280', 'hn01'],
+    '湖南都市': ['346', 'hn02'],
+    '湖南电视剧': ['484', 'hn03'],
+    '湖南电影': ['221', 'hn04'],
+    '湖南爱晚': ['261', 'hn05'],
+    '湖南国际': ['229', 'hn06'],
+    '湖南娱乐': ['344', 'hn07'],
+    '快乐购': ['267', 'hn08'],
+    '茶频道': ['578', 'hn09'],
+    '金鹰纪实': ['316', 'hn10'],
+    '金鹰卡通': ['287', 'hn11'],
+    '快乐垂钓': ['218', 'hn12'],
+    '先锋乒羽': ['329', 'hn13'],
+    '长沙新闻': ['269', 'hn14'],
+    '长沙政法': ['254', 'hn15'],
+    '长沙女性': ['230', 'hn16'],
 }
 
-txt_lis =[]
+txt_lis = []
 
 for channel in channel_dic:
-    response = requests.get(url=url+channel_dic[channel][0], proxies=proxy, headers=headers)
-    json_data = response.json()
-    txt_url = json_data['data']['url']
-    txt_lis.append(f'{channel},{txt_url}\n')
-    
-txt_string =''.join(txt_lis)
+    if proxy:
+        response = requests.get(url=url + str(channel_dic[channel][0]), headers=headers, proxies={'http': proxy})
+    else:
+        response = requests.get(url=url + str(channel_dic[channel][0]), headers=headers)
 
-with open(file_path,'w',encoding='utf-8')  as file:
-    file.write('湖南芒果,#genre#\n')
+    # 检查响应状态码
+    if response.status_code == 200:
+        # 检查响应体是否为空
+        if response.text:
+            json_data = response.json()
+            txt_url = json_data['data']['url']
+            txt_lis.append(f'{channel},{txt_url}\n')
+        else:
+            print(f"Warning: Empty response body for channel {channel}")
+    else:
+        print(f"Warning: Request failed for channel {channel} with status code {response.status_code}")
+
+txt_string = ''.join(txt_lis)
+
+with open(file_path, 'w', encoding='utf-8') as file:
+    file.write('湖南频道,#genre#\n')
     file.write(txt_string)
 
-# print(f'文件已保存至{file_path},欢迎下次使用！！')
+print(f'文件已保存至{file_path},欢迎下次使用！！')
 
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieXVleWFuZyI%3D",  # 岳 阳
