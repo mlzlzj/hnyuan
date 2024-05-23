@@ -77,8 +77,8 @@ def build_proxy_pool(proxies, file_path):
 
 # 示例使用
 if __name__ == '__main__':
-    start_page = 8
-    end_page = 10  # 最大页数为1-10
+    start_page = 1
+    end_page = 2  # 最大页数为1-10
     proxies = crawl_proxies(start_page, end_page)
     file_path = 'proxy_ip.txt'  # 指定一个文件路径来存储可用代理
     proxy_pool = build_proxy_pool(proxies, file_path)  # 构建代理池时，同时写入文件
