@@ -14,7 +14,7 @@ import eventlet
 
 eventlet.monkey_patch()
 
-# 爬取代理IP
+# 爬取国内免费代理IP
 def crawl_proxies(start_page, end_page):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
@@ -40,7 +40,7 @@ def crawl_proxies(start_page, end_page):
 
 
 def test_proxy_and_write(proxy, file_path):
-    url = 'http://baidu.com'  # 测试网站
+    url = 'http://mpp.liveapi.mgtv.com/v1/epg/turnplay/getLivePlayUrlMPP?version=PCweb_1.0&platform=1&buss_id=2000001&channel_id='  # 测试网站
     proxies = {
         'http': 'http://' + proxy,
         'https': 'https://' + proxy
@@ -48,9 +48,9 @@ def test_proxy_and_write(proxy, file_path):
     try:
         response = requests.get(url, proxies=proxies, timeout=10)  # 增加超时时间为10秒
         if response.status_code == 200:
-            with open(file_path, 'w', encoding='utf-8') as file:  # 使用 'w' 模式覆盖写入（'a' 模式追加写入）
+            with open(file_path, 'a', encoding='utf-8') as file:  # 使用 'a' 模式追加写入
                 file.write(proxy + '\n')
-            return True
+                return True
     except requests.exceptions.RequestException as e:
         print(f"Error testing proxy {proxy}: {e}")
     return False
@@ -66,6 +66,8 @@ def get_random_proxy(proxy_pool):
 
 # 构建代理IP池
 def build_proxy_pool(proxies, file_path):
+    # 清空文件，准备写入新的代理IP
+    open(file_path, 'w').close()
     proxy_pool = []
     for proxy in proxies:
         if test_proxy_and_write(proxy, file_path):
@@ -80,13 +82,20 @@ if __name__ == '__main__':
     proxies = crawl_proxies(start_page, end_page)
     file_path = 'proxy_ip.txt'  # 指定一个文件路径来存储可用代理
     proxy_pool = build_proxy_pool(proxies, file_path)  # 构建代理池时，同时写入文件
-    random_proxy = get_random_proxy(proxy_pool)
-    if random_proxy:
-        print(f"获取到有效的代理IP: {random_proxy}")
-    else:
+
+    # 打印所有有效的代理IP
+    for proxy in proxy_pool:
+        print(f"有效代理IP: {proxy}")
+
+    if proxy_pool:
+        print(f"本次扫描共获取到 {len(proxy_pool)} 个有效的代理IP.")
+    if not proxy_pool:
         print("未获取到有效的代理IP.")
-        
-# 使用爬取到的代理ip获取湖南芒果频道列表
+        exit()  # 如果没有有效的代理IP，则退出程序
+
+# 从代理池中随机选择一个代理IP
+random_proxy = get_random_proxy(proxy_pool)
+
 file_path = 'mgtv.txt'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0'
@@ -140,8 +149,9 @@ txt_string = ''.join(txt_lis)
 with open(file_path, 'w', encoding='utf-8') as file:
     file.write('湖南频道,#genre#\n')
     file.write(txt_string)
+    print(txt_string)
+print(f'湖南芒果频道列表已保存至{file_path}！')
 
-print(f'文件已保存至{file_path},欢迎下次使用！！')
 
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieXVleWFuZyI%3D",  # 岳 阳
