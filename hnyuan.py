@@ -1,18 +1,15 @@
 import time
+import os
 import concurrent.futures
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import requests
 import re
-import os
+import base64
+from datetime import datetime
 import threading
 from queue import Queue
-from datetime import datetime
+from pypinyin import lazy_pinyin
 from bs4 import BeautifulSoup
 import random
-import eventlet
-
-eventlet.monkey_patch()
 
 # 爬取国内免费代理IP
 def crawl_proxies(start_page, end_page):
@@ -152,90 +149,29 @@ with open(file_path, 'w', encoding='utf-8') as file:
     print(txt_string)
 print(f'湖南芒果频道列表已保存至{file_path}！')
 
+urls = []
+shengshi_names = ["长沙", "娄底", "衡阳", "常德", "贵港", "南宁", "广州", "深圳", "梅州"]
+pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
+print(f'本次查询{shengshi_names}的酒店频道。')
 
-urls = [
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieXVleWFuZyI%3D",  # 岳 阳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoYW5nc2hhIg%3D%3D",    # 长 沙
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iemh1emhvdSI%3D",  # 株 洲
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iaGVuZ3lhbmci",  # 衡 阳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iY2hlbnpob3Ui",  # 郴 州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieGlhbmd0YW4i",  # 湘 潭
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iY2hhbmdkZSI%3D",  # 常 德
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieWl5YW5nIg%3D%3D",  # 益 阳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ieW9uZ3pob3Ui",  # 永 州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iaHVhaWh1YSI%3D",  # 怀 化
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ic2hhb3lhbmci",  # 邵 阳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ibG91ZGki",  # 娄 底
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iemhhbmdqaWFqaWUi",  # 张家界
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5rmW5Y2XIg%3D%3D",    # 湖 南
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iZ3Vhbmdkb25nIg%3D%3D",    # 广 东
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ic2hlbnpoZW4i",  # 深 圳
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0iZ3Vhbmd6aG91Ig%3D%3D",  # 广 州
-    "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY2l0eT0ibWVpemhvdSI%3D",  # 梅 州
-   
-    # # 株洲
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InpodXpob3UiICYmIG9yZz0iQ0hJTkEgVU5JQ09NIENoaW5hMTY5IEJhY2tib25lIg==",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InpodXpob3UiICYmIG9yZz0iQ2hpbmEgTW9iaWxlIENvbW11bmljYXRpb25zIENvcnBvcmF0aW9uIg==",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InhpYW5ndGFuIiAmJiBvcmc9IkNoaW5hbmV0Ig==",
-    # # 湘潭
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InhpYW5ndGFuIiAmJiBvcmc9IkNISU5BIFVOSUNPTSBDaGluYTE2OSBCYWNrYm9uZSI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InhpYW5ndGFuIiAmJiBvcmc9IkNoaW5hIE1vYmlsZSBDb21tdW5pY2F0aW9ucyBDb3Jwb3JhdGlvbiI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Imhlbmd5YW5nIiAmJiBvcmc9IkNoaW5hbmV0Ig==",
-    # # 衡阳
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Imhlbmd5YW5nIiAmJiBvcmc9IkNISU5BIFVOSUNPTSBDaGluYTE2OSBCYWNrYm9uZSI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Imhlbmd5YW5nIiAmJiBvcmc9IkNoaW5hIE1vYmlsZSBDb21tdW5pY2F0aW9ucyBDb3Jwb3JhdGlvbiI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InNoYW95YW5nIiAmJiBvcmc9IkNoaW5hbmV0Ig==",
-    # # 邵阳
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InNoYW95YW5nIiAmJiBvcmc9IkNISU5BIFVOSUNPTSBDaGluYTE2OSBCYWNrYm9uZSI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InNoYW95YW5nIiAmJiBvcmc9IkNoaW5hIE1vYmlsZSBDb21tdW5pY2F0aW9ucyBDb3Jwb3JhdGlvbiI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoYW5nZGUiICYmIG9yZz0iQ2hpbmFuZXQi",
-    # # 常德
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoYW5nZGUiICYmIG9yZz0iQ0hJTkEgVU5JQ09NIENoaW5hMTY5IEJhY2tib25lIg==",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoYW5nZGUiICYmIG9yZz0iQ2hpbmEgTW9iaWxlIENvbW11bmljYXRpb25zIENvcnBvcmF0aW9uIg==",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InpoYW5namlhamllIiAmJiBvcmc9IkNoaW5hbmV0Ig==",
-    # # 张家界
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InpoYW5namlhamllIiAmJiBvcmc9IkNISU5BIFVOSUNPTSBDaGluYTE2OSBCYWNrYm9uZSI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InpoYW5namlhamllIiAmJiBvcmc9IkNoaW5hIE1vYmlsZSBDb21tdW5pY2F0aW9ucyBDb3Jwb3JhdGlvbiI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InlpeWFuZyIgJiYgb3JnPSJDaGluYW5ldCI=",
-    # # 益阳
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InlpeWFuZyIgJiYgb3JnPSJDSElOQSBVTklDT00gQ2hpbmExNjkgQmFja2JvbmUi",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9InlpeWFuZyIgJiYgb3JnPSJDaGluYSBNb2JpbGUgQ29tbXVuaWNhdGlvbnMgQ29ycG9yYXRpb24i",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoZW56aG91IiAmJiBvcmc9IkNoaW5hbmV0Ig==",
-    # # 郴州
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoZW56aG91IiAmJiBvcmc9IkNISU5BIFVOSUNPTSBDaGluYTE2OSBCYWNrYm9uZSI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImNoZW56aG91IiAmJiBvcmc9IkNoaW5hIE1vYmlsZSBDb21tdW5pY2F0aW9ucyBDb3Jwb3JhdGlvbiI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Inlvbmd6aG91IiAmJiBvcmc9IkNoaW5hbmV0Ig==",
-    # # 永州
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Inlvbmd6aG91IiAmJiBvcmc9IkNISU5BIFVOSUNPTSBDaGluYTE2OSBCYWNrYm9uZSI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Inlvbmd6aG91IiAmJiBvcmc9IkNoaW5hIE1vYmlsZSBDb21tdW5pY2F0aW9ucyBDb3Jwb3JhdGlvbiI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Imh1YWlodWEiICYmIG9yZz0iQ2hpbmFuZXQi",
-    # # 怀化
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Imh1YWlodWEiICYmIG9yZz0iQ0hJTkEgVU5JQ09NIENoaW5hMTY5IEJhY2tib25lIg==",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9Imh1YWlodWEiICYmIG9yZz0iQ2hpbmEgTW9iaWxlIENvbW11bmljYXRpb25zIENvcnBvcmF0aW9uIg==",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImxvdWRpIiAmJiBvcmc9IkNoaW5hbmV0Ig==",
-    # # 娄底
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImxvdWRpIiAmJiBvcmc9IkNISU5BIFVOSUNPTSBDaGluYTE2OSBCYWNrYm9uZSI=",
-    # "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIGNpdHk9ImxvdWRpIiAmJiBvcmc9IkNoaW5hIE1vYmlsZSBDb21tdW5pY2F0aW9ucyBDb3Jwb3JhdGlvbiI=",
-
-    # "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22guangdong%22",    # 广 东
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22shenzhen%22",  # 深 圳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22guangzhou%22",  # 广 州
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22meizhou%22",  # 梅 州
-    # "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22hunan%22",    # 湖 南
-    # "https://www.zoomeye.org/searchResult?q=city:%22changsha%22",  # 长 沙
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22hengyang%22",  # 衡 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22zhuzhou%22",  # 株 洲
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22yueyang%22",  # 岳 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22loudi%22",  # 娄 底
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22chenzhou%22",  # 郴 州
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22xiangtan%22",  # 湘 潭
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22changde%22",  # 常 德
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22yiyang%22",  # 益 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22yongzhou%22",  # 永 州
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22huaihua%22",  # 怀 化
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22shaoyang%22",  # 邵 阳
-    # "https://www.zoomeye.org/searchResult?q=city%3A%22zhangjiajie%22",  # 张家界
-]
+# 定义运营商的名称和对应的组织名称
+operators = {
+    "中国电信": "Chinanet",
+    "中国联通": "CHINA UNICOM China169 Backbone",
+    "中国移动": "China Mobile Communications Corporation"
+}
+for shengshi in pinyin_names:
+    for operator_name, org_name in operators.items():
+        url = 'https://fofa.info/result?qbase64='
+        search_txt = f'"iptv/live/zh_cn.js" && country="CN" && city="{shengshi}" && org="{org_name}"'  # 构造查询市字符串
+        # 将字符串编码为字节流
+        bytes_string = search_txt.encode('utf-8')
+        # 使用 base64 进行编码
+        encoded_search_txt = base64.b64encode(bytes_string).decode('utf-8')
+        url += encoded_search_txt
+        print(f"正在扫描 {shengshi} {operator_name}地址: ")
+        print(f"{url}")
+        urls.append(url)
 
 
 def modify_urls(url):
@@ -267,22 +203,8 @@ def is_url_accessible(url):
 results = []
 
 for url in urls:
-    # 创建一个Chrome WebDriver实例
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-dev-shm-usage')
-
-    driver = webdriver.Chrome(options=chrome_options)
-    # 使用WebDriver访问网页
-    driver.get(url)  # 将网址替换为你要访问的网页地址
-    time.sleep(10)
-    # 获取网页内容
-    page_content = driver.page_source
-
-    # 关闭WebDriver
-    driver.quit()
-
+    response = requests.get(url, headers=headers, timeout=15)
+    page_content = response.text
     # 查找所有符合指定格式的网址
     pattern = r"http://\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+"  # 设置匹配的格式，如http://8.8.8.8:8888
     urls_all = re.findall(pattern, page_content)
@@ -328,8 +250,8 @@ for url in urls:
             # 发送GET请求获取JSON文件，设置超时时间为0.5秒
             ip_start_index = url.find("//") + 2
             ip_end_index = url.find(":", ip_start_index)
-            info = url[ip_start_index:ip_end_index + 5]  # 这里获取 info
-
+            ip_port = url[ip_start_index:ip_end_index + 5]  # 这里获取ip地址和端口
+            print(f"获取到有效的酒店源IP地址：{ip_port}")
             response = requests.get(url, timeout=0.5)
             json_data = response.json()
 
@@ -343,10 +265,10 @@ for url in urls:
                         # 替换频道名称中的特定字符串
                         name = name.replace("中央", "CCTV")
                         name = name.replace("高清", "")
+                        name = name.replace("搞清", "")
                         name = name.replace("HD", "")
                         name = name.replace("标清", "")
                         name = name.replace("超高", "")
-                        name = name.replace("搞清", "")
                         name = name.replace("频道", "")
                         name = name.replace("-", "")
                         name = name.replace(" ", "")
@@ -395,8 +317,6 @@ for url in urls:
                         name = name.replace("CCTV5+赛事", "CCTV5+")
                         name = name.replace("CCTV5+体育", "CCTV5+")
                         name = name.replace("CCTV5赛事", "CCTV5+")
-                        name = name.replace("CCTV5测试", "")
-                        name = name.replace("CCTV9测试", "CCTV5+")
                         name = name.replace("凤凰中文台", "凤凰中文")
                         name = name.replace("凤凰资讯台", "凤凰资讯")
                         name = name.replace("CCTV4K测试）", "CCTV4")
@@ -424,13 +344,13 @@ for url in urls:
                         name = name.replace("湖南电视台", "湖南卫视")
                         name = name.replace("少儿科教", "少儿")
                         name = name.replace("影视剧", "影视")
-                        name = name.replace("影迷电影", "CHC电影")
-                        
+
                         if name and chid and srcid:
                             # 格式化 URL
-                            channel_url = '{name},http://{info}/tsfile/live/{chid}_{srcid}.m3u8'.format(
+                            channel_url = ('{name},http://{ip_port}/tsfile/live/{chid}_{'
+                                           'srcid}.m3u8?key=txiptv&playlive=1&authid=0').format(
                                 name=name,
-                                info=info,
+                                ip_port=ip_port,
                                 chid=chid,
                                 srcid=srcid
                             )
@@ -454,15 +374,30 @@ with open("iptv.txt", 'w', encoding='utf-8') as file:
         file.write(result + "\n")
         print(result)
 
-print("频道列表文件iptv.txt获取完成！")
+print(f"共获取到频道{len(channels)}个，频道列表文件iptv.txt生成完毕！")
+
+
+import eventlet
+
+eventlet.monkey_patch()
 
 # 线程安全的队列，用于存储下载任务
 task_queue = Queue()
 
 # 线程安全的列表，用于存储结果
 results = []
-
+channels = []
 error_channels = []
+
+# 从iptv.txt文件提取cctv频道进行检测
+with open("iptv.txt", 'r', encoding='utf-8') as file:
+    lines = file.readlines()
+    for line in lines:
+        line = line.strip()
+        if line:
+            channel_name, channel_url = line.split(',')
+            if 'CCTV' in channel_name:
+                channels.append((channel_name, channel_url))
 
 
 # 定义工作线程函数
@@ -472,7 +407,7 @@ def worker():
         channel_name, channel_url = task_queue.get()
         try:
             channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])  # m3u8链接前缀
-            lines = requests.get(channel_url, timeout=1).text.strip().split('\n')  # 获取m3u8文件内容
+            lines = requests.get(channel_url).text.strip().split('\n')  # 获取m3u8文件内容
             ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]  # 获取m3u8文件下视频流后缀
             ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])  # m3u8链接前缀
             ts_url = channel_url_t + ts_lists[0]  # 拼接单个视频片段下载链接
@@ -480,7 +415,116 @@ def worker():
             # 多获取的视频数据进行5秒钟限制
             with eventlet.Timeout(5, False):
                 start_time = time.time()
-                content = requests.get(ts_url, timeout=1).content
+                content = requests.get(ts_url).content
+                end_time = time.time()
+                response_time = (end_time - start_time) * 1
+
+            if content:
+                with open(ts_lists_0, 'ab') as f:
+                    f.write(content)  # 写入文件
+                file_size = len(content)
+                # print(f"文件大小：{file_size} 字节")
+                download_speed = file_size / response_time / 1024
+                # print(f"下载速度：{download_speed:.3f} kB/s")
+                normalized_speed = min(max(download_speed / 1024, 0.001), 100)  # 将速率从kB/s转换为MB/s并限制在1~100之间
+                # print(f"标准化后的速率：{normalized_speed:.3f} MB/s")
+
+                # 删除下载的文件
+                os.remove(ts_lists_0)
+                result = channel_name, channel_url, f"{normalized_speed:.3f} MB/s"
+                results.append(result)
+                numberx = (len(results) + len(error_channels)) / len(channels) * 100
+                print(
+                    f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
+        except:
+            error_channel = channel_name, channel_url
+            error_channels.append(error_channel)
+            numberx = (len(results) + len(error_channels)) / len(channels) * 100
+            print(
+                f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
+        # 标记任务完成
+        task_queue.task_done()
+
+
+# 创建多个工作线程
+num_threads = 10
+for _ in range(num_threads):
+    t = threading.Thread(target=worker, daemon=True)
+    t.start()
+
+# 添加下载任务到队列
+for channel in channels:
+    task_queue.put(channel)
+
+# 等待所有任务完成
+task_queue.join()
+
+
+def channel_key(channel_name):
+    match = re.search(r'\d+', channel_name)
+    if match:
+        return int(match.group())
+    else:
+        return float('inf')  # 返回一个无穷大的数字作为关键字
+
+
+# 对频道进行排序
+results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
+results.sort(key=lambda x: channel_key(x[0]))
+
+result_counter = 20  # 每个频道需要的个数
+
+# 写入cctv.txt和.m3u文件
+with open("cctv.txt", 'w', encoding='utf-8') as file:
+    channel_counters = {}
+    file.write('央视频道,#genre#\n')
+    for result in results:
+        channel_name, channel_url, speed = result
+        if 'CCTV' in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"{channel_name},{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"{channel_name},{channel_url}\n")
+                channel_counters[channel_name] = 1
+
+# 线程安全的队列，用于存储下载任务
+task_queue = Queue()
+
+# 线程安全的列表，用于存储结果
+results = []
+
+channels = []
+error_channels = []
+
+with open("iptv.txt", 'r', encoding='utf-8') as file:
+    lines = file.readlines()
+    for line in lines:
+        line = line.strip()
+        if line:
+            channel_name, channel_url = line.split(',')
+            if 'CCTV' not in channel_name:
+                channels.append((channel_name, channel_url))
+
+# 定义工作线程函数
+def worker():
+    while True:
+        # 从队列中获取一个任务
+        channel_name, channel_url = task_queue.get()
+        try:
+            channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])  # m3u8链接前缀
+            lines = requests.get(channel_url).text.strip().split('\n')  # 获取m3u8文件内容
+            ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]  # 获取m3u8文件下视频流后缀
+            ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])  # m3u8链接前缀
+            ts_url = channel_url_t + ts_lists[0]  # 拼接单个视频片段下载链接
+
+            # 多获取的视频数据进行5秒钟限制
+            with eventlet.Timeout(5, False):
+                start_time = time.time()
+                content = requests.get(ts_url).content
                 end_time = time.time()
                 response_time = (end_time - start_time) * 1
 
@@ -515,8 +559,10 @@ def worker():
 # 创建多个工作线程
 num_threads = 10
 for _ in range(num_threads):
-    t = threading.Thread(target=worker, daemon=True)  # 将工作线程设置为守护线程
+    t = threading.Thread(target=worker, daemon=True)
+    # t = threading.Thread(target=worker, args=(event,len(channels)))  # 将工作线程设置为守护线程
     t.start()
+    # event.set()
 
 # 添加下载任务到队列
 for channel in channels:
@@ -536,16 +582,18 @@ def channel_key(channel_name):
 
 # 对频道进行排序
 results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
-results.sort(key=lambda x: channel_key(x[0]))
+# results.sort(key=lambda x: channel_key(x[0]))
+# now_today = datetime.date.today()
 
 result_counter = 20  # 每个频道需要的个数
 
+# 生成txt文件
 with open("iptvlist.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
-    file.write('央卫频道,#genre#\n')
+    file.write('卫视频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if 'CCTV' in channel_name or '卫视' in channel_name or '重温经典' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name or 'CHC' in channel_name:
+        if '卫视' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name or 'CHC' in channel_name or '重温经典' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -556,23 +604,8 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
 
-    # channel_counters = {}
-    # file.write('卫视频道,#genre#\n')
-    # for result in results:
-    #     channel_name, channel_url, speed = result
-    #     if '卫视' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name or '重温经典' in channel_name:
-    #         if channel_name in channel_counters:
-    #             if channel_counters[channel_name] >= result_counter:
-    #                 continue
-    #             else:
-    #                 file.write(f"{channel_name},{channel_url}\n")
-    #                 channel_counters[channel_name] += 1
-    #         else:
-    #             file.write(f"{channel_name},{channel_url}\n")
-    #             channel_counters[channel_name] = 1
-
     channel_counters = {}
-    file.write('湖南频道,#genre#\n')
+    file.write('省内频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
         if '湖南' in channel_name or '长沙' in channel_name or '金鹰' in channel_name or '先锋乒羽' in channel_name:
@@ -585,23 +618,28 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-    # file.write('其他频道,#genre#\n')
-    # for result in results:
-    #     channel_name, channel_url, speed = result
-    #     if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
-    #         if channel_name in channel_counters:
-    #             if channel_counters[channel_name] >= result_counter:
-    #                 continue
-    #             else:
-    #                 file.write(f"{channel_name},{channel_url}\n")
-    #                 channel_counters[channel_name] += 1
-    #         else:
-    #             file.write(f"{channel_name},{channel_url}\n")
-    #             channel_counters[channel_name] = 1
+
+    channel_counters = {}
+    file.write('其他频道,#genre#\n')
+    for result in results:
+        channel_name, channel_url, speed = result
+        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in \
+                channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '重温经典' not in channel_nameand \
+                and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"{channel_name},{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"{channel_name},{channel_url}\n")
+                channel_counters[channel_name] = 1
+
 
 # 合并自定义频道文件内容
 file_contents = []
-file_paths = ["YD-IPTV.txt", "iptvlist.txt", "mgtv.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt", "cctv.txt", "iptvlist.txt", "mgtv.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -618,8 +656,9 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
     output.write(f"{now.strftime("%H:%M:%S")},url\n")
 
 os.remove("iptv.txt")
+os.remove(""cctv.txt"")
 os.remove("iptvlist.txt")
-# os.remove("mgtv.txt")
+os.remove("mgtv.txt")
 os.remove("gangaotai.txt")
 
-print("任务运行完毕，分类频道列表可查看文件夹内hunan.txt文件！")
+print("任务运行完毕，分类频道列表可查看文件夹内iptv_list.txt文件！")
