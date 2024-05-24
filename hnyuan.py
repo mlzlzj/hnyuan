@@ -149,6 +149,9 @@ with open(file_path, 'w', encoding='utf-8') as file:
     print(txt_string)
 print(f'湖南芒果频道列表已保存至{file_path}！')
 
+headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+    }
 urls = []
 shengshi_names = ["长沙", "娄底", "衡阳", "常德", "贵港", "南宁", "广州", "深圳", "梅州"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
