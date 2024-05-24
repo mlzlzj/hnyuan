@@ -656,7 +656,7 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
     output.write(f"{now.strftime("%H:%M:%S")},url\n")
 
 os.remove("iptv.txt")
-os.remove(""cctv.txt"")
+os.remove("cctv.txt")
 os.remove("iptvlist.txt")
 os.remove("mgtv.txt")
 os.remove("gangaotai.txt")
