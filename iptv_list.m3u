@@ -366,25 +366,23 @@ http://tvgslb.hn.chinamobile.com:8089/180000001001/00000001000000000003000000104
 #EXTINF:-1 group-title="移动专网",中国天气
 http://tvgslb.hn.chinamobile.com:8089/180000001002/00000001000000000004000000182438/main.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV1
-http://113.64.94.185:9901/tsfile/live/0001_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV1
 http://223.151.51.74:9901/tsfile/live/0001_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV1
-http://175.10.228.184:8081/tsfile/live/0001_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV1
-http://175.10.228.184:8081/tsfile/live/0001_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV1
-http://119.125.104.11:9901/tsfile/live/1020_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV1
-http://222.241.154.37:9901/tsfile/live/23001_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0001_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV1
 http://124.228.160.211:9901/tsfile/live/0017_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV1
+http://175.10.228.184:8081/tsfile/live/0001_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV1
+http://42.48.17.188:9901/tsfile/live/37201_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV1
 http://222.241.154.37:9901/tsfile/live/23001_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV1
+http://124.231.212.247:9999/tsfile/live/0001_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV1
 http://223.159.8.103:8099/tsfile/live/0001_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV1
-http://124.231.212.247:9999/tsfile/live/0001_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23001_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV1
 http://61.141.202.118:9901/tsfile/live/0001_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV1
@@ -392,129 +390,145 @@ http://119.125.104.17:9901/tsfile/live/0001_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
 http://223.151.51.74:9901/tsfile/live/0002_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
-http://113.64.94.185:9901/tsfile/live/0002_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0002_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
 http://175.10.228.184:8081/tsfile/live/0002_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
-http://175.10.228.184:8081/tsfile/live/0002_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV2
-http://119.125.104.11:9901/tsfile/live/1021_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37202_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
 http://222.241.154.37:9901/tsfile/live/23002_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
 http://124.228.160.211:9901/tsfile/live/0018_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
-http://222.241.154.37:9901/tsfile/live/23002_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0002_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
 http://223.159.8.103:8099/tsfile/live/0002_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
-http://124.231.212.247:9999/tsfile/live/0002_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23002_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV2
+http://113.64.94.185:9901/tsfile/live/0002_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV2
+http://119.125.104.11:9901/tsfile/live/1021_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV2
 http://119.125.104.17:9901/tsfile/live/0002_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV3
+http://61.141.202.118:9901/tsfile/live/0003_2.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV3
 http://223.151.51.74:9901/tsfile/live/0003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV3
-http://175.10.228.184:8081/tsfile/live/0003_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0003_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV3
+http://42.48.17.188:9901/tsfile/live/37203_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV3
 http://175.10.228.184:8081/tsfile/live/0003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV3
-http://119.125.104.11:9901/tsfile/live/1022_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV3
 http://222.241.154.37:9901/tsfile/live/23003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV3
-http://222.241.154.37:9901/tsfile/live/23003_1.m3u8
+http://124.228.160.211:9901/tsfile/live/0019_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV3
+http://124.231.212.247:9999/tsfile/live/0003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV3
 http://223.159.8.103:8099/tsfile/live/0003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV3
-http://124.231.212.247:9999/tsfile/live/0003_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV3
-http://124.231.212.247:9999/tsfile/live/0003_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV3
-http://61.141.202.118:9901/tsfile/live/0003_2.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV3
-http://119.125.104.17:9901/tsfile/live/0003_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV3
 http://113.64.94.185:9901/tsfile/live/0003_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV3
+http://119.125.104.11:9901/tsfile/live/1022_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV3
+http://119.125.104.17:9901/tsfile/live/0003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV4
-http://223.151.51.74:9901/tsfile/live/0004_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV4
-http://124.231.212.247:9999/tsfile/live/0004_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV4
-http://175.10.228.184:8081/tsfile/live/0004_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0004_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV4
 http://119.125.104.11:9901/tsfile/live/1023_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV4
-http://222.241.154.37:9901/tsfile/live/23004_1.m3u8
+http://223.151.51.74:9901/tsfile/live/0004_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV4
+http://42.48.17.188:9901/tsfile/live/37204_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV4
+http://175.10.228.184:8081/tsfile/live/0004_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV4
 http://222.241.154.37:9901/tsfile/live/23004_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV4
+http://175.10.228.184:8081/tsfile/live/0004_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV4
+http://124.231.212.247:9999/tsfile/live/0004_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV4
 http://223.159.8.103:8099/tsfile/live/0004_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV4
+http://222.241.154.37:9901/tsfile/live/23004_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV4
 http://124.231.212.247:9999/tsfile/live/0004_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV4
 http://119.125.104.17:9901/tsfile/live/0004_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV4
-http://113.64.94.185:9901/tsfile/live/0004_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV5
 http://223.151.51.74:9901/tsfile/live/0005_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5
-http://222.241.154.37:9901/tsfile/live/23005_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5
-http://175.10.228.184:8081/tsfile/live/0005_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5
-http://175.10.228.184:8081/tsfile/live/0005_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5
-http://119.125.104.11:9901/tsfile/live/1024_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5
-http://124.231.212.247:9999/tsfile/live/0005_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5
-http://222.241.154.37:9901/tsfile/live/23005_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5
-http://124.228.160.211:9901/tsfile/live/0005_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5
-http://223.159.8.103:8099/tsfile/live/0005_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV5
 http://124.231.212.247:9999/tsfile/live/0005_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV5
 http://113.64.94.185:9901/tsfile/live/0005_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5
+http://42.48.17.188:9901/tsfile/live/37205_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5
+http://222.241.154.37:9901/tsfile/live/23005_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5
+http://175.10.228.184:8081/tsfile/live/0005_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5
+http://175.10.228.184:8081/tsfile/live/0005_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5
+http://223.159.8.103:8099/tsfile/live/0005_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5
+http://222.241.154.37:9901/tsfile/live/23005_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5
+http://124.231.212.247:9999/tsfile/live/0005_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5
+http://119.125.104.11:9901/tsfile/live/1024_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5
+http://119.125.104.17:9901/tsfile/live/0005_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV5+
 http://124.231.212.247:9999/tsfile/live/1114_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5+
-http://119.125.104.11:9901/tsfile/live/1025_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5+
-http://222.241.154.37:9901/tsfile/live/23018_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV5+
 http://222.241.154.37:9901/tsfile/live/23018_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV5+
 http://124.228.160.211:9901/tsfile/live/0016_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV5+
-http://124.231.212.247:9999/tsfile/live/1114_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23018_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV5+
+http://119.125.104.11:9901/tsfile/live/1025_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV5+
 http://119.125.104.17:9901/tsfile/live/0016_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV5+
-http://113.64.94.185:9901/tsfile/live/0016_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV6
 http://223.151.51.74:9901/tsfile/live/0006_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV6
+http://113.64.94.185:9901/tsfile/live/0006_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV6
+http://124.228.160.211:9901/tsfile/live/0006_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV6
 http://175.10.228.184:8081/tsfile/live/0006_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV6
-http://119.125.104.11:9901/tsfile/live/1026_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37206_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV6
 http://175.10.228.184:8081/tsfile/live/0006_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV6
-http://222.241.154.37:9901/tsfile/live/23006_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV6
-http://124.231.212.247:9999/tsfile/live/0006_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV6
 http://222.241.154.37:9901/tsfile/live/23006_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV6
 http://223.159.8.103:8099/tsfile/live/0006_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV6
+http://222.241.154.37:9901/tsfile/live/23006_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV6
 http://124.231.212.247:9999/tsfile/live/0006_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV6
+http://124.231.212.247:9999/tsfile/live/0006_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV6
+http://119.125.104.11:9901/tsfile/live/1026_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV6
 http://119.125.104.17:9901/tsfile/live/0006_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV7
 http://223.151.51.74:9901/tsfile/live/0007_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV7
+http://222.241.154.37:9901/tsfile/live/23007_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV7
 http://175.10.228.184:8081/tsfile/live/0007_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV7
@@ -522,35 +536,41 @@ http://124.231.212.247:9999/tsfile/live/0007_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV7
 http://175.10.228.184:8081/tsfile/live/0007_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV7
-http://222.241.154.37:9901/tsfile/live/23007_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV7
-http://222.241.154.37:9901/tsfile/live/23007_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV7
-http://124.228.160.211:9901/tsfile/live/0007_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV7
 http://223.159.8.103:8099/tsfile/live/0007_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV7
-http://119.125.104.17:9901/tsfile/live/0007_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23007_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV7
+http://124.231.212.247:9999/tsfile/live/0007_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV7
 http://113.64.94.185:9901/tsfile/live/0007_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV8
-http://223.151.51.74:9901/tsfile/live/0008_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV8
-http://175.10.228.184:8081/tsfile/live/0008_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV8
-http://175.10.228.184:8081/tsfile/live/0008_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV7
+http://119.125.104.11:9901/tsfile/live/1027_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV7
+http://119.125.104.17:9901/tsfile/live/0007_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV8
 http://119.125.104.11:9901/tsfile/live/1028_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV8
+http://42.48.17.188:9901/tsfile/live/37208_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV8
+http://223.151.51.74:9901/tsfile/live/0008_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV8
+http://124.228.160.211:9901/tsfile/live/0008_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV8
+http://175.10.228.184:8081/tsfile/live/0008_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV8
+http://222.241.154.37:9901/tsfile/live/23008_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV8
+http://175.10.228.184:8081/tsfile/live/0008_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV8
 http://124.231.212.247:9999/tsfile/live/0008_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV8
-http://222.241.154.37:9901/tsfile/live/23008_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV8
-http://222.241.154.37:9901/tsfile/live/23008_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV8
 http://223.159.8.103:8099/tsfile/live/0008_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV8
-http://61.141.202.118:9901/tsfile/live/0008_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23008_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV8
+http://124.231.212.247:9999/tsfile/live/0008_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV8
+http://113.64.94.185:9901/tsfile/live/0008_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV8
 http://119.125.104.17:9901/tsfile/live/0008_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV9
@@ -560,157 +580,171 @@ http://223.151.51.74:9901/tsfile/live/0009_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV9
 http://175.10.228.184:8081/tsfile/live/0009_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV9
+http://42.48.17.188:9901/tsfile/live/37209_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV9
 http://175.10.228.184:8081/tsfile/live/0009_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV9
-http://222.241.154.37:9901/tsfile/live/23009_1.m3u8
+http://124.228.160.211:9901/tsfile/live/0009_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV9
 http://222.241.154.37:9901/tsfile/live/23009_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV9
+http://124.231.212.247:9999/tsfile/live/0009_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV9
 http://223.159.8.103:8099/tsfile/live/0009_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV9
-http://119.125.104.17:9901/tsfile/live/0009_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0009_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV9
 http://119.125.104.11:9901/tsfile/live/1029_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV9
-http://113.64.94.185:9901/tsfile/live/0009_1.m3u8
+http://119.125.104.17:9901/tsfile/live/0009_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV10
 http://223.151.51.74:9901/tsfile/live/0010_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV10
-http://175.10.228.184:8081/tsfile/live/0010_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0010_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV10
+http://124.228.160.211:9901/tsfile/live/0010_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV10
 http://175.10.228.184:8081/tsfile/live/0010_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV10
-http://119.125.104.11:9901/tsfile/live/1030_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV10
-http://124.231.212.247:9999/tsfile/live/0010_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0010_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV10
 http://222.241.154.37:9901/tsfile/live/23010_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV10
+http://124.231.212.247:9999/tsfile/live/0010_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV10
 http://223.159.8.103:8099/tsfile/live/0010_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV10
 http://222.241.154.37:9901/tsfile/live/23010_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV10
-http://61.141.202.118:9901/tsfile/live/0010_1.m3u8
+http://119.125.104.11:9901/tsfile/live/1030_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV10
 http://119.125.104.17:9901/tsfile/live/0010_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV10
-http://113.64.94.185:9901/tsfile/live/0010_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV11
 http://223.151.51.74:9901/tsfile/live/0011_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV11
-http://113.64.94.185:9901/tsfile/live/0011_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0011_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV11
 http://175.10.228.184:8081/tsfile/live/0011_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV11
+http://124.228.160.211:9901/tsfile/live/0011_2.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV11
+http://42.48.17.188:9901/tsfile/live/37211_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV11
 http://175.10.228.184:8081/tsfile/live/0011_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV11
 http://222.241.154.37:9901/tsfile/live/23011_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV11
 http://124.231.212.247:9999/tsfile/live/0011_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV11
-http://222.241.154.37:9901/tsfile/live/23011_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV11
 http://223.159.8.103:8099/tsfile/live/0011_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV11
-http://124.231.212.247:9999/tsfile/live/0011_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV11
-http://61.141.202.118:9901/tsfile/live/0011_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23011_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV11
 http://119.125.104.17:9901/tsfile/live/0011_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV12
 http://223.151.51.74:9901/tsfile/live/0012_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV12
-http://175.10.228.184:8081/tsfile/live/0012_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV12
-http://175.10.228.184:8081/tsfile/live/0012_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV12
-http://119.125.104.11:9901/tsfile/live/1032_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37212_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV12
 http://222.241.154.37:9901/tsfile/live/23012_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV12
-http://222.241.154.37:9901/tsfile/live/23012_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0012_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV12
-http://124.228.160.211:9901/tsfile/live/0012_2.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV12
-http://223.159.8.103:8099/tsfile/live/0012_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0012_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV12
 http://124.231.212.247:9999/tsfile/live/0012_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV12
-http://61.141.202.118:9901/tsfile/live/0012_1.m3u8
+http://223.159.8.103:8099/tsfile/live/0012_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV12
+http://222.241.154.37:9901/tsfile/live/23012_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV12
+http://113.64.94.185:9901/tsfile/live/0012_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV12
+http://119.125.104.11:9901/tsfile/live/1032_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV12
 http://119.125.104.17:9901/tsfile/live/0012_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV13
-http://119.125.104.17:9901/tsfile/live/0013_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV13
-http://175.10.228.184:8081/tsfile/live/0013_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV13
-http://175.10.228.184:8081/tsfile/live/0013_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV13
-http://119.125.104.11:9901/tsfile/live/1033_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV13
-http://222.241.154.37:9901/tsfile/live/23013_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV13
-http://222.241.154.37:9901/tsfile/live/23013_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0013_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV13
 http://124.228.160.211:9901/tsfile/live/0013_2.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV13
+http://175.10.228.184:8081/tsfile/live/0013_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV13
+http://222.241.154.37:9901/tsfile/live/23013_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV13
+http://175.10.228.184:8081/tsfile/live/0013_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV13
+http://124.231.212.247:9999/tsfile/live/0013_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV13
 http://223.159.8.103:8099/tsfile/live/0013_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV13
-http://124.231.212.247:9999/tsfile/live/0013_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23013_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV13
-http://124.231.212.247:9999/tsfile/live/0013_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0013_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV13
+http://119.125.104.11:9901/tsfile/live/1033_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV13
+http://119.125.104.17:9901/tsfile/live/0013_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV14
-http://175.10.228.184:8081/tsfile/live/0014_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0014_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV14
-http://175.10.228.184:8081/tsfile/live/0014_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV14
-http://222.241.154.37:9901/tsfile/live/23014_1.m3u8
+http://119.125.104.11:9901/tsfile/live/1034_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV14
 http://124.231.212.247:9999/tsfile/live/0014_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV14
-http://222.241.154.37:9901/tsfile/live/23014_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV14
 http://124.228.160.211:9901/tsfile/live/0014_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV14
-http://223.159.8.103:8099/tsfile/live/0014_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0014_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV14
+http://42.48.17.188:9901/tsfile/live/37214_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV14
+http://222.241.154.37:9901/tsfile/live/23014_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV14
 http://124.231.212.247:9999/tsfile/live/0014_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV14
+http://223.159.8.103:8099/tsfile/live/0014_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV14
+http://222.241.154.37:9901/tsfile/live/23014_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV14
 http://61.141.202.118:9901/tsfile/live/0125_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV14
 http://119.125.104.17:9901/tsfile/live/0014_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV14
-http://119.125.104.11:9901/tsfile/live/1034_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV14
-http://113.64.94.185:9901/tsfile/live/0014_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV15
-http://223.151.51.74:9901/tsfile/live/0015_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV15
-http://175.10.228.184:8081/tsfile/live/0015_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV15
-http://222.241.154.37:9901/tsfile/live/23015_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV15
-http://175.10.228.184:8081/tsfile/live/0015_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV15
-http://119.125.104.11:9901/tsfile/live/1035_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV15
-http://124.228.160.211:9901/tsfile/live/0015_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV15
-http://222.241.154.37:9901/tsfile/live/23015_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CCTV15
-http://223.159.8.103:8099/tsfile/live/0015_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV15
 http://124.231.212.247:9999/tsfile/live/0015_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV15
-http://119.125.104.17:9901/tsfile/live/0015_1.m3u8
+http://223.151.51.74:9901/tsfile/live/0015_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV15
 http://113.64.94.185:9901/tsfile/live/0015_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://42.48.17.188:9901/tsfile/live/37215_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://175.10.228.184:8081/tsfile/live/0015_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://222.241.154.37:9901/tsfile/live/23015_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://175.10.228.184:8081/tsfile/live/0015_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://124.228.160.211:9901/tsfile/live/0015_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://223.159.8.103:8099/tsfile/live/0015_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://222.241.154.37:9901/tsfile/live/23015_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://124.231.212.247:9999/tsfile/live/0015_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://119.125.104.11:9901/tsfile/live/1035_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV15
+http://119.125.104.17:9901/tsfile/live/0015_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV16
+http://222.241.154.37:9901/tsfile/live/23016_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV16
 http://222.241.154.37:9901/tsfile/live/23016_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV16
 http://124.231.212.247:9999/tsfile/live/1084_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV16
-http://222.241.154.37:9901/tsfile/live/23016_1.m3u8
+http://124.231.212.247:9999/tsfile/live/1084_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV16
+http://113.64.94.185:9901/tsfile/live/1008_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV16
 http://119.125.104.17:9901/tsfile/live/1008_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV17
@@ -718,85 +752,97 @@ http://223.151.51.74:9901/tsfile/live/1001_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV17
 http://222.241.154.37:9901/tsfile/live/23017_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV17
+http://124.231.212.247:9999/tsfile/live/0019_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV17
+http://124.228.160.211:9901/tsfile/live/0019_2.m3u8
+#EXTINF:-1 group-title="央卫频道",CCTV17
 http://222.241.154.37:9901/tsfile/live/23017_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CCTV17
 http://124.231.212.247:9999/tsfile/live/0019_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CHC动作电影
+http://113.64.94.185:9901/tsfile/live/1028_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CHC动作电影
+http://42.48.17.188:9901/tsfile/live/37230_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CHC动作电影
 http://119.125.104.17:9901/tsfile/live/1028_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CHC家庭电影
 http://119.125.104.17:9901/tsfile/live/1027_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CHC家庭电影
-http://113.64.94.185:9901/tsfile/live/1027_1.m3u8
+#EXTINF:-1 group-title="央卫频道",CHC电影
+http://42.48.17.188:9901/tsfile/live/37231_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CHC电影
 http://124.231.212.247:9999/tsfile/live/1110_1.m3u8
 #EXTINF:-1 group-title="央卫频道",CHC电影
 http://124.231.212.247:9999/tsfile/live/1110_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CHC电影
-http://119.125.104.17:9901/tsfile/live/1023_1.m3u8
-#EXTINF:-1 group-title="央卫频道",CHC电影
-http://113.64.94.185:9901/tsfile/live/1023_1.m3u8
-#EXTINF:-1 group-title="央卫频道",三沙卫视
-http://119.125.104.17:9901/tsfile/live/1020_1.m3u8
 #EXTINF:-1 group-title="央卫频道",三沙卫视
 http://113.64.94.185:9901/tsfile/live/1020_1.m3u8
+#EXTINF:-1 group-title="央卫频道",三沙卫视
+http://119.125.104.17:9901/tsfile/live/1020_1.m3u8
 #EXTINF:-1 group-title="央卫频道",上海卫视
 http://223.151.51.74:9901/tsfile/live/0107_1.m3u8
 #EXTINF:-1 group-title="央卫频道",上海卫视
-http://124.231.212.247:9999/tsfile/live/0107_1.m3u8
+http://119.125.104.11:9901/tsfile/live/1051_1.m3u8
+#EXTINF:-1 group-title="央卫频道",上海卫视
+http://113.64.94.185:9901/tsfile/live/1037_1.m3u8
 #EXTINF:-1 group-title="央卫频道",上海卫视
 http://175.10.228.184:8081/tsfile/live/0107_1.m3u8
-#EXTINF:-1 group-title="央卫频道",上海卫视
-http://175.10.228.184:8081/tsfile/live/0107_1.m3u8
-#EXTINF:-1 group-title="央卫频道",上海卫视
-http://222.241.154.37:9901/tsfile/live/23033_1.m3u8
-#EXTINF:-1 group-title="央卫频道",上海卫视
-http://124.231.212.247:9999/tsfile/live/0107_1.m3u8
-#EXTINF:-1 group-title="央卫频道",上海卫视
-http://222.241.154.37:9901/tsfile/live/23033_1.m3u8
 #EXTINF:-1 group-title="央卫频道",上海卫视
 http://124.228.160.211:9901/tsfile/live/1005_1.m3u8
 #EXTINF:-1 group-title="央卫频道",上海卫视
+http://175.10.228.184:8081/tsfile/live/0107_1.m3u8
+#EXTINF:-1 group-title="央卫频道",上海卫视
+http://222.241.154.37:9901/tsfile/live/23033_1.m3u8
+#EXTINF:-1 group-title="央卫频道",上海卫视
+http://124.231.212.247:9999/tsfile/live/0107_1.m3u8
+#EXTINF:-1 group-title="央卫频道",上海卫视
+http://124.231.212.247:9999/tsfile/live/0107_1.m3u8
+#EXTINF:-1 group-title="央卫频道",上海卫视
 http://223.159.8.103:8099/tsfile/live/0107_1.m3u8
+#EXTINF:-1 group-title="央卫频道",上海卫视
+http://222.241.154.37:9901/tsfile/live/23033_1.m3u8
 #EXTINF:-1 group-title="央卫频道",上海卫视
 http://61.141.202.118:9901/tsfile/live/0107_1.m3u8
 #EXTINF:-1 group-title="央卫频道",上海卫视
 http://119.125.104.17:9901/tsfile/live/1037_1.m3u8
-#EXTINF:-1 group-title="央卫频道",上海卫视
-http://113.64.94.185:9901/tsfile/live/1037_1.m3u8
-#EXTINF:-1 group-title="央卫频道",东南卫视
-http://124.231.212.247:9999/tsfile/live/0137_1.m3u8
-#EXTINF:-1 group-title="央卫频道",东南卫视
-http://175.10.228.184:8081/tsfile/live/0137_1.m3u8
-#EXTINF:-1 group-title="央卫频道",东南卫视
-http://175.10.228.184:8081/tsfile/live/0137_1.m3u8
 #EXTINF:-1 group-title="央卫频道",东南卫视
 http://113.64.94.185:9901/tsfile/live/1050_1.m3u8
 #EXTINF:-1 group-title="央卫频道",东南卫视
-http://119.125.104.17:9901/tsfile/live/1050_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0137_1.m3u8
 #EXTINF:-1 group-title="央卫频道",东南卫视
 http://124.228.160.211:9901/tsfile/live/0137_1.m3u8
 #EXTINF:-1 group-title="央卫频道",东南卫视
-http://119.125.104.11:9901/tsfile/live/1070_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0137_1.m3u8
+#EXTINF:-1 group-title="央卫频道",东南卫视
+http://222.241.154.37:9901/tsfile/live/23037_1.m3u8
+#EXTINF:-1 group-title="央卫频道",东南卫视
+http://119.125.104.17:9901/tsfile/live/1050_1.m3u8
 #EXTINF:-1 group-title="央卫频道",东南卫视
 http://124.231.212.247:9999/tsfile/live/0137_1.m3u8
 #EXTINF:-1 group-title="央卫频道",东南卫视
-http://222.241.154.37:9901/tsfile/live/23037_1.m3u8
-#EXTINF:-1 group-title="央卫频道",东南卫视
-http://222.241.154.37:9901/tsfile/live/23037_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0137_1.m3u8
 #EXTINF:-1 group-title="央卫频道",东南卫视
 http://223.159.8.103:8099/tsfile/live/0137_1.m3u8
+#EXTINF:-1 group-title="央卫频道",东南卫视
+http://222.241.154.37:9901/tsfile/live/23037_1.m3u8
+#EXTINF:-1 group-title="央卫频道",东南卫视
+http://119.125.104.11:9901/tsfile/live/1070_1.m3u8
 #EXTINF:-1 group-title="央卫频道",云南卫视
 http://175.10.228.184:8081/tsfile/live/0119_1.m3u8
 #EXTINF:-1 group-title="央卫频道",云南卫视
 http://175.10.228.184:8081/tsfile/live/0119_1.m3u8
+#EXTINF:-1 group-title="央卫频道",云南卫视
+http://222.241.154.37:9901/tsfile/live/23043_1.m3u8
+#EXTINF:-1 group-title="央卫频道",云南卫视
+http://124.228.160.211:9901/tsfile/live/0119_1.m3u8
+#EXTINF:-1 group-title="央卫频道",云南卫视
+http://124.231.212.247:9999/tsfile/live/0119_1.m3u8
+#EXTINF:-1 group-title="央卫频道",云南卫视
+http://223.159.8.103:8099/tsfile/live/0119_1.m3u8
 #EXTINF:-1 group-title="央卫频道",云南卫视
 http://222.241.154.37:9901/tsfile/live/23043_1.m3u8
 #EXTINF:-1 group-title="央卫频道",云南卫视
 http://124.231.212.247:9999/tsfile/live/0119_1.m3u8
 #EXTINF:-1 group-title="央卫频道",云南卫视
-http://222.241.154.37:9901/tsfile/live/23043_1.m3u8
-#EXTINF:-1 group-title="央卫频道",云南卫视
-http://223.159.8.103:8099/tsfile/live/0119_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0119_1.m3u8
 #EXTINF:-1 group-title="央卫频道",云南卫视
 http://119.125.104.17:9901/tsfile/live/0119_1.m3u8
 #EXTINF:-1 group-title="央卫频道",兵团卫视
@@ -806,235 +852,251 @@ http://124.231.212.247:9999/tsfile/live/0115_1.m3u8
 #EXTINF:-1 group-title="央卫频道",兵团卫视
 http://124.231.212.247:9999/tsfile/live/0115_1.m3u8
 #EXTINF:-1 group-title="央卫频道",兵团卫视
-http://119.125.104.11:9901/tsfile/live/1087_1.m3u8
-#EXTINF:-1 group-title="央卫频道",兵团卫视
 http://113.64.94.185:9901/tsfile/live/0115_1.m3u8
+#EXTINF:-1 group-title="央卫频道",兵团卫视
+http://119.125.104.11:9901/tsfile/live/1087_1.m3u8
 #EXTINF:-1 group-title="央卫频道",内蒙古卫视
 http://175.10.228.184:8081/tsfile/live/0109_1.m3u8
 #EXTINF:-1 group-title="央卫频道",内蒙古卫视
 http://175.10.228.184:8081/tsfile/live/0109_1.m3u8
+#EXTINF:-1 group-title="央卫频道",内蒙古卫视
+http://113.64.94.185:9901/tsfile/live/0109_1.m3u8
 #EXTINF:-1 group-title="央卫频道",内蒙古卫视
 http://119.125.104.17:9901/tsfile/live/0109_1.m3u8
 #EXTINF:-1 group-title="央卫频道",内蒙古卫视
 http://124.231.212.247:9999/tsfile/live/0109_1.m3u8
 #EXTINF:-1 group-title="央卫频道",内蒙古卫视
-http://113.64.94.185:9901/tsfile/live/0109_1.m3u8
-#EXTINF:-1 group-title="央卫频道",凤凰中文
-http://119.125.104.17:9901/tsfile/live/1019_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0109_1.m3u8
 #EXTINF:-1 group-title="央卫频道",凤凰中文
 http://113.64.94.185:9901/tsfile/live/1019_1.m3u8
+#EXTINF:-1 group-title="央卫频道",凤凰中文
+http://119.125.104.17:9901/tsfile/live/1019_1.m3u8
 #EXTINF:-1 group-title="央卫频道",凤凰卫视
 http://119.125.104.11:9901/tsfile/live/1037_1.m3u8
 #EXTINF:-1 group-title="央卫频道",北京卫视
 http://223.151.51.74:9901/tsfile/live/0122_1.m3u8
 #EXTINF:-1 group-title="央卫频道",北京卫视
-http://119.125.104.17:9901/tsfile/live/1039_1.m3u8
+http://61.141.202.118:9901/tsfile/live/0122_1.m3u8
 #EXTINF:-1 group-title="央卫频道",北京卫视
-http://175.10.228.184:8081/tsfile/live/0122_1.m3u8
-#EXTINF:-1 group-title="央卫频道",北京卫视
-http://175.10.228.184:8081/tsfile/live/0122_1.m3u8
+http://113.64.94.185:9901/tsfile/live/1039_1.m3u8
 #EXTINF:-1 group-title="央卫频道",北京卫视
 http://124.231.212.247:9999/tsfile/live/0122_1.m3u8
 #EXTINF:-1 group-title="央卫频道",北京卫视
+http://124.228.160.211:9901/tsfile/live/0122_1.m3u8
+#EXTINF:-1 group-title="央卫频道",北京卫视
+http://175.10.228.184:8081/tsfile/live/0122_1.m3u8
+#EXTINF:-1 group-title="央卫频道",北京卫视
 http://222.241.154.37:9901/tsfile/live/23030_1.m3u8
+#EXTINF:-1 group-title="央卫频道",北京卫视
+http://175.10.228.184:8081/tsfile/live/0122_1.m3u8
 #EXTINF:-1 group-title="央卫频道",北京卫视
 http://223.159.8.103:8099/tsfile/live/0122_1.m3u8
 #EXTINF:-1 group-title="央卫频道",北京卫视
 http://222.241.154.37:9901/tsfile/live/23030_1.m3u8
 #EXTINF:-1 group-title="央卫频道",北京卫视
-http://61.141.202.118:9901/tsfile/live/0122_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0122_1.m3u8
+#EXTINF:-1 group-title="央卫频道",北京卫视
+http://119.125.104.11:9901/tsfile/live/1055_1.m3u8
+#EXTINF:-1 group-title="央卫频道",北京卫视
+http://119.125.104.17:9901/tsfile/live/1039_1.m3u8
+#EXTINF:-1 group-title="央卫频道",北京纪实卫视
+http://119.125.104.11:9901/tsfile/live/1052_1.m3u8
+#EXTINF:-1 group-title="央卫频道",南方卫视
+http://113.64.94.185:9901/tsfile/live/1015_1.m3u8
 #EXTINF:-1 group-title="央卫频道",南方卫视
 http://175.10.228.184:8081/tsfile/live/1004_1.m3u8
 #EXTINF:-1 group-title="央卫频道",南方卫视
 http://175.10.228.184:8081/tsfile/live/1004_1.m3u8
 #EXTINF:-1 group-title="央卫频道",南方卫视
 http://119.125.104.17:9901/tsfile/live/1015_1.m3u8
-#EXTINF:-1 group-title="央卫频道",南方卫视
-http://113.64.94.185:9901/tsfile/live/1015_1.m3u8
-#EXTINF:-1 group-title="央卫频道",厦门卫视
-http://113.64.94.185:9901/tsfile/live/0129_1.m3u8
 #EXTINF:-1 group-title="央卫频道",厦门卫视
 http://119.125.104.17:9901/tsfile/live/0129_1.m3u8
 #EXTINF:-1 group-title="央卫频道",吉林卫视
-http://175.10.228.184:8081/tsfile/live/0116_1.m3u8
-#EXTINF:-1 group-title="央卫频道",吉林卫视
-http://175.10.228.184:8081/tsfile/live/0116_1.m3u8
-#EXTINF:-1 group-title="央卫频道",吉林卫视
-http://119.125.104.17:9901/tsfile/live/1051_1.m3u8
-#EXTINF:-1 group-title="央卫频道",吉林卫视
 http://124.228.160.211:9901/tsfile/live/0116_1.m3u8
+#EXTINF:-1 group-title="央卫频道",吉林卫视
+http://175.10.228.184:8081/tsfile/live/0116_1.m3u8
+#EXTINF:-1 group-title="央卫频道",吉林卫视
+http://175.10.228.184:8081/tsfile/live/0116_1.m3u8
 #EXTINF:-1 group-title="央卫频道",吉林卫视
 http://124.231.212.247:9999/tsfile/live/0116_1.m3u8
 #EXTINF:-1 group-title="央卫频道",吉林卫视
 http://223.159.8.103:8099/tsfile/live/0116_1.m3u8
 #EXTINF:-1 group-title="央卫频道",吉林卫视
 http://124.231.212.247:9999/tsfile/live/0116_1.m3u8
+#EXTINF:-1 group-title="央卫频道",吉林卫视
+http://119.125.104.17:9901/tsfile/live/1051_1.m3u8
+#EXTINF:-1 group-title="央卫频道",四川卫视
+http://124.228.160.211:9901/tsfile/live/0123_1.m3u8
 #EXTINF:-1 group-title="央卫频道",四川卫视
 http://175.10.228.184:8081/tsfile/live/0123_1.m3u8
 #EXTINF:-1 group-title="央卫频道",四川卫视
-http://175.10.228.184:8081/tsfile/live/0123_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37228_1.m3u8
 #EXTINF:-1 group-title="央卫频道",四川卫视
-http://119.125.104.11:9901/tsfile/live/1063_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0123_1.m3u8
 #EXTINF:-1 group-title="央卫频道",四川卫视
 http://222.241.154.37:9901/tsfile/live/23041_1.m3u8
 #EXTINF:-1 group-title="央卫频道",四川卫视
 http://124.231.212.247:9999/tsfile/live/0123_1.m3u8
 #EXTINF:-1 group-title="央卫频道",四川卫视
-http://222.241.154.37:9901/tsfile/live/23041_1.m3u8
-#EXTINF:-1 group-title="央卫频道",四川卫视
-http://124.228.160.211:9901/tsfile/live/0123_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0123_1.m3u8
 #EXTINF:-1 group-title="央卫频道",四川卫视
 http://223.159.8.103:8099/tsfile/live/0123_1.m3u8
 #EXTINF:-1 group-title="央卫频道",四川卫视
-http://119.125.104.17:9901/tsfile/live/1047_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23041_1.m3u8
 #EXTINF:-1 group-title="央卫频道",四川卫视
 http://113.64.94.185:9901/tsfile/live/1047_1.m3u8
+#EXTINF:-1 group-title="央卫频道",四川卫视
+http://119.125.104.11:9901/tsfile/live/1063_1.m3u8
+#EXTINF:-1 group-title="央卫频道",四川卫视
+http://119.125.104.17:9901/tsfile/live/1047_1.m3u8
 #EXTINF:-1 group-title="央卫频道",天津卫视
 http://223.151.51.74:9901/tsfile/live/0125_1.m3u8
 #EXTINF:-1 group-title="央卫频道",天津卫视
+http://119.125.104.11:9901/tsfile/live/1056_1.m3u8
+#EXTINF:-1 group-title="央卫频道",天津卫视
 http://175.10.228.184:8081/tsfile/live/0135_1.m3u8
 #EXTINF:-1 group-title="央卫频道",天津卫视
 http://175.10.228.184:8081/tsfile/live/0135_1.m3u8
+#EXTINF:-1 group-title="央卫频道",天津卫视
+http://222.241.154.37:9901/tsfile/live/23032_1.m3u8
+#EXTINF:-1 group-title="央卫频道",天津卫视
+http://113.64.94.185:9901/tsfile/live/1040_1.m3u8
 #EXTINF:-1 group-title="央卫频道",天津卫视
 http://119.125.104.17:9901/tsfile/live/1040_1.m3u8
 #EXTINF:-1 group-title="央卫频道",天津卫视
-http://124.231.212.247:9999/tsfile/live/0135_1.m3u8
-#EXTINF:-1 group-title="央卫频道",天津卫视
-http://119.125.104.11:9901/tsfile/live/1056_1.m3u8
-#EXTINF:-1 group-title="央卫频道",天津卫视
-http://222.241.154.37:9901/tsfile/live/23032_1.m3u8
-#EXTINF:-1 group-title="央卫频道",天津卫视
-http://222.241.154.37:9901/tsfile/live/23032_1.m3u8
-#EXTINF:-1 group-title="央卫频道",天津卫视
 http://223.159.8.103:8099/tsfile/live/0135_1.m3u8
 #EXTINF:-1 group-title="央卫频道",天津卫视
+http://222.241.154.37:9901/tsfile/live/23032_1.m3u8
+#EXTINF:-1 group-title="央卫频道",天津卫视
 http://124.231.212.247:9999/tsfile/live/0135_1.m3u8
 #EXTINF:-1 group-title="央卫频道",天津卫视
-http://61.141.202.118:9901/tsfile/live/0135_1.m3u8
-#EXTINF:-1 group-title="央卫频道",天津卫视
-http://113.64.94.185:9901/tsfile/live/1040_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0135_1.m3u8
 #EXTINF:-1 group-title="央卫频道",宁夏卫视
 http://175.10.228.184:8081/tsfile/live/0112_1.m3u8
 #EXTINF:-1 group-title="央卫频道",宁夏卫视
 http://175.10.228.184:8081/tsfile/live/0112_1.m3u8
-#EXTINF:-1 group-title="央卫频道",宁夏卫视
-http://119.125.104.11:9901/tsfile/live/1083_1.m3u8
-#EXTINF:-1 group-title="央卫频道",宁夏卫视
-http://124.231.212.247:9999/tsfile/live/0112_1.m3u8
 #EXTINF:-1 group-title="央卫频道",宁夏卫视
 http://113.64.94.185:9901/tsfile/live/0112_1.m3u8
 #EXTINF:-1 group-title="央卫频道",宁夏卫视
 http://119.125.104.17:9901/tsfile/live/0112_1.m3u8
 #EXTINF:-1 group-title="央卫频道",宁夏卫视
 http://124.231.212.247:9999/tsfile/live/0112_1.m3u8
+#EXTINF:-1 group-title="央卫频道",宁夏卫视
+http://124.231.212.247:9999/tsfile/live/0112_1.m3u8
+#EXTINF:-1 group-title="央卫频道",宁夏卫视
+http://119.125.104.11:9901/tsfile/live/1083_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
 http://223.151.51.74:9901/tsfile/live/0130_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
 http://175.10.228.184:8081/tsfile/live/0130_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
-http://124.231.212.247:9999/tsfile/live/0130_1.m3u8
+http://124.228.160.211:9901/tsfile/live/0130_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
 http://175.10.228.184:8081/tsfile/live/0130_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
 http://222.241.154.37:9901/tsfile/live/23031_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
-http://124.228.160.211:9901/tsfile/live/0130_1.m3u8
-#EXTINF:-1 group-title="央卫频道",安徽卫视
-http://222.241.154.37:9901/tsfile/live/23031_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0130_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
 http://223.159.8.103:8099/tsfile/live/0130_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
+http://222.241.154.37:9901/tsfile/live/23031_1.m3u8
+#EXTINF:-1 group-title="央卫频道",安徽卫视
 http://124.231.212.247:9999/tsfile/live/0130_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
-http://119.125.104.17:9901/tsfile/live/1038_1.m3u8
+http://113.64.94.185:9901/tsfile/live/1038_1.m3u8
 #EXTINF:-1 group-title="央卫频道",安徽卫视
 http://119.125.104.11:9901/tsfile/live/1065_1.m3u8
-#EXTINF:-1 group-title="央卫频道",少儿卫视
-http://119.125.104.11:9901/tsfile/live/1038_1.m3u8
-#EXTINF:-1 group-title="央卫频道",山东卫视
-http://119.125.104.11:9901/tsfile/live/1057_1.m3u8
-#EXTINF:-1 group-title="央卫频道",山东卫视
-http://175.10.228.184:8081/tsfile/live/0131_1.m3u8
-#EXTINF:-1 group-title="央卫频道",山东卫视
-http://175.10.228.184:8081/tsfile/live/0131_1.m3u8
-#EXTINF:-1 group-title="央卫频道",山东卫视
-http://119.125.104.17:9901/tsfile/live/1041_1.m3u8
+#EXTINF:-1 group-title="央卫频道",安徽卫视
+http://119.125.104.17:9901/tsfile/live/1038_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山东卫视
 http://124.231.212.247:9999/tsfile/live/0131_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山东卫视
-http://222.241.154.37:9901/tsfile/live/23040_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0131_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山东卫视
 http://124.228.160.211:9901/tsfile/live/0131_1.m3u8
+#EXTINF:-1 group-title="央卫频道",山东卫视
+http://175.10.228.184:8081/tsfile/live/0131_1.m3u8
+#EXTINF:-1 group-title="央卫频道",山东卫视
+http://222.241.154.37:9901/tsfile/live/23040_1.m3u8
+#EXTINF:-1 group-title="央卫频道",山东卫视
+http://119.125.104.17:9901/tsfile/live/1041_1.m3u8
+#EXTINF:-1 group-title="央卫频道",山东卫视
+http://175.10.228.184:8081/tsfile/live/0131_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山东卫视
 http://223.159.8.103:8099/tsfile/live/0131_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山东卫视
 http://222.241.154.37:9901/tsfile/live/23040_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山东卫视
-http://124.231.212.247:9999/tsfile/live/0131_1.m3u8
-#EXTINF:-1 group-title="央卫频道",山东卫视
 http://61.141.202.118:9901/tsfile/live/0131_1.m3u8
+#EXTINF:-1 group-title="央卫频道",山东卫视
+http://119.125.104.11:9901/tsfile/live/1057_1.m3u8
+#EXTINF:-1 group-title="央卫频道",山西卫视
+http://175.10.228.184:8081/tsfile/live/0118_1.m3u8
+#EXTINF:-1 group-title="央卫频道",山西卫视
+http://175.10.228.184:8081/tsfile/live/0118_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山西卫视
 http://119.125.104.17:9901/tsfile/live/0118_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山西卫视
-http://175.10.228.184:8081/tsfile/live/0118_1.m3u8
-#EXTINF:-1 group-title="央卫频道",山西卫视
-http://175.10.228.184:8081/tsfile/live/0118_1.m3u8
-#EXTINF:-1 group-title="央卫频道",山西卫视
-http://124.228.160.211:9901/tsfile/live/0118_1.m3u8
-#EXTINF:-1 group-title="央卫频道",山西卫视
-http://223.159.8.103:8099/tsfile/live/0118_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0118_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山西卫视
 http://124.231.212.247:9999/tsfile/live/0118_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山西卫视
-http://119.125.104.11:9901/tsfile/live/1078_1.m3u8
+http://223.159.8.103:8099/tsfile/live/0118_1.m3u8
 #EXTINF:-1 group-title="央卫频道",山西卫视
 http://113.64.94.185:9901/tsfile/live/0118_1.m3u8
+#EXTINF:-1 group-title="央卫频道",山西卫视
+http://119.125.104.11:9901/tsfile/live/1078_1.m3u8
+#EXTINF:-1 group-title="央卫频道",广东卫视
+http://116.21.122.2:4433/tsfile/live/0125_1.m3u8
+#EXTINF:-1 group-title="央卫频道",广东卫视
+http://116.21.122.2:4433/tsfile/live/0125_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广东卫视
 http://223.151.51.74:9901/tsfile/live/0143_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广东卫视
+http://222.241.154.37:9901/tsfile/live/23038_1.m3u8
+#EXTINF:-1 group-title="央卫频道",广东卫视
 http://175.10.228.184:8081/tsfile/live/0125_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广东卫视
 http://175.10.228.184:8081/tsfile/live/0125_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广东卫视
 http://124.231.212.247:9999/tsfile/live/0125_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广东卫视
-http://119.125.104.11:9901/tsfile/live/1010_1.m3u8
-#EXTINF:-1 group-title="央卫频道",广东卫视
-http://222.241.154.37:9901/tsfile/live/23038_1.m3u8
-#EXTINF:-1 group-title="央卫频道",广东卫视
 http://124.231.212.247:9999/tsfile/live/0125_1.m3u8
-#EXTINF:-1 group-title="央卫频道",广东卫视
-http://222.241.154.37:9901/tsfile/live/23038_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广东卫视
 http://223.159.8.103:8099/tsfile/live/0125_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广东卫视
+http://222.241.154.37:9901/tsfile/live/23038_1.m3u8
+#EXTINF:-1 group-title="央卫频道",广东卫视
 http://61.141.202.118:9901/tsfile/live/0125_2.m3u8
 #EXTINF:-1 group-title="央卫频道",广东卫视
-http://119.125.104.17:9901/tsfile/live/0125_1.m3u8
+http://119.125.104.11:9901/tsfile/live/1010_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广东卫视
-http://113.64.94.185:9901/tsfile/live/0125_1.m3u8
+http://119.125.104.17:9901/tsfile/live/0125_1.m3u8
+#EXTINF:-1 group-title="央卫频道",广西卫视
+http://124.228.160.211:9901/tsfile/live/0113_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广西卫视
 http://223.151.51.74:9901/tsfile/live/1002_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广西卫视
 http://175.10.228.184:8081/tsfile/live/0113_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广西卫视
-http://124.231.212.247:9999/tsfile/live/0113_1.m3u8
-#EXTINF:-1 group-title="央卫频道",广西卫视
 http://175.10.228.184:8081/tsfile/live/0113_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广西卫视
 http://222.241.154.37:9901/tsfile/live/23039_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广西卫视
-http://222.241.154.37:9901/tsfile/live/23039_1.m3u8
-#EXTINF:-1 group-title="央卫频道",广西卫视
-http://124.228.160.211:9901/tsfile/live/0113_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0113_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广西卫视
 http://223.159.8.103:8099/tsfile/live/0113_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广西卫视
-http://119.125.104.17:9901/tsfile/live/0113_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23039_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广西卫视
 http://119.125.104.11:9901/tsfile/live/1074_1.m3u8
 #EXTINF:-1 group-title="央卫频道",广西卫视
-http://113.64.94.185:9901/tsfile/live/0113_1.m3u8
+http://119.125.104.17:9901/tsfile/live/0113_1.m3u8
+#EXTINF:-1 group-title="央卫频道",新疆卫视
+http://124.231.212.247:9999/tsfile/live/0110_1.m3u8
+#EXTINF:-1 group-title="央卫频道",新疆卫视
+http://124.231.212.247:9999/tsfile/live/0110_1.m3u8
 #EXTINF:-1 group-title="央卫频道",新疆卫视
 http://175.10.228.184:8081/tsfile/live/0110_1.m3u8
 #EXTINF:-1 group-title="央卫频道",新疆卫视
@@ -1042,9 +1104,7 @@ http://175.10.228.184:8081/tsfile/live/0110_1.m3u8
 #EXTINF:-1 group-title="央卫频道",新疆卫视
 http://119.125.104.17:9901/tsfile/live/0110_1.m3u8
 #EXTINF:-1 group-title="央卫频道",新疆卫视
-http://124.231.212.247:9999/tsfile/live/0110_1.m3u8
-#EXTINF:-1 group-title="央卫频道",新疆卫视
-http://124.231.212.247:9999/tsfile/live/0110_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0110_1.m3u8
 #EXTINF:-1 group-title="央卫频道",旅游卫视
 http://124.231.212.247:9999/tsfile/live/0114_1.m3u8
 #EXTINF:-1 group-title="央卫频道",旅游卫视
@@ -1054,81 +1114,83 @@ http://119.125.104.17:9901/tsfile/live/0114_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
 http://223.151.51.74:9901/tsfile/live/0127_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
-http://175.10.228.184:8081/tsfile/live/0127_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0127_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
-http://175.10.228.184:8081/tsfile/live/0127_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0127_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
-http://113.64.94.185:9901/tsfile/live/1036_1.m3u8
+http://116.21.122.2:4433/tsfile/live/0127_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
-http://222.241.154.37:9901/tsfile/live/23029_1.m3u8
-#EXTINF:-1 group-title="央卫频道",江苏卫视
-http://222.241.154.37:9901/tsfile/live/23029_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37225_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
 http://124.228.160.211:9901/tsfile/live/0127_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
+http://222.241.154.37:9901/tsfile/live/23029_1.m3u8
+#EXTINF:-1 group-title="央卫频道",江苏卫视
+http://175.10.228.184:8081/tsfile/live/0127_1.m3u8
+#EXTINF:-1 group-title="央卫频道",江苏卫视
+http://175.10.228.184:8081/tsfile/live/0127_1.m3u8
+#EXTINF:-1 group-title="央卫频道",江苏卫视
 http://223.159.8.103:8099/tsfile/live/0127_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
-http://124.231.212.247:9999/tsfile/live/0127_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23029_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
-http://124.231.212.247:9999/tsfile/live/0127_1.m3u8
+http://116.21.122.2:4433/tsfile/live/0127_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
-http://119.125.104.17:9901/tsfile/live/1036_1.m3u8
+http://113.64.94.185:9901/tsfile/live/1036_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江苏卫视
 http://119.125.104.11:9901/tsfile/live/1050_1.m3u8
+#EXTINF:-1 group-title="央卫频道",江苏卫视
+http://119.125.104.17:9901/tsfile/live/1036_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江西卫视
 http://223.151.51.74:9901/tsfile/live/0121_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江西卫视
 http://175.10.228.184:8081/tsfile/live/0138_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江西卫视
-http://119.125.104.17:9901/tsfile/live/1042_1.m3u8
-#EXTINF:-1 group-title="央卫频道",江西卫视
-http://124.231.212.247:9999/tsfile/live/0138_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23034_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江西卫视
 http://175.10.228.184:8081/tsfile/live/0138_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江西卫视
-http://119.125.104.11:9901/tsfile/live/1058_1.m3u8
-#EXTINF:-1 group-title="央卫频道",江西卫视
-http://222.241.154.37:9901/tsfile/live/23034_1.m3u8
-#EXTINF:-1 group-title="央卫频道",江西卫视
-http://222.241.154.37:9901/tsfile/live/23034_1.m3u8
-#EXTINF:-1 group-title="央卫频道",江西卫视
 http://124.228.160.211:9901/tsfile/live/0138_1.m3u8
+#EXTINF:-1 group-title="央卫频道",江西卫视
+http://124.231.212.247:9999/tsfile/live/0138_1.m3u8
+#EXTINF:-1 group-title="央卫频道",江西卫视
+http://124.231.212.247:9999/tsfile/live/0138_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江西卫视
 http://223.159.8.103:8099/tsfile/live/0138_1.m3u8
 #EXTINF:-1 group-title="央卫频道",江西卫视
-http://124.231.212.247:9999/tsfile/live/0138_1.m3u8
-#EXTINF:-1 group-title="央卫频道",河北卫视
-http://119.125.104.17:9901/tsfile/live/1049_1.m3u8
-#EXTINF:-1 group-title="央卫频道",河北卫视
-http://175.10.228.184:8081/tsfile/live/0117_1.m3u8
-#EXTINF:-1 group-title="央卫频道",河北卫视
-http://119.125.104.11:9901/tsfile/live/1069_1.m3u8
-#EXTINF:-1 group-title="央卫频道",河北卫视
-http://175.10.228.184:8081/tsfile/live/0117_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23034_1.m3u8
+#EXTINF:-1 group-title="央卫频道",江西卫视
+http://119.125.104.17:9901/tsfile/live/1042_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河北卫视
 http://124.231.212.247:9999/tsfile/live/0117_1.m3u8
+#EXTINF:-1 group-title="央卫频道",河北卫视
+http://175.10.228.184:8081/tsfile/live/0117_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河北卫视
 http://124.228.160.211:9901/tsfile/live/0117_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河北卫视
 http://222.241.154.37:9901/tsfile/live/23047_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河北卫视
-http://222.241.154.37:9901/tsfile/live/23047_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0117_1.m3u8
+#EXTINF:-1 group-title="央卫频道",河北卫视
+http://124.231.212.247:9999/tsfile/live/0117_1.m3u8
+#EXTINF:-1 group-title="央卫频道",河北卫视
+http://119.125.104.17:9901/tsfile/live/1049_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河北卫视
 http://223.159.8.103:8099/tsfile/live/0117_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河北卫视
+http://222.241.154.37:9901/tsfile/live/23047_1.m3u8
+#EXTINF:-1 group-title="央卫频道",河北卫视
 http://113.64.94.185:9901/tsfile/live/1049_1.m3u8
+#EXTINF:-1 group-title="央卫频道",河北卫视
+http://119.125.104.11:9901/tsfile/live/1069_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河南卫视
-http://113.64.94.185:9901/tsfile/live/0139_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0139_1.m3u8
+#EXTINF:-1 group-title="央卫频道",河南卫视
+http://42.48.17.188:9901/tsfile/live/37226_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河南卫视
 http://175.10.228.184:8081/tsfile/live/0139_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河南卫视
 http://175.10.228.184:8081/tsfile/live/0139_1.m3u8
-#EXTINF:-1 group-title="央卫频道",河南卫视
-http://124.231.212.247:9999/tsfile/live/0139_1.m3u8
-#EXTINF:-1 group-title="央卫频道",河南卫视
-http://222.241.154.37:9901/tsfile/live/23044_1.m3u8
-#EXTINF:-1 group-title="央卫频道",河南卫视
-http://124.231.212.247:9999/tsfile/live/0139_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河南卫视
 http://222.241.154.37:9901/tsfile/live/23044_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河南卫视
@@ -1136,115 +1198,133 @@ http://124.228.160.211:9901/tsfile/live/0139_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河南卫视
 http://223.159.8.103:8099/tsfile/live/0139_1.m3u8
 #EXTINF:-1 group-title="央卫频道",河南卫视
+http://222.241.154.37:9901/tsfile/live/23044_1.m3u8
+#EXTINF:-1 group-title="央卫频道",河南卫视
+http://113.64.94.185:9901/tsfile/live/0139_1.m3u8
+#EXTINF:-1 group-title="央卫频道",河南卫视
 http://119.125.104.17:9901/tsfile/live/0139_1.m3u8
-#EXTINF:-1 group-title="央卫频道",浙江卫视
-http://119.125.104.17:9901/tsfile/live/1035_1.m3u8
 #EXTINF:-1 group-title="央卫频道",浙江卫视
 http://223.151.51.74:9901/tsfile/live/0124_1.m3u8
 #EXTINF:-1 group-title="央卫频道",浙江卫视
-http://124.231.212.247:9999/tsfile/live/0124_1.m3u8
+http://61.141.202.118:9901/tsfile/live/0124_1.m3u8
 #EXTINF:-1 group-title="央卫频道",浙江卫视
-http://175.10.228.184:8081/tsfile/live/0124_1.m3u8
+http://116.21.122.2:4433/tsfile/live/0124_1.m3u8
+#EXTINF:-1 group-title="央卫频道",浙江卫视
+http://116.21.122.2:4433/tsfile/live/0124_1.m3u8
+#EXTINF:-1 group-title="央卫频道",浙江卫视
+http://124.228.160.211:9901/tsfile/live/0124_1.m3u8
 #EXTINF:-1 group-title="央卫频道",浙江卫视
 http://175.10.228.184:8081/tsfile/live/0124_1.m3u8
 #EXTINF:-1 group-title="央卫频道",浙江卫视
 http://222.241.154.37:9901/tsfile/live/23028_1.m3u8
 #EXTINF:-1 group-title="央卫频道",浙江卫视
-http://124.231.212.247:9999/tsfile/live/0124_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0124_1.m3u8
 #EXTINF:-1 group-title="央卫频道",浙江卫视
-http://222.241.154.37:9901/tsfile/live/23028_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0124_1.m3u8
 #EXTINF:-1 group-title="央卫频道",浙江卫视
 http://223.159.8.103:8099/tsfile/live/0124_1.m3u8
 #EXTINF:-1 group-title="央卫频道",浙江卫视
-http://61.141.202.118:9901/tsfile/live/0124_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23028_1.m3u8
+#EXTINF:-1 group-title="央卫频道",浙江卫视
+http://124.231.212.247:9999/tsfile/live/0124_1.m3u8
+#EXTINF:-1 group-title="央卫频道",浙江卫视
+http://119.125.104.11:9901/tsfile/live/1049_1.m3u8
+#EXTINF:-1 group-title="央卫频道",浙江卫视
+http://119.125.104.17:9901/tsfile/live/1035_1.m3u8
 #EXTINF:-1 group-title="央卫频道",海南卫视
 http://175.10.228.184:8081/tsfile/live/1003_1.m3u8
+#EXTINF:-1 group-title="央卫频道",海南卫视
+http://42.48.17.188:9901/tsfile/live/37227_1.m3u8
+#EXTINF:-1 group-title="央卫频道",海南卫视
+http://124.228.160.211:9901/tsfile/live/1006_1.m3u8
 #EXTINF:-1 group-title="央卫频道",海南卫视
 http://175.10.228.184:8081/tsfile/live/1003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",深圳卫视
 http://223.151.51.74:9901/tsfile/live/0126_1.m3u8
 #EXTINF:-1 group-title="央卫频道",深圳卫视
-http://113.64.94.185:9901/tsfile/live/1043_1.m3u8
-#EXTINF:-1 group-title="央卫频道",深圳卫视
-http://175.10.228.184:8081/tsfile/live/0126_1.m3u8
-#EXTINF:-1 group-title="央卫频道",深圳卫视
-http://119.125.104.11:9901/tsfile/live/1059_1.m3u8
-#EXTINF:-1 group-title="央卫频道",深圳卫视
-http://175.10.228.184:8081/tsfile/live/0126_1.m3u8
-#EXTINF:-1 group-title="央卫频道",深圳卫视
 http://124.231.212.247:9999/tsfile/live/0126_1.m3u8
 #EXTINF:-1 group-title="央卫频道",深圳卫视
-http://222.241.154.37:9901/tsfile/live/23035_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0126_1.m3u8
+#EXTINF:-1 group-title="央卫频道",深圳卫视
+http://175.10.228.184:8081/tsfile/live/0126_1.m3u8
 #EXTINF:-1 group-title="央卫频道",深圳卫视
 http://222.241.154.37:9901/tsfile/live/23035_1.m3u8
+#EXTINF:-1 group-title="央卫频道",深圳卫视
+http://124.228.160.211:9901/tsfile/live/0126_1.m3u8
+#EXTINF:-1 group-title="央卫频道",深圳卫视
+http://124.231.212.247:9999/tsfile/live/0126_1.m3u8
 #EXTINF:-1 group-title="央卫频道",深圳卫视
 http://223.159.8.103:8099/tsfile/live/0126_1.m3u8
 #EXTINF:-1 group-title="央卫频道",深圳卫视
-http://124.231.212.247:9999/tsfile/live/0126_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23035_1.m3u8
 #EXTINF:-1 group-title="央卫频道",深圳卫视
 http://61.141.202.118:9901/tsfile/live/0126_1.m3u8
+#EXTINF:-1 group-title="央卫频道",深圳卫视
+http://113.64.94.185:9901/tsfile/live/1043_1.m3u8
+#EXTINF:-1 group-title="央卫频道",深圳卫视
+http://119.125.104.11:9901/tsfile/live/1059_1.m3u8
 #EXTINF:-1 group-title="央卫频道",深圳卫视
 http://119.125.104.17:9901/tsfile/live/1043_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖北卫视
 http://223.151.51.74:9901/tsfile/live/0135_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖北卫视
+http://124.231.212.247:9999/tsfile/live/0132_1.m3u8
+#EXTINF:-1 group-title="央卫频道",湖北卫视
+http://113.64.94.185:9901/tsfile/live/0132_1.m3u8
+#EXTINF:-1 group-title="央卫频道",湖北卫视
+http://175.10.228.184:8081/tsfile/live/0132_1.m3u8
+#EXTINF:-1 group-title="央卫频道",湖北卫视
 http://175.10.228.184:8081/tsfile/live/0132_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖北卫视
 http://124.231.212.247:9999/tsfile/live/0132_1.m3u8
-#EXTINF:-1 group-title="央卫频道",湖北卫视
-http://175.10.228.184:8081/tsfile/live/0132_1.m3u8
-#EXTINF:-1 group-title="央卫频道",湖北卫视
-http://119.125.104.11:9901/tsfile/live/1060_1.m3u8
-#EXTINF:-1 group-title="央卫频道",湖北卫视
-http://124.228.160.211:9901/tsfile/live/0132_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖北卫视
 http://223.159.8.103:8099/tsfile/live/0132_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖北卫视
-http://124.231.212.247:9999/tsfile/live/0132_1.m3u8
+http://119.125.104.11:9901/tsfile/live/1060_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖北卫视
 http://119.125.104.17:9901/tsfile/live/0132_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
-http://116.21.122.2:4433/tsfile/live/0128_1.m3u8
-#EXTINF:-1 group-title="央卫频道",湖南卫视
 http://223.151.51.74:9901/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
-http://175.10.228.184:8081/tsfile/live/0017_1.m3u8
+http://116.21.122.2:4433/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
-http://119.125.104.11:9901/tsfile/live/1048_1.m3u8
+http://116.21.122.2:4433/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
-http://175.10.228.184:8081/tsfile/live/0017_1.m3u8
-#EXTINF:-1 group-title="央卫频道",湖南卫视
-http://222.241.154.37:9901/tsfile/live/23019_1.m3u8
-#EXTINF:-1 group-title="央卫频道",湖南卫视
-http://222.241.154.37:9901/tsfile/live/23019_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37216_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
 http://124.228.160.211:9901/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
+http://175.10.228.184:8081/tsfile/live/0017_1.m3u8
+#EXTINF:-1 group-title="央卫频道",湖南卫视
+http://175.10.228.184:8081/tsfile/live/0017_1.m3u8
+#EXTINF:-1 group-title="央卫频道",湖南卫视
+http://222.241.154.37:9901/tsfile/live/23019_1.m3u8
+#EXTINF:-1 group-title="央卫频道",湖南卫视
+http://124.231.212.247:9999/tsfile/live/0128_1.m3u8
+#EXTINF:-1 group-title="央卫频道",湖南卫视
+http://124.231.212.247:9999/tsfile/live/0128_1.m3u8
+#EXTINF:-1 group-title="央卫频道",湖南卫视
 http://223.159.8.103:8099/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
-http://124.231.212.247:9999/tsfile/live/0128_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23019_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
-http://124.231.212.247:9999/tsfile/live/0128_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
-http://61.141.202.118:9901/tsfile/live/0128_1.m3u8
+http://119.125.104.11:9901/tsfile/live/1048_1.m3u8
 #EXTINF:-1 group-title="央卫频道",湖南卫视
 http://119.125.104.17:9901/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="央卫频道",甘肃卫视
 http://124.231.212.247:9999/tsfile/live/0141_1.m3u8
 #EXTINF:-1 group-title="央卫频道",甘肃卫视
-http://124.231.212.247:9999/tsfile/live/0141_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0141_1.m3u8
 #EXTINF:-1 group-title="央卫频道",甘肃卫视
 http://119.125.104.17:9901/tsfile/live/0141_1.m3u8
-#EXTINF:-1 group-title="央卫频道",甘肃卫视
-http://113.64.94.185:9901/tsfile/live/0141_1.m3u8
 #EXTINF:-1 group-title="央卫频道",综合卫视
 http://119.125.104.11:9901/tsfile/live/1085_1.m3u8
 #EXTINF:-1 group-title="央卫频道",翡翠台
 http://119.125.104.11:9901/tsfile/live/1006_1.m3u8
 #EXTINF:-1 group-title="央卫频道",翡翠台
 http://119.125.104.17:9901/tsfile/live/1007_1.m3u8
-#EXTINF:-1 group-title="央卫频道",翡翠台
-http://113.64.94.185:9901/tsfile/live/1007_1.m3u8
 #EXTINF:-1 group-title="央卫频道",西藏卫视
 http://113.64.94.185:9901/tsfile/live/0111_1.m3u8
 #EXTINF:-1 group-title="央卫频道",西藏卫视
@@ -1254,97 +1334,103 @@ http://175.10.228.184:8081/tsfile/live/0111_1.m3u8
 #EXTINF:-1 group-title="央卫频道",西藏卫视
 http://119.125.104.17:9901/tsfile/live/0111_1.m3u8
 #EXTINF:-1 group-title="央卫频道",西藏卫视
-http://119.125.104.11:9901/tsfile/live/1084_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0111_1.m3u8
 #EXTINF:-1 group-title="央卫频道",西藏卫视
 http://124.231.212.247:9999/tsfile/live/0111_1.m3u8
+#EXTINF:-1 group-title="央卫频道",西藏卫视
+http://119.125.104.11:9901/tsfile/live/1084_1.m3u8
 #EXTINF:-1 group-title="央卫频道",贵州卫视
 http://223.151.51.74:9901/tsfile/live/0120_1.m3u8
 #EXTINF:-1 group-title="央卫频道",贵州卫视
-http://175.10.228.184:8081/tsfile/live/0120_1.m3u8
+http://119.125.104.11:9901/tsfile/live/1062_1.m3u8
 #EXTINF:-1 group-title="央卫频道",贵州卫视
 http://175.10.228.184:8081/tsfile/live/0120_1.m3u8
 #EXTINF:-1 group-title="央卫频道",贵州卫视
-http://222.241.154.37:9901/tsfile/live/23046_1.m3u8
-#EXTINF:-1 group-title="央卫频道",贵州卫视
-http://222.241.154.37:9901/tsfile/live/23046_1.m3u8
+http://175.10.228.184:8081/tsfile/live/0120_1.m3u8
 #EXTINF:-1 group-title="央卫频道",贵州卫视
 http://124.228.160.211:9901/tsfile/live/0120_1.m3u8
 #EXTINF:-1 group-title="央卫频道",贵州卫视
+http://222.241.154.37:9901/tsfile/live/23046_1.m3u8
+#EXTINF:-1 group-title="央卫频道",贵州卫视
+http://124.231.212.247:9999/tsfile/live/0120_1.m3u8
+#EXTINF:-1 group-title="央卫频道",贵州卫视
+http://124.231.212.247:9999/tsfile/live/0120_1.m3u8
+#EXTINF:-1 group-title="央卫频道",贵州卫视
 http://223.159.8.103:8099/tsfile/live/0120_1.m3u8
 #EXTINF:-1 group-title="央卫频道",贵州卫视
-http://119.125.104.17:9901/tsfile/live/1046_1.m3u8
-#EXTINF:-1 group-title="央卫频道",贵州卫视
-http://119.125.104.11:9901/tsfile/live/1062_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23046_1.m3u8
 #EXTINF:-1 group-title="央卫频道",贵州卫视
 http://113.64.94.185:9901/tsfile/live/1046_1.m3u8
-#EXTINF:-1 group-title="央卫频道",辽宁卫视
-http://119.125.104.17:9901/tsfile/live/1044_1.m3u8
-#EXTINF:-1 group-title="央卫频道",辽宁卫视
-http://175.10.228.184:8081/tsfile/live/0121_1.m3u8
-#EXTINF:-1 group-title="央卫频道",辽宁卫视
-http://113.64.94.185:9901/tsfile/live/1044_1.m3u8
-#EXTINF:-1 group-title="央卫频道",辽宁卫视
-http://175.10.228.184:8081/tsfile/live/0121_1.m3u8
-#EXTINF:-1 group-title="央卫频道",辽宁卫视
-http://222.241.154.37:9901/tsfile/live/23036_1.m3u8
+#EXTINF:-1 group-title="央卫频道",贵州卫视
+http://119.125.104.17:9901/tsfile/live/1046_1.m3u8
 #EXTINF:-1 group-title="央卫频道",辽宁卫视
 http://124.231.212.247:9999/tsfile/live/0121_1.m3u8
 #EXTINF:-1 group-title="央卫频道",辽宁卫视
+http://175.10.228.184:8081/tsfile/live/0121_1.m3u8
+#EXTINF:-1 group-title="央卫频道",辽宁卫视
 http://222.241.154.37:9901/tsfile/live/23036_1.m3u8
+#EXTINF:-1 group-title="央卫频道",辽宁卫视
+http://175.10.228.184:8081/tsfile/live/0121_1.m3u8
+#EXTINF:-1 group-title="央卫频道",辽宁卫视
+http://124.231.212.247:9999/tsfile/live/0121_1.m3u8
 #EXTINF:-1 group-title="央卫频道",辽宁卫视
 http://124.228.160.211:9901/tsfile/live/0121_1.m3u8
 #EXTINF:-1 group-title="央卫频道",辽宁卫视
 http://223.159.8.103:8099/tsfile/live/0121_1.m3u8
 #EXTINF:-1 group-title="央卫频道",辽宁卫视
-http://124.231.212.247:9999/tsfile/live/0121_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23036_1.m3u8
 #EXTINF:-1 group-title="央卫频道",辽宁卫视
-http://61.141.202.118:9901/tsfile/live/0121_1.m3u8
+http://113.64.94.185:9901/tsfile/live/1044_1.m3u8
 #EXTINF:-1 group-title="央卫频道",辽宁卫视
 http://119.125.104.11:9901/tsfile/live/1061_1.m3u8
+#EXTINF:-1 group-title="央卫频道",辽宁卫视
+http://119.125.104.17:9901/tsfile/live/1044_1.m3u8
 #EXTINF:-1 group-title="央卫频道",重庆卫视
-http://119.125.104.17:9901/tsfile/live/1048_1.m3u8
+http://113.64.94.185:9901/tsfile/live/1048_1.m3u8
+#EXTINF:-1 group-title="央卫频道",重庆卫视
+http://175.10.228.184:8081/tsfile/live/0142_1.m3u8
+#EXTINF:-1 group-title="央卫频道",重庆卫视
+http://175.10.228.184:8081/tsfile/live/0142_1.m3u8
+#EXTINF:-1 group-title="央卫频道",重庆卫视
+http://222.241.154.37:9901/tsfile/live/23042_1.m3u8
 #EXTINF:-1 group-title="央卫频道",重庆卫视
 http://124.231.212.247:9999/tsfile/live/0142_1.m3u8
 #EXTINF:-1 group-title="央卫频道",重庆卫视
-http://175.10.228.184:8081/tsfile/live/0142_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0142_1.m3u8
 #EXTINF:-1 group-title="央卫频道",重庆卫视
-http://175.10.228.184:8081/tsfile/live/0142_1.m3u8
+http://223.159.8.103:8099/tsfile/live/0142_1.m3u8
+#EXTINF:-1 group-title="央卫频道",重庆卫视
+http://222.241.154.37:9901/tsfile/live/23042_1.m3u8
 #EXTINF:-1 group-title="央卫频道",重庆卫视
 http://119.125.104.11:9901/tsfile/live/1068_1.m3u8
 #EXTINF:-1 group-title="央卫频道",重庆卫视
-http://222.241.154.37:9901/tsfile/live/23042_1.m3u8
-#EXTINF:-1 group-title="央卫频道",重庆卫视
-http://124.231.212.247:9999/tsfile/live/0142_1.m3u8
-#EXTINF:-1 group-title="央卫频道",重庆卫视
-http://222.241.154.37:9901/tsfile/live/23042_1.m3u8
-#EXTINF:-1 group-title="央卫频道",重庆卫视
-http://223.159.8.103:8099/tsfile/live/0142_1.m3u8
-#EXTINF:-1 group-title="央卫频道",重温经典
-http://124.231.212.247:9999/tsfile/live/1111_1.m3u8
+http://119.125.104.17:9901/tsfile/live/1048_1.m3u8
 #EXTINF:-1 group-title="央卫频道",重温经典
 http://124.231.212.247:9999/tsfile/live/1111_1.m3u8
 #EXTINF:-1 group-title="央卫频道",陕西卫视
-http://119.125.104.17:9901/tsfile/live/0136_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0136_1.m3u8
 #EXTINF:-1 group-title="央卫频道",陕西卫视
 http://223.151.51.74:9901/tsfile/live/1003_1.m3u8
 #EXTINF:-1 group-title="央卫频道",陕西卫视
+http://222.241.154.37:9901/tsfile/live/23048_1.m3u8
+#EXTINF:-1 group-title="央卫频道",陕西卫视
 http://175.10.228.184:8081/tsfile/live/0136_1.m3u8
 #EXTINF:-1 group-title="央卫频道",陕西卫视
 http://175.10.228.184:8081/tsfile/live/0136_1.m3u8
 #EXTINF:-1 group-title="央卫频道",陕西卫视
-http://222.241.154.37:9901/tsfile/live/23048_1.m3u8
-#EXTINF:-1 group-title="央卫频道",陕西卫视
-http://222.241.154.37:9901/tsfile/live/23048_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0136_1.m3u8
 #EXTINF:-1 group-title="央卫频道",陕西卫视
 http://223.159.8.103:8099/tsfile/live/0136_1.m3u8
 #EXTINF:-1 group-title="央卫频道",陕西卫视
-http://124.231.212.247:9999/tsfile/live/0136_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23048_1.m3u8
 #EXTINF:-1 group-title="央卫频道",陕西卫视
 http://124.231.212.247:9999/tsfile/live/0136_1.m3u8
 #EXTINF:-1 group-title="央卫频道",陕西卫视
 http://119.125.104.11:9901/tsfile/live/1077_1.m3u8
+#EXTINF:-1 group-title="央卫频道",陕西卫视
+http://119.125.104.17:9901/tsfile/live/0136_1.m3u8
 #EXTINF:-1 group-title="央卫频道",青海卫视
-http://119.125.104.17:9901/tsfile/live/0140_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0140_1.m3u8
 #EXTINF:-1 group-title="央卫频道",青海卫视
 http://124.231.212.247:9999/tsfile/live/0140_1.m3u8
 #EXTINF:-1 group-title="央卫频道",青海卫视
@@ -1353,11 +1439,11 @@ http://124.231.212.247:9999/tsfile/live/0140_1.m3u8
 http://223.159.8.103:8099/tsfile/live/0140_1.m3u8
 #EXTINF:-1 group-title="央卫频道",青海卫视
 http://119.125.104.11:9901/tsfile/live/1080_1.m3u8
+#EXTINF:-1 group-title="央卫频道",青海卫视
+http://119.125.104.17:9901/tsfile/live/0140_1.m3u8
 #EXTINF:-1 group-title="央卫频道",黑龙江卫视
 http://223.151.51.74:9901/tsfile/live/0142_1.m3u8
 #EXTINF:-1 group-title="央卫频道",黑龙江卫视
-http://124.231.212.247:9999/tsfile/live/0143_1.m3u8
-#EXTINF:-1 group-title="央卫频道",黑龙江卫视
 http://175.10.228.184:8081/tsfile/live/0143_1.m3u8
 #EXTINF:-1 group-title="央卫频道",黑龙江卫视
 http://222.241.154.37:9901/tsfile/live/23045_1.m3u8
@@ -1366,15 +1452,19 @@ http://175.10.228.184:8081/tsfile/live/0143_1.m3u8
 #EXTINF:-1 group-title="央卫频道",黑龙江卫视
 http://124.231.212.247:9999/tsfile/live/0143_1.m3u8
 #EXTINF:-1 group-title="央卫频道",黑龙江卫视
-http://222.241.154.37:9901/tsfile/live/23045_1.m3u8
+http://124.231.212.247:9999/tsfile/live/0143_1.m3u8
 #EXTINF:-1 group-title="央卫频道",黑龙江卫视
 http://124.228.160.211:9901/tsfile/live/0143_1.m3u8
 #EXTINF:-1 group-title="央卫频道",黑龙江卫视
 http://223.159.8.103:8099/tsfile/live/0143_1.m3u8
 #EXTINF:-1 group-title="央卫频道",黑龙江卫视
-http://119.125.104.17:9901/tsfile/live/1045_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23045_1.m3u8
+#EXTINF:-1 group-title="央卫频道",黑龙江卫视
+http://113.64.94.185:9901/tsfile/live/1045_1.m3u8
 #EXTINF:-1 group-title="央卫频道",黑龙江卫视
 http://119.125.104.11:9901/tsfile/live/1054_1.m3u8
+#EXTINF:-1 group-title="央卫频道",黑龙江卫视
+http://119.125.104.17:9901/tsfile/live/1045_1.m3u8
 #EXTINF:-1 group-title="湖南频道",2金鹰卡通
 http://59.32.97.52:9901/tsfile/live/1057_1.m3u8
 #EXTINF:-1 group-title="湖南频道",先锋乒羽
@@ -1382,65 +1472,73 @@ http://124.231.212.247:9999/tsfile/live/1119_1.m3u8
 #EXTINF:-1 group-title="湖南频道",先锋乒羽
 http://124.231.212.247:9999/tsfile/live/1119_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南公共
+http://124.228.160.211:9901/tsfile/live/0012_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南公共
 http://223.159.8.103:8099/tsfile/live/1003_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南卫视
-http://116.21.122.2:4433/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
 http://223.151.51.74:9901/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
-http://175.10.228.184:8081/tsfile/live/0017_1.m3u8
+http://116.21.122.2:4433/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
-http://119.125.104.11:9901/tsfile/live/1048_1.m3u8
+http://116.21.122.2:4433/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
-http://175.10.228.184:8081/tsfile/live/0017_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南卫视
-http://222.241.154.37:9901/tsfile/live/23019_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南卫视
-http://222.241.154.37:9901/tsfile/live/23019_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37216_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
 http://124.228.160.211:9901/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
+http://175.10.228.184:8081/tsfile/live/0017_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南卫视
+http://175.10.228.184:8081/tsfile/live/0017_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南卫视
+http://222.241.154.37:9901/tsfile/live/23019_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南卫视
+http://124.231.212.247:9999/tsfile/live/0128_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南卫视
+http://124.231.212.247:9999/tsfile/live/0128_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南卫视
 http://223.159.8.103:8099/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
-http://124.231.212.247:9999/tsfile/live/0128_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23019_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
-http://124.231.212.247:9999/tsfile/live/0128_1.m3u8
+http://113.64.94.185:9901/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
-http://61.141.202.118:9901/tsfile/live/0128_1.m3u8
+http://119.125.104.11:9901/tsfile/live/1048_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南卫视
 http://119.125.104.17:9901/tsfile/live/0128_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南国际
 http://175.10.228.184:8081/tsfile/live/1001_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南国际
+http://222.241.154.37:9901/tsfile/live/23024_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南国际
 http://175.10.228.184:8081/tsfile/live/1001_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南国际
-http://222.241.154.37:9901/tsfile/live/23024_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南国际
-http://222.241.154.37:9901/tsfile/live/23024_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南国际
 http://223.159.8.103:8099/tsfile/live/1007_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南国际
+http://222.241.154.37:9901/tsfile/live/23024_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南娱乐
 http://175.10.228.184:8081/tsfile/live/1000_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南娱乐
-http://175.10.228.184:8081/tsfile/live/1000_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南娱乐
-http://222.241.154.37:9901/tsfile/live/23023_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南娱乐
 http://124.231.212.247:9999/tsfile/live/1096_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南娱乐
-http://222.241.154.37:9901/tsfile/live/23023_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37221_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南娱乐
+http://175.10.228.184:8081/tsfile/live/1000_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南娱乐
 http://124.228.160.211:9901/tsfile/live/1045_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南娱乐
 http://223.159.8.103:8099/tsfile/live/1000_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南娱乐
+http://222.241.154.37:9901/tsfile/live/23023_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南导视
 http://124.231.212.247:9999/tsfile/live/1085_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南教育
-http://124.231.212.247:9999/tsfile/live/1086_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37223_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南教育
 http://124.231.212.247:9999/tsfile/live/1086_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南教育
 http://223.159.8.103:8099/tsfile/live/1008_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南教育
+http://124.231.212.247:9999/tsfile/live/1086_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南教育台
 http://222.241.154.37:9901/tsfile/live/23027_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南教育台
@@ -1450,119 +1548,125 @@ http://222.241.154.37:9901/tsfile/live/23022_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南爱晚
 http://124.231.212.247:9999/tsfile/live/1097_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南爱晚
-http://124.231.212.247:9999/tsfile/live/1097_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南爱晚
 http://222.241.154.37:9901/tsfile/live/23022_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南爱晚
+http://124.231.212.247:9999/tsfile/live/1097_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南电影
+http://175.10.228.184:8081/tsfile/live/0019_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南电影
+http://42.48.17.188:9901/tsfile/live/37220_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电影
 http://175.10.228.184:8081/tsfile/live/0019_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电影
 http://222.241.154.37:9901/tsfile/live/23025_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电影
-http://124.228.160.211:9901/tsfile/live/1000_1.m3u8
+http://124.231.212.247:9999/tsfile/live/1093_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电影
-http://222.241.154.37:9901/tsfile/live/23025_1.m3u8
+http://124.228.160.211:9901/tsfile/live/1000_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电影
 http://223.159.8.103:8099/tsfile/live/1001_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电影
-http://124.231.212.247:9999/tsfile/live/1093_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南电影
-http://124.231.212.247:9999/tsfile/live/1093_1.m3u8
+http://222.241.154.37:9901/tsfile/live/23025_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电视剧
-http://124.231.212.247:9999/tsfile/live/1094_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南电视剧
-http://124.231.212.247:9999/tsfile/live/1094_1.m3u8
+http://42.48.17.188:9901/tsfile/live/37219_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电视剧
 http://222.241.154.37:9901/tsfile/live/23026_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电视剧
-http://222.241.154.37:9901/tsfile/live/23026_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南电视剧
-http://124.228.160.211:9901/tsfile/live/1043_1.m3u8
+http://124.231.212.247:9999/tsfile/live/1094_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南电视剧
 http://223.159.8.103:8099/tsfile/live/1004_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南电视剧
+http://222.241.154.37:9901/tsfile/live/23026_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南经视
 http://124.231.212.247:9999/tsfile/live/1091_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南经视
+http://124.231.212.247:9999/tsfile/live/1091_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南经视
+http://42.48.17.188:9901/tsfile/live/37217_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南经视
+http://124.228.160.211:9901/tsfile/live/1042_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南经视
 http://222.241.154.37:9901/tsfile/live/23020_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南经视
 http://223.159.8.103:8099/tsfile/live/1006_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南经视
 http://222.241.154.37:9901/tsfile/live/23020_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南经视
-http://124.231.212.247:9999/tsfile/live/1091_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南都市
 http://175.10.228.184:8081/tsfile/live/0018_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南都市
+http://42.48.17.188:9901/tsfile/live/37218_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南都市
+http://222.241.154.37:9901/tsfile/live/23021_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南都市
 http://175.10.228.184:8081/tsfile/live/0018_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南都市
-http://222.241.154.37:9901/tsfile/live/23021_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南都市
-http://124.231.212.247:9999/tsfile/live/1092_1.m3u8
-#EXTINF:-1 group-title="湖南频道",湖南都市
-http://222.241.154.37:9901/tsfile/live/23021_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南都市
 http://124.228.160.211:9901/tsfile/live/1044_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南都市
 http://223.159.8.103:8099/tsfile/live/1002_1.m3u8
 #EXTINF:-1 group-title="湖南频道",湖南都市
+http://222.241.154.37:9901/tsfile/live/23021_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南都市
+http://124.231.212.247:9999/tsfile/live/1092_1.m3u8
+#EXTINF:-1 group-title="湖南频道",湖南都市
 http://124.231.212.247:9999/tsfile/live/1092_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰卡通
-http://175.10.228.184:8081/tsfile/live/1002_1.m3u8
+http://119.125.104.11:9901/tsfile/live/1039_1.m3u8
+#EXTINF:-1 group-title="湖南频道",金鹰卡通
+http://42.48.17.188:9901/tsfile/live/37222_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰卡通
 http://175.10.228.184:8081/tsfile/live/1002_1.m3u8
+#EXTINF:-1 group-title="湖南频道",金鹰卡通
+http://124.228.160.211:9901/tsfile/live/0011_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰卡通
 http://124.231.212.247:9999/tsfile/live/1101_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰卡通
-http://119.125.104.11:9901/tsfile/live/1039_1.m3u8
+http://175.10.228.184:8081/tsfile/live/1002_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰卡通
 http://124.231.212.247:9999/tsfile/live/1101_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰卡通
 http://223.159.8.103:8099/tsfile/live/1005_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰卡通
 http://119.125.104.17:9901/tsfile/live/1032_1.m3u8
-#EXTINF:-1 group-title="湖南频道",金鹰卡通
-http://113.64.94.185:9901/tsfile/live/1032_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰纪实
-http://124.231.212.247:9999/tsfile/live/1095_1.m3u8
-#EXTINF:-1 group-title="湖南频道",金鹰纪实
-http://124.231.212.247:9999/tsfile/live/1095_1.m3u8
+http://124.228.160.211:9901/tsfile/live/0013_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰纪实
 http://223.159.8.103:8099/tsfile/live/1009_1.m3u8
 #EXTINF:-1 group-title="湖南频道",金鹰纪实
-http://119.125.104.17:9901/tsfile/live/1053_1.m3u8
-#EXTINF:-1 group-title="湖南频道",金鹰纪实
 http://119.125.104.11:9901/tsfile/live/1064_1.m3u8
+#EXTINF:-1 group-title="湖南频道",金鹰纪实
+http://119.125.104.17:9901/tsfile/live/1053_1.m3u8
 #EXTINF:-1 group-title="湖南芒果",湖南经视
-http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPWY4NjFhNTZjNGMzYmY3MGE2MTI0NjliMGYzZTkxMTRiJmVzPTE3MTY1NDg2MDYmdXVpZD1jYjI2Y2MwOGRiMjBkNTdkY2ExMDVhYjQwMWZlOWVhYy02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/HNJSMPP360.m3u8
+http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTg5NzNmZDA5MTVlZGM5YWY4MGI2OTRjZjc5YzhlMDMzJmVzPTE3MTY1NzQwNDQmdXVpZD0zODE5MGUyZjY3NGY1ZTkwNWI5OTM5NWRjM2Y2NTQ0ZS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/HNJSMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",湖南都市
-http://phonetx.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPThjMjQ1ZTgwNjRiMTEzOTk3ODgyYzhjOTY5MjI2OTM4JmVzPTE3MTY1NDg2MDcmdXVpZD1jNDU2NGViMmJmMDVjY2JmYTMwYTBmM2UyZjliYTQyYS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD10eF9waG9uZV9saXZl/HNDSMPP360.m3u8
+http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTJiMDU5OWRhM2YwYTIyZWVhZTFkNGFhN2VhMTc5OGIyJmVzPTE3MTY1NzQwNDUmdXVpZD03ZjIwZWY2NWYxNTU2YTkxYzJkOGFiZDQzNTk1OGZiMy02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/HNDSMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",湖南电视剧
-http://phoneal.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTgxMzdiMDEyODQwYWE0NTQzOTIyZWI1YjU2ODkxNzI0JmVzPTE3MTY1NDg2MDcmdXVpZD1lNDlhODkwYzIyNThlMTY0MDEzNTdlMmJjYzZhYzYwNS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1hbF9waG9uZTM,/HNDSJMPP360.m3u8
+http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTQ1NjY5Zjc0ZmYxNjQ2YzBlZDQ0OWQyZTM0OTlmMDE0JmVzPTE3MTY1NzQwNDUmdXVpZD04MzBmZTFhYTM4NzEwMjY5MjhlZWE1M2EwMmUyNmYxMS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/HNDSJMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",湖南电影
-http://phonehw.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTQzYjI4MzgwNjcxYWNiMDMyMTlhOGY0MGMwMzE5YmMwJmVzPTE3MTY1NDg2MDgmdXVpZD02ZmMwNjkwNThkMWE4ZjRhODczNTQ0YmYwZDlhMTViMS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1od19waG9uZQ,,/HNDYMPP360.m3u8
+http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPWVjMmQ1YTQ3YzEzNzQ4YzczNTNjYzRhOWE1YzllNmY4JmVzPTE3MTY1NzQwNDYmdXVpZD1kZDA0ZWNjMDNiNjU5MjNkMDcyODg2ZThkZjcwYmM5Ni02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/HNDYMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",湖南爱晚
-http://phonetx.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTM1NTI2Njg3NjJjOTI4MjBiMmVkMDM5OWViMWE3NDBkJmVzPTE3MTY1NDg2MDgmdXVpZD1jMDY5NTRmNjFkODYzYzA5NDE3ZDQ1MTA5Y2Q1YWY4OC02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD10eF9waG9uZV9saXZl/HNGGMPP360.m3u8
+http://phonetx.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPWYzZGIwYTYzZGQ0NDU1NDQwMDhjYTM2Y2ZhMTM1YjkxJmVzPTE3MTY1NzQwNDYmdXVpZD01YmY1NjhjN2UxMGFiY2U0NTMwMjE0MGRkNGM2MWVmOS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD10eF9waG9uZV9saXZl/HNGGMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",湖南国际
-http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTQ3ZjVlYTg2NjRiYjE4M2I3MDVmODdiZmFiMzEwOWVlJmVzPTE3MTY1NDg2MDkmdXVpZD1iZGY4MTExOTU1MmVjMWE0MzgwMDQ2M2E1ZTY0N2YxZi02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/HNGJMPP360.m3u8
+http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTRhZGZlODY4Yjg0NjFlOWFkYjkwMWY1MTJkODMwNTMwJmVzPTE3MTY1NzQwNDcmdXVpZD1kYzgzNDZkMDc2MWEyMDMwYmM4Y2E3OWM1Mjc2YzQxOC02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/HNGJMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",湖南娱乐
-http://phonehw.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTA0OWJmMmU3MzQ4ZDJiMmJmNTgzZGU5MTYxMzlhYThmJmVzPTE3MTY1NDg2MDkmdXVpZD1hZmE4NGViMGQ3MWZjNmIxMTgwZTQ1ZDBhZGVjOGI4Yi02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1od19waG9uZQ,,/HNYLMPP360.m3u8
+http://phoneal.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTJlMDhlYzFhYmI3ZGM4N2Y3M2VkNWE2MTMxNjUyZmRmJmVzPTE3MTY1NzQwNDcmdXVpZD0yNWNjYzQxN2Y1NjcxYmM1ZjNkMTYzMTA1NGUxOGJmMS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1hbF9waG9uZTM,/HNYLMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",快乐购
-http://phoneal.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPThiZDE5OTM4YWMzN2Y3MmY1M2UxYzQ2NDlmNjdhODk1JmVzPTE3MTY1NDg2MTAmdXVpZD1jMjExY2Y5ZWEyN2JmMWU0YTczMWM0NGJmOTYyNjc5MC02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1hbF9waG9uZTM,/KLGMPP360.m3u8
+http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTA3ZWI2MDkwNjU1MTg3NzY3ZDk0NDBkMjVjM2QxODBhJmVzPTE3MTY1NzQwNDgmdXVpZD1kMmRiOGYyNjFmNzY5OTk5YjhkNmZmZTQ1NWZlZTUxMi02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/KLGMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",茶频道
-http://phonetx.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPWI1YmQ5NzYzYzhlMDJkMDIwYWE3OTBjNjBiODhjM2U5JmVzPTE3MTY1NDg2MTEmdXVpZD1hM2FmNzE0Yjk1NWQxNzNiNmM0MmRiMzIyZDcyMGIyMS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD10eF9waG9uZV9saXZl/CPDMPP360.m3u8
+http://phoneqq.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPWE3MzY5ZGI2MzlmZTk4ZmQwNDRmZGZjZjZlMDdhNDg2JmVzPTE3MTY1NzQwNDgmdXVpZD1iZDU1NDY3NmE1YWJhY2RhNGM3YmRhNTlhNTkyNzBlNC02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1xcV9waG9uZV9saXZl/CPDMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",金鹰纪实
-http://phonehw.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPWJiZTBjNzIzMjVlZTA0MWE5NTBiNWI2ZDU5NjdhZTA1JmVzPTE3MTY1NDg2MTEmdXVpZD0xMjdhOWE3NDQwYjc2ODliMzlmMzA3OTRmZjFhZTE0Yy02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1od19waG9uZQ,,/JYJSMPP360.m3u8
+http://phonehw.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTk5Y2NlMTAzZWU4Y2IzODQzNzU0NjY5ZGFmNjAyMTI0JmVzPTE3MTY1NzQwNDkmdXVpZD1mNTg0Y2E5NTdmNDMzZTA1ZmUyNWU5Mjc0YWFmN2I3MS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1od19waG9uZQ,,/JYJSMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",金鹰卡通
-http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTI2OTAzMTY0ZDM0NjY1Y2ExN2VjNGIyMWFiZDJjMzQ0JmVzPTE3MTY1NDg2MTImdXVpZD05N2QxNDE2NDY2NWJhOWMwMjZiMmI5Njc3YTY3MTk5YS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/JYKTMPP360.m3u8
+http://phonetx.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTY2YmNkMjM1NDYyOTNjMTNlOGRkNDdiMmUwYWNlMTcyJmVzPTE3MTY1NzQwNDkmdXVpZD1lZGIwOGVhYWIzODBmNjMyOWM4MGY0Njc4NDE1ZjZkYS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD10eF9waG9uZV9saXZl/JYKTMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",快乐垂钓
-http://phoneal.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTllYzc0YWM2YzhiZTJkMjNmYjgyODdkY2U0YjA2YmViJmVzPTE3MTY1NDg2MTImdXVpZD0zZTMwYTQ2ZTVlNjQzMDExODNmYTJjYTFkMjIyMTc3MS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1hbF9waG9uZTM,/KLCDMPP360.m3u8
+http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTI2ZmU0ZTgxNWE4M2YyYmZkMWFiNzcyZmU2NjNiYjJiJmVzPTE3MTY1NzQwNTAmdXVpZD00MDZhMzFjMGE4ZWMwY2M5MWQ0NTE0YzZhMDYyMGVkZS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/KLCDMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",先锋乒羽
-http://phoneqq.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTYzZDZjNWE2NzlkNzIxYjViYTllMTYwOGY5YjljZGUwJmVzPTE3MTY1NDg2MTMmdXVpZD1jYTMyYjIzOTUwYWEzZWZmYTFmNDY1NDBhMjJhYjhiYS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1xcV9waG9uZV9saXZl/XFPYMPP360.m3u8
+http://phonetx.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPWZhOGY2MDIzNGY5NThjYWUyOWIwYjAwODgwN2UxNGJkJmVzPTE3MTY1NzQwNTAmdXVpZD00ZmQyMDQ2Njc3MWQyNDg0ZTU2ODVjNjQzNzhjNDhiNi02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD10eF9waG9uZV9saXZl/XFPYMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",长沙新闻
-http://phoneqq.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTk3ZjFiNTA5YWU0YjYwMGU1YWQ2NjczYzk0YWQyNmU4JmVzPTE3MTY1NDg2MTMmdXVpZD01ODIyODNiZWE2OTEwYTFlNTZiNzhiYThiOGVmMjRhNC02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1xcV9waG9uZV9saXZl/CSXWMPP360.m3u8
+http://phoneal.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPWJkZDg1MTgyNTU3Mzc5ZWFlN2E0ZWRlMTgzMWM0ZjNhJmVzPTE3MTY1NzQwNTEmdXVpZD01NWVmNTQ5NmE5MDMxNWE5NTQ0ZGZjNDE4OWVkMDk5Ny02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1hbF9waG9uZTM,/CSXWMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",长沙政法
-http://phoneqq.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTkxOGI4MzYwNzlmOWYzNzMzOTM0MjNlZDM5MWY3MDJjJmVzPTE3MTY1NDg2MTQmdXVpZD0xY2RiZTNiZTBkOTMyZmM4NmIzZTkxNDQ0NzVjNmJlMi02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1xcV9waG9uZV9saXZl/CSZFMPP360.m3u8
+http://phonews.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTI4YWM0NjkzMjlkMzBmNDkyZjA3ZTE1YjcwMzQ1NTZkJmVzPTE3MTY1NzQwNTEmdXVpZD1mOWI0ZmFlODJmOWI2YzkyYTg4NDRmYzE3MGM0OWE4MC02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD13c19waG9uZTM,/CSZFMPP360.m3u8
 #EXTINF:-1 group-title="湖南芒果",长沙女性
-http://phonetx.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPTE3OWVkNmFjZjQzNDM2ZTZlMjgyYjZjNzUyZDk3MDdiJmVzPTE3MTY1NDg2MTQmdXVpZD05Y2VhYTc0OTM5NzBiNzkyYzZkNzQxMjVkYjRlOTZjYS02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD10eF9waG9uZV9saXZl/CSNXMPP360.m3u8
+http://phoneqq.qing.mgtv.com/nn_live/nn_x64/dWlwPTExMS4yNi4xNzcuMjgmcWlkPSZzPWY2ZWVkMmYzMzk1MmI0YmY0NWJlYmUxZTNhOTQ5NTgwJmVzPTE3MTY1NzQwNTImdXVpZD04Y2FiM2IwZGMxZWNmZGFhMDZiZWQ4ZTNhNDUxMWZjNC02ZjFhYjExYyZ2PTImYXM9MCZjZG5leF9pZD1xcV9waG9uZV9saXZl/CSNXMPP360.m3u8
 #EXTINF:-1 group-title="港澳频道",凤凰资讯
 http://playtv-live.ifeng.com/live/06OLEEWQKN4.m3u8
 #EXTINF:-1 group-title="港澳频道",凤凰资讯
@@ -4671,5 +4775,5 @@ https://txmov2.a.kwimgs.com/bs3/video-hls/5251197255879398624_hlshd15.m3u8
 https://p2.bdstatic.com/rtmp.liveshow.lss-user.baidubce.com/live/stream_bduid_6488563992_8982723413/merged_1707497046297_88536_25144_41936.m3u8
 #EXTINF:-1 group-title="更新时间",2024-05-24
 url
-#EXTINF:-1 group-title="更新时间",03:18:35
+#EXTINF:-1 group-title="更新时间",10:22:20
 url
