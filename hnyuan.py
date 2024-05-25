@@ -627,7 +627,7 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
     for result in results:
         channel_name, channel_url, speed = result
         if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in \
-                channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '重温经典' not in channel_nameand \
+                channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '重温经典' not in channel_name \
                 and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
