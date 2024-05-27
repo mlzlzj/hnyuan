@@ -153,7 +153,7 @@ headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
     }
 urls = []
-shengshi_names = ["长沙", "娄底", "衡阳", "常德", "南宁"]
+shengshi_names = ["长沙", "娄底", "衡阳", "常德"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
 
@@ -351,7 +351,7 @@ for url in urls:
                         if name and chid and srcid:
                             # 格式化 URL
                             channel_url = ('{name},http://{ip_port}/tsfile/live/{chid}_{'
-                                           'srcid}.m3u8?key=txiptv&playlive=1&authid=0').format(
+                                           'srcid}.m3u8').format(
                                 name=name,
                                 ip_port=ip_port,
                                 chid=chid,
@@ -611,7 +611,8 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
     file.write('省内频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if '湖南' in channel_name or '长沙' in channel_name or '金鹰' in channel_name or '先锋乒羽' in channel_name:
+        if '湖南' in channel_name or '长沙' in channel_name or '金鹰' in channel_name or '先锋乒羽' in channel_name or '双峰' in channel_name \
+                 or '娄底' in channel_name or '常德' in channel_name or '邵阳' in channel_name :
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -622,22 +623,22 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
 
-    channel_counters = {}
-    file.write('其他频道,#genre#\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in \
-                channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '重温经典' not in channel_name \
-                and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"{channel_name},{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"{channel_name},{channel_url}\n")
-                channel_counters[channel_name] = 1
+    # channel_counters = {}
+    # file.write('其他频道,#genre#\n')
+    # for result in results:
+    #     channel_name, channel_url, speed = result
+    #     if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in \
+    #             channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '重温经典' not in channel_name \
+    #             and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
+    #         if channel_name in channel_counters:
+    #             if channel_counters[channel_name] >= result_counter:
+    #                 continue
+    #             else:
+    #                 file.write(f"{channel_name},{channel_url}\n")
+    #                 channel_counters[channel_name] += 1
+    #         else:
+    #             file.write(f"{channel_name},{channel_url}\n")
+    #             channel_counters[channel_name] = 1
 
 
 # 合并自定义频道文件内容
