@@ -150,31 +150,88 @@ with open(file_path, 'w', encoding='utf-8') as file:
 print(f'湖南芒果频道列表已保存至{file_path}！')
 
 headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
-    }
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
+                  'Safari/537.36 Edg/119.0.0.0'}
 urls = []
-shengshi_names = ["长沙", "娄底", "衡阳", "常德", "益阳", "邵阳"]
+shengshi_names = ["湖南", "长沙", "娄底", "衡阳", "常德", "南宁", "山东"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
+
+# 省份名称列表
+provinces = ["湖南", "湖北", "广东", "广西", "江西", "江苏", "浙江", "安徽", "河南", "四川", "贵州", "云南",
+             "河北", "山西", "陕西", "福建", "海南", "山东", "辽宁", "吉林", "黑龙江", "甘肃", "青海"]
+# 城市名称列表
+cities = ["石家庄", "唐山, “秦皇岛", "邯郸", "邢台", "保定", "张家口", "承德", "沧州", "廊坊", "衡水",
+          "太原", "大同", "阳泉", "长治", "晋城", "朔州", "晋中", "运城", "忻州", "临汾", "吕梁",
+          "呼和浩特", "包头", "乌海", "赤峰", "通辽", "鄂尔多斯", "呼伦贝尔", "巴彦淖尔", "乌兰察布", "沈阳",
+          "大连", "鞍山", "抚顺", "本溪", "丹东", "锦州", "营口", "阜新", "辽阳", "盘锦", "铁岭", "朝阳", "葫芦岛",
+          "长春", "吉林", "四平", "辽源", "通化", "白山", "松原", "白城",
+          "哈尔滨", "齐齐哈尔", "鸡西", "鹤岗", "双鸭山", "大庆", "伊春", "佳木斯", "七台河", "牡丹江", "黑河", "绥化",
+          "南京", "无锡", "徐州", "常州", "苏州", "南通", "连云港", "淮安", "盐城", "扬州", "镇江", "泰州", "宿迁",
+          "杭州", "宁波", "温州", "嘉兴", "湖州", "绍兴", "金华", "衢州", "舟山", "台州", "丽水",
+          "合肥", "芜湖", "蚌埠", "淮南", "马鞍山", "淮北", "铜陵", "安庆", "黄山", "阜阳", "宿州", "滁州", "六安",
+          "宣城", "池州", "亳州",
+          "福州", "厦门", "莆田", "三明", "泉州", "漳州", "南平", "龙岩", "宁德",
+          "南昌", "景德镇", "萍乡", "九江", "抚州", "鹰潭", "赣州", "吉安", "宜春", "新余", "上饶",
+          "济南", "青岛", "淄博", "枣庄", "东营", "烟台", "潍坊", "济宁", "泰安", "威海", "日照", "临沂", "德州",
+          "聊城", "滨州", "菏泽",
+          "郑州", "开封", "洛阳", "平顶山", "安阳", "鹤壁", "新乡", "焦作", "濮阳", "许昌", "漯河", "三门峡", "南阳",
+          "商丘", "信阳", "周口", "驻马店",
+          "武汉", "黄石", "十堰", "宜昌", "襄阳", "鄂州", "荆门", "孝感", "荆州", "黄冈", "咸宁", "随州",
+          "长沙", "娄底", "衡阳", "常德", "株洲", "湘潭", "邵阳", "张家界", "益阳", "郴州", "永州", "怀化", "岳阳",
+          "广州", "韶关", "深圳", "珠海", "汕头", "佛山", "江门", "湛江", "茂名", "肇庆", "惠州", "梅州", "汕尾",
+          "河源", "阳江", "清远", "东莞", "中山", "潮州", "揭阳", "云浮",
+          "南宁", "贵港", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "玉林", "百色", "贺州", "河池", "来宾", "崇左",
+          "海口", "三亚", "三沙", "儋州",
+          "成都", "自贡", "攀枝花", "泸州", "德阳", "绵阳", "广元", "遂宁", "内江", "乐山", "南充", "眉山", "宜宾",
+          "广安", "达州", "雅安", "巴中", "资阳",
+          "贵阳", "六盘水", "遵义", "安顺", "毕节", "铜仁",
+          "昆明", "曲靖", "玉溪", "保山", "昭通", "丽江", "普洱", "临沧",
+          "拉萨", "日喀则", "昌都", "林芝", "山南", "那曲",
+          "西安", "铜川", "宝鸡", "咸阳", "渭南", "延安", "汉中", "榆林", "安康", "商洛",
+          "兰州", "嘉峪关", "金昌", "白银", "天水", "武威", "张掖", "平凉", "酒泉", "庆阳", "定西", "陇南",
+          "西宁", "海东", "银川", "石嘴山", "吴忠", "固原", "中卫", "乌鲁木齐", "克拉玛依", "吐鲁番", "哈密"]
+
+
+# 判断一个名称是省份还是城市
+def is_province(name, provinces, cities):
+    return name in provinces and name not in cities
+
+
+# 判断一个名称是城市还是省份
+def is_city(name, provinces, cities):
+    return name not in provinces and name in cities
+
 
 # 定义运营商的名称和对应的组织名称
 operators = {
     "中国电信": "Chinanet",
     "中国联通": "CHINA UNICOM China169 Backbone",
-    "中国移动": "China Mobile Communications Corporation"
+    # "中国移动": "China Mobile Communications Corporation"
 }
-for shengshi in pinyin_names:
+
+all_urls = []
+
+for shengshi in shengshi_names:
+    pinyin_name = "".join(lazy_pinyin(shengshi, errors=lambda x: x))
     for operator_name, org_name in operators.items():
-        url = 'https://fofa.info/result?qbase64='
-        search_txt = f'"iptv/live/zh_cn.js" && country="CN" && city="{shengshi}" && org="{org_name}"'  # 构造查询市字符串
-        # 将字符串编码为字节流
+        # 省份查询
+        if is_province(shengshi, provinces, cities):
+            search_txt = f'"iptv/live/zh_cn.js" && country="CN" && region="{pinyin_name}" && org="{org_name}"'
+        # 城市查询
+        elif is_city(shengshi, provinces, cities):
+            search_txt = f'"iptv/live/zh_cn.js" && country="CN" && city="{pinyin_name}" && org="{org_name}"'
+        else:
+            continue  # 如果不是省份或城市，则跳过
+            # 编码和构建URL
         bytes_string = search_txt.encode('utf-8')
-        # 使用 base64 进行编码
         encoded_search_txt = base64.b64encode(bytes_string).decode('utf-8')
-        url += encoded_search_txt
+        url = f'https://fofa.info/result?qbase64={encoded_search_txt}'
         print(f"正在扫描 {shengshi} {operator_name}地址: ")
         print(f"{url}")
-        urls.append(url)
+        all_urls.append(url)  # 添加到所有URL的列表中
+    # 现在 all_urls 包含了所有省份和城市的URL
+    urls = all_urls  # 将所有查询到的URL赋值给 urls 变量
 
 
 def modify_urls(url):
@@ -369,6 +426,7 @@ channels = []
 for result in results:
     line = result.strip()
     if result:
+        # channels.append(result)
         channel_name, channel_url = result.split(',')
         channels.append((channel_name, channel_url))
 
@@ -623,22 +681,22 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
 
-    # channel_counters = {}
-    # file.write('其他频道,#genre#\n')
-    # for result in results:
-    #     channel_name, channel_url, speed = result
-    #     if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in \
-    #             channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '重温经典' not in channel_name \
-    #             and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
-    #         if channel_name in channel_counters:
-    #             if channel_counters[channel_name] >= result_counter:
-    #                 continue
-    #             else:
-    #                 file.write(f"{channel_name},{channel_url}\n")
-    #                 channel_counters[channel_name] += 1
-    #         else:
-    #             file.write(f"{channel_name},{channel_url}\n")
-    #             channel_counters[channel_name] = 1
+    channel_counters = {}
+    file.write('其他频道,#genre#\n')
+    for result in results:
+        channel_name, channel_url, speed = result
+        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in \
+                channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '重温经典' not in channel_name \
+                and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"{channel_name},{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"{channel_name},{channel_url}\n")
+                channel_counters[channel_name] = 1
 
 
 # 合并自定义频道文件内容
