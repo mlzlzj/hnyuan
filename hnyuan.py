@@ -10,6 +10,7 @@ from queue import Queue
 from pypinyin import lazy_pinyin
 from bs4 import BeautifulSoup
 import random
+
 #  获取芒果频道
 url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/mlzlzj/mgtv/main/mgtv.txt'
 r = requests.get(url)
@@ -21,6 +22,8 @@ if r.status_code == 200:
         lines[0] = "湖南芒果,#genre#\n"
         file.seek(0)
         file.writelines(lines)
+    print("mgtv.txt文件获取成功。")
+        
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
