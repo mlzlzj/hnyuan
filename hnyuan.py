@@ -11,144 +11,6 @@ from pypinyin import lazy_pinyin
 from bs4 import BeautifulSoup
 import random
 
-# 爬取国内免费代理IP
-def crawl_proxies(start_page, end_page):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
-    }
-    proxies = []
-
-    for page in range(start_page, end_page + 1):
-        url = f'http://www.kxdaili.com/dailiip/2/{page}.html'
-        r = requests.get(url, headers=headers)
-        soup = BeautifulSoup(r.text, 'html.parser')
-
-        # 解析代理IP列表
-        for row in soup.find_all('tr'):
-            cols = row.find_all('td')
-            if len(cols) >= 2:
-                try:
-                    proxy = cols[0].text.strip() + ':' + cols[1].text.strip()
-                    proxies.append(proxy)
-                except Exception as e:
-                    print(f"Error parsing proxy on page {page}: {e}")
-
-    return proxies
-
-
-def test_proxy_and_write(proxy, file_path):
-    url = 'http://mpp.liveapi.mgtv.com/v1/epg/turnplay/getLivePlayUrlMPP?version=PCweb_1.0&platform=1&buss_id=2000001&channel_id='  # 测试网站
-    proxies = {
-        'http': 'http://' + proxy,
-        'https': 'https://' + proxy
-    }
-    try:
-        response = requests.get(url, proxies=proxies, timeout=10)  # 增加超时时间为10秒
-        if response.status_code == 200:
-            with open(file_path, 'a', encoding='utf-8') as file:  # 使用 'a' 模式追加写入
-                file.write(proxy + '\n')
-                return True
-    except requests.exceptions.RequestException as e:
-        print(f"Error testing proxy {proxy}: {e}")
-    return False
-
-
-# 随机选择代理IP
-def get_random_proxy(proxy_pool):
-    if proxy_pool:
-        return random.choice(proxy_pool)
-    else:
-        return None
-
-
-# 构建代理IP池
-def build_proxy_pool(proxies, file_path):
-    # 清空文件，准备写入新的代理IP
-    open(file_path, 'w').close()
-    proxy_pool = []
-    for proxy in proxies:
-        if test_proxy_and_write(proxy, file_path):
-            proxy_pool.append(proxy)
-    return proxy_pool
-
-
-# 示例使用
-if __name__ == '__main__':
-    start_page = 8
-    end_page = 10  # 最大页数为1-10
-    proxies = crawl_proxies(start_page, end_page)
-    file_path = 'proxy_ip.txt'  # 指定一个文件路径来存储可用代理
-    proxy_pool = build_proxy_pool(proxies, file_path)  # 构建代理池时，同时写入文件
-
-    # 打印所有有效的代理IP
-    for proxy in proxy_pool:
-        print(f"有效代理IP: {proxy}")
-
-    if proxy_pool:
-        print(f"本次扫描共获取到 {len(proxy_pool)} 个有效的代理IP.")
-    if not proxy_pool:
-        print("未获取到有效的代理IP.")
-        exit()  # 如果没有有效的代理IP，则退出程序
-
-# 从代理池中随机选择一个代理IP
-random_proxy = get_random_proxy(proxy_pool)
-
-file_path = 'mgtv.txt'
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0'
-}
-if random_proxy:
-    proxy = f'http://{random_proxy}'  # 正确引用有效的代理IP
-else:
-    proxy = None  # 如果没有有效的代理IP，则不设置代理
-url = 'http://mpp.liveapi.mgtv.com/v1/epg/turnplay/getLivePlayUrlMPP?version=PCweb_1.0&platform=1&buss_id=2000001&channel_id='
-channel_dic = {
-    '湖南经视': ['280', 'hn01'],
-    '湖南都市': ['346', 'hn02'],
-    '湖南电视剧': ['484', 'hn03'],
-    '湖南电影': ['221', 'hn04'],
-    '湖南爱晚': ['261', 'hn05'],
-    '湖南国际': ['229', 'hn06'],
-    '湖南娱乐': ['344', 'hn07'],
-    '快乐购': ['267', 'hn08'],
-    '茶频道': ['578', 'hn09'],
-    '金鹰纪实': ['316', 'hn10'],
-    '金鹰卡通': ['287', 'hn11'],
-    '快乐垂钓': ['218', 'hn12'],
-    '先锋乒羽': ['329', 'hn13'],
-    '长沙新闻': ['269', 'hn14'],
-    '长沙政法': ['254', 'hn15'],
-    '长沙女性': ['230', 'hn16'],
-}
-
-txt_lis = []
-
-for channel in channel_dic:
-    if proxy:
-        response = requests.get(url=url + str(channel_dic[channel][0]), headers=headers, proxies={'http': proxy})
-    else:
-        response = requests.get(url=url + str(channel_dic[channel][0]), headers=headers)
-
-    # 检查响应状态码
-    if response.status_code == 200:
-        # 检查响应体是否为空
-        if response.text:
-            json_data = response.json()
-            txt_url = json_data['data']['url']
-            txt_lis.append(f'{channel},{txt_url}\n')
-        else:
-            print(f"Warning: Empty response body for channel {channel}")
-    else:
-        print(f"Warning: Request failed for channel {channel} with status code {response.status_code}")
-
-txt_string = ''.join(txt_lis)
-
-with open(file_path, 'w', encoding='utf-8') as file:
-    file.write('湖南芒果,#genre#\n')
-    file.write(txt_string)
-    print(txt_string)
-print(f'湖南芒果频道列表已保存至{file_path}！')
-
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
@@ -157,10 +19,10 @@ shengshi_names = ["湖南", "长沙", "娄底", "衡阳", "常德", "南宁", "�
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
 
-# 省份名称列表
+# 省直辖市名称列表：
 provinces = ["湖南", "湖北", "广东", "广西", "江西", "江苏", "浙江", "安徽", "河南", "四川", "贵州", "云南",
-             "河北", "山西", "陕西", "福建", "海南", "山东", "辽宁", "吉林", "黑龙江", "甘肃", "青海"]
-# 城市名称列表
+             "河北", "山西", "陕西", "福建", "海南", "山东", "辽宁", "吉林", "黑龙江", "甘肃", "青海"，"北京", "天津", "上海", "重庆"]
+# 城市名称列表：
 cities = ["石家庄", "唐山, “秦皇岛", "邯郸", "邢台", "保定", "张家口", "承德", "沧州", "廊坊", "衡水",
           "太原", "大同", "阳泉", "长治", "晋城", "朔州", "晋中", "运城", "忻州", "临汾", "吕梁",
           "呼和浩特", "包头", "乌海", "赤峰", "通辽", "鄂尔多斯", "呼伦贝尔", "巴彦淖尔", "乌兰察布", "沈阳",
@@ -258,7 +120,6 @@ def is_url_accessible(url):
     except requests.exceptions.RequestException:
         pass
     return None
-
 
 results = []
 
@@ -680,25 +541,7 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-
-    # channel_counters = {}
-    # file.write('其他频道,#genre#\n')
-    # for result in results:
-    #     channel_name, channel_url, speed = result
-    #     if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in \
-    #             channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '重温经典' not in channel_name \
-    #             and '湖南' not in channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
-    #         if channel_name in channel_counters:
-    #             if channel_counters[channel_name] >= result_counter:
-    #                 continue
-    #             else:
-    #                 file.write(f"{channel_name},{channel_url}\n")
-    #                 channel_counters[channel_name] += 1
-    #         else:
-    #             file.write(f"{channel_name},{channel_url}\n")
-    #             channel_counters[channel_name] = 1
-
-
+    
 # 合并自定义频道文件内容
 file_contents = []
 file_paths = ["YD-IPTV.txt", "cctv.txt", "iptvlist.txt", "mgtv.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
@@ -720,7 +563,6 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
 os.remove("iptv.txt")
 os.remove("cctv.txt")
 os.remove("iptvlist.txt")
-os.remove("mgtv.txt")
 os.remove("gangaotai.txt")
 
 print("任务运行完毕，分类频道列表可查看文件夹内iptv_list.txt文件！")
