@@ -23,7 +23,7 @@ if r.status_code == 200:
         file.seek(0)
         file.writelines(lines)
     print("mgtv.txt文件获取成功。")
-        
+
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
@@ -33,8 +33,10 @@ pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in sheng
 print(f'本次查询{shengshi_names}的酒店频道。')
 
 # 省直辖市名称列表：
-provinces = ["湖南", "湖北", "广东", "广西", "江西", "江苏", "浙江", "安徽", "河南", "四川", "贵州", "云南", "河北", "山西", 
-             "陕西", "福建", "海南", "山东", "辽宁", "吉林", "黑龙江", "甘肃", "青海", "北京", "天津", "上海", "重庆", "广西壮族自治区"]
+provinces = ["湖南", "湖北", "广东", "广西", "江西", "江苏", "浙江", "安徽", "河南", "四川", "贵州", "云南", "河北",
+             "山西",
+             "陕西", "福建", "海南", "山东", "辽宁", "吉林", "黑龙江", "甘肃", "青海", "北京", "天津", "上海", "重庆",
+             "广西壮族自治区"]
 # 城市名称列表：
 cities = ["石家庄", "唐山, “秦皇岛", "邯郸", "邢台", "保定", "张家口", "承德", "沧州", "廊坊", "衡水",
           "太原", "大同", "阳泉", "长治", "晋城", "朔州", "晋中", "运城", "忻州", "临汾", "吕梁",
@@ -56,7 +58,8 @@ cities = ["石家庄", "唐山, “秦皇岛", "邯郸", "邢台", "保定", "�
           "长沙", "娄底", "衡阳", "常德", "株洲", "湘潭", "邵阳", "张家界", "益阳", "郴州", "永州", "怀化", "岳阳",
           "广州", "韶关", "深圳", "珠海", "汕头", "佛山", "江门", "湛江", "茂名", "肇庆", "惠州", "梅州", "汕尾",
           "河源", "阳江", "清远", "东莞", "中山", "潮州", "揭阳", "云浮",
-          "南宁", "贵港", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "玉林", "百色", "贺州", "河池", "来宾", "崇左",
+          "南宁", "贵港", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "玉林", "百色", "贺州", "河池", "来宾",
+          "崇左",
           "海口", "三亚", "三沙", "儋州",
           "成都", "自贡", "攀枝花", "泸州", "德阳", "绵阳", "广元", "遂宁", "内江", "乐山", "南充", "眉山", "宜宾",
           "广安", "达州", "雅安", "巴中", "资阳",
@@ -133,6 +136,7 @@ def is_url_accessible(url):
     except requests.exceptions.RequestException:
         pass
     return None
+
 
 results = []
 
@@ -311,7 +315,6 @@ with open("iptv.txt", 'w', encoding='utf-8') as file:
 
 print(f"共获取到频道{len(channels)}个，频道列表文件iptv.txt生成完毕！")
 
-
 import eventlet
 
 eventlet.monkey_patch()
@@ -444,6 +447,7 @@ with open("iptv.txt", 'r', encoding='utf-8') as file:
             if 'CCTV' not in channel_name:
                 channels.append((channel_name, channel_url))
 
+
 # 定义工作线程函数
 def worker():
     while True:
@@ -544,7 +548,7 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
     for result in results:
         channel_name, channel_url, speed = result
         if '湖南' in channel_name or '长沙' in channel_name or '金鹰' in channel_name or '先锋乒羽' in channel_name or '双峰' in channel_name \
-                 or '娄底' in channel_name or '常德' in channel_name or '邵阳' in channel_name :
+                or '娄底' in channel_name or '常德' in channel_name or '邵阳' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -554,7 +558,7 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-    
+
 # 合并自定义频道文件内容
 file_contents = []
 file_paths = ["YD-IPTV.txt", "cctv.txt", "iptvlist.txt", "mgtv.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
