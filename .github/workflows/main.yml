@@ -1,54 +1,54 @@
-name: hnyuan
+# name: hnyuan
 
-on:
-  schedule:
-    - cron: '0 10,18,02 * * *'
-  push:
-    branches:
-      - main
+# on:
+#   schedule:
+#     - cron: '0 10,18,02 * * *'
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
     
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
+#       - name: Set up Python
+#         uses: actions/setup-python@v2
+#         with:
+#           python-version: 3.x
 
-      - name: Install dependencies
-        run: pip install selenium requests futures eventlet  pypinyin  bs4
+#       - name: Install dependencies
+#         run: pip install selenium requests futures eventlet  pypinyin  bs4
 
-      - name: Install Chrome WebDriver
-        run: |
-          LATEST_CHROMEDRIVER_VERSION=124.0.6367.78       
-          curl -sS -o chromedriver_linux64.zip "https://storage.googleapis.com/chrome-for-testing-public/124.0.6367.78/linux64/chrome-headless-shell-linux64.zip"
-          sudo unzip chromedriver_linux64.zip -d /usr/local/bin
-          rm chromedriver_linux64.zip
-      - name: Set chromedriver path
-        run: |
-          sudo ln -sf /usr/local/bin/chrome-headless-shell-linux64/chrome-headless-shell /usr/local/bin/chromedriver
-          sudo chmod +x /usr/local/bin/chromedriver
+#       - name: Install Chrome WebDriver
+#         run: |
+#           LATEST_CHROMEDRIVER_VERSION=124.0.6367.78       
+#           curl -sS -o chromedriver_linux64.zip "https://storage.googleapis.com/chrome-for-testing-public/124.0.6367.78/linux64/chrome-headless-shell-linux64.zip"
+#           sudo unzip chromedriver_linux64.zip -d /usr/local/bin
+#           rm chromedriver_linux64.zip
+#       - name: Set chromedriver path
+#         run: |
+#           sudo ln -sf /usr/local/bin/chrome-headless-shell-linux64/chrome-headless-shell /usr/local/bin/chromedriver
+#           sudo chmod +x /usr/local/bin/chromedriver
 
-      - name: Run gangaotai
-        run: python ${{ github.workspace }}/gangaotai.py
+#       - name: Run gangaotai
+#         run: python ${{ github.workspace }}/gangaotai.py
             
-      - name: Run hunan
-        run: python ${{ github.workspace }}/hnyuan.py
+#       - name: Run hunan
+#         run: python ${{ github.workspace }}/hnyuan.py
         
-      - name: Run txt-m3u
-        run: python ${{ github.workspace }}/txt-m3u.py
+#       - name: Run txt-m3u
+#         run: python ${{ github.workspace }}/txt-m3u.py
                  
-      - name: 提交更改
-        run: |
-          git config --local user.email "mlyuanlang@126.com"
-          git config --local user.name "mlvjfchen"
-          git add .
-          git commit *.txt -m "Add generated file"
-          git commit *.m3u -m "Add generated file"
-          #git pull --rebase
-          git push -f
+#       - name: 提交更改
+#         run: |
+#           git config --local user.email "mlyuanlang@126.com"
+#           git config --local user.name "mlvjfchen"
+#           git add .
+#           git commit *.txt -m "Add generated file"
+#           git commit *.m3u -m "Add generated file"
+#           #git pull --rebase
+#           git push -f
