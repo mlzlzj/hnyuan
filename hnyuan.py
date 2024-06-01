@@ -237,6 +237,7 @@ for url in urls:
                         name = name.replace("CCTV17农业", "CCTV17")
                         name = name.replace("CCTV5+体育赛视", "CCTV5+")
                         name = name.replace("CCTV5+赛视", "CCTV5+")
+                        name = name.replace("CCTV5卡", "CCTV5+")
                         name = name.replace("CCTV5+体育赛事", "CCTV5+")
                         name = name.replace("CCTV5+赛事", "CCTV5+")
                         name = name.replace("CCTV5+体育", "CCTV5+")
