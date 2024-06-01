@@ -12,17 +12,44 @@ from bs4 import BeautifulSoup
 import random
 
 #  获取芒果频道
+# 定义一个函数来处理文件
+def process_mgtv_file(url, output_filename="mgtv.txt"):
+    try:
+        # 发送HTTP请求
+        response = requests.get(url)
+        # 检查请求是否成功
+        if response.status_code == 200:
+            # 写入原始内容到文件
+            with open(output_filename, "wb") as code:
+                code.write(response.content)
+            
+            # 读取并修改文件内容
+            with open(output_filename, "r+", encoding='utf-8') as file:
+                # 读取所有行
+                lines = file.readlines()
+                # 替换第一行
+                lines[0] = "湖南芒果,#genre#\n"
+                # 去除第二行之后的每一行的首尾空白字符
+                for i in range(1, len(lines)):
+                    lines[i] = lines[i].strip() + "\n"
+                # 重置文件指针到文件开头
+                file.seek(0)
+                # 写入修改后的内容
+                file.writelines(lines)
+
+            print("mgtv.txt文件获取成功。")
+        else:
+            print(f"文件下载失败，状态码：{response.status_code}")
+    except requests.RequestException as e:
+        print(f"请求过程中发生错误：{e}")
+    except Exception as e:
+        print(f"处理文件时发生错误：{e}")
+
+
+# URL和处理函数调用
 url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/mlzlzj/mgtv/main/mgtv.txt'
-r = requests.get(url)
-if r.status_code == 200:
-    with open("mgtv.txt", "wb") as code:
-        code.write(r.content)
-    with open("mgtv.txt", "r+", encoding='utf-8') as file:
-        lines = file.readlines()
-        lines[0] = "湖南芒果,#genre#\n"
-        file.seek(0)
-        file.writelines(lines)
-    print("mgtv.txt文件获取成功。")
+process_mgtv_file(url)
+
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
@@ -58,8 +85,7 @@ cities = ["石家庄", "唐山, “秦皇岛", "邯郸", "邢台", "保定", "�
           "长沙", "娄底", "衡阳", "常德", "株洲", "湘潭", "邵阳", "张家界", "益阳", "郴州", "永州", "怀化", "岳阳",
           "广州", "韶关", "深圳", "珠海", "汕头", "佛山", "江门", "湛江", "茂名", "肇庆", "惠州", "梅州", "汕尾",
           "河源", "阳江", "清远", "东莞", "中山", "潮州", "揭阳", "云浮",
-          "南宁", "贵港", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "玉林", "百色", "贺州", "河池", "来宾",
-          "崇左",
+          "南宁", "贵港", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "玉林", "百色", "贺州", "河池", "来宾", "崇左",
           "海口", "三亚", "三沙", "儋州",
           "成都", "自贡", "攀枝花", "泸州", "德阳", "绵阳", "广元", "遂宁", "内江", "乐山", "南充", "眉山", "宜宾",
           "广安", "达州", "雅安", "巴中", "资阳",
