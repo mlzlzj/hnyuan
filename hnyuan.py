@@ -607,5 +607,5 @@ os.remove("iptv.txt")
 os.remove("cctv.txt")
 os.remove("iptvlist.txt")
 os.remove("gangaotai.txt")
-
+os.remove("mgtv.txt")
 print("任务运行完毕，分类频道列表可查看文件夹内iptv_list.txt文件！")
