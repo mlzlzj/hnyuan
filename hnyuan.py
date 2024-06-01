@@ -11,51 +11,11 @@ from pypinyin import lazy_pinyin
 from bs4 import BeautifulSoup
 import random
 
-#  获取芒果频道
-# 定义一个函数来处理文件
-def process_mgtv_file(url, output_filename="mgtv.txt"):
-    try:
-        # 发送HTTP请求
-        response = requests.get(url)
-        # 检查请求是否成功
-        if response.status_code == 200:
-            # 写入原始内容到文件
-            with open(output_filename, "wb") as code:
-                code.write(response.content)
-            
-            # 读取并修改文件内容
-            with open(output_filename, "r+", encoding='utf-8') as file:
-                # 读取所有行
-                lines = file.readlines()
-                # 替换第一行
-                lines[0] = "湖南芒果,#genre#\n"
-                # 去除第二行之后的每一行的首尾空白字符
-                for i in range(1, len(lines)):
-                    lines[i] = lines[i].strip() + "\n"
-                # 重置文件指针到文件开头
-                file.seek(0)
-                # 写入修改后的内容
-                file.writelines(lines)
-
-            print("mgtv.txt文件获取成功。")
-        else:
-            print(f"文件下载失败，状态码：{response.status_code}")
-    except requests.RequestException as e:
-        print(f"请求过程中发生错误：{e}")
-    except Exception as e:
-        print(f"处理文件时发生错误：{e}")
-
-
-# URL和处理函数调用
-url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/mlzlzj/mgtv/main/mgtv.txt'
-process_mgtv_file(url)
-
-
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
 urls = []
-shengshi_names = ["湖南", "长沙", "娄底", "衡阳", "常德", "南宁", "山东"]
+shengshi_names = ["湖南", "长沙", "娄底", "衡阳", "常德", "南宁", "河南", "山东"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
 
@@ -436,7 +396,7 @@ def channel_key(channel_name):
 results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 results.sort(key=lambda x: channel_key(x[0]))
 
-result_counter = 20  # 每个频道需要的个数
+result_counter = 30  # 每个频道需要的个数
 
 # 写入cctv.txt和.m3u文件
 with open("cctv.txt", 'w', encoding='utf-8') as file:
@@ -550,7 +510,7 @@ results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 # results.sort(key=lambda x: channel_key(x[0]))
 # now_today = datetime.date.today()
 
-result_counter = 20  # 每个频道需要的个数
+result_counter = 30  # 每个频道需要的个数
 
 # 生成txt文件
 with open("iptvlist.txt", 'w', encoding='utf-8') as file:
@@ -587,7 +547,7 @@ with open("iptvlist.txt", 'w', encoding='utf-8') as file:
 
 # 合并自定义频道文件内容
 file_contents = []
-file_paths = ["YD-IPTV.txt", "cctv.txt", "iptvlist.txt", "mgtv.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt", "cctv.txt", "iptvlist.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -607,5 +567,5 @@ os.remove("iptv.txt")
 os.remove("cctv.txt")
 os.remove("iptvlist.txt")
 os.remove("gangaotai.txt")
-os.remove("mgtv.txt")
+
 print("任务运行完毕，分类频道列表可查看文件夹内iptv_list.txt文件！")
