@@ -25,8 +25,8 @@ jobs:
 
       - name: Install Chrome WebDriver
         run: |
-          LATEST_CHROMEDRIVER_VERSION=124.0.6367.78       
-          curl -sS -o chromedriver_linux64.zip "https://storage.googleapis.com/chrome-for-testing-public/124.0.6367.78/linux64/chrome-headless-shell-linux64.zip"
+          LATEST_CHROMEDRIVER_VERSION=125.0.6422.112       
+          curl -sS -o chromedriver_linux64.zip "https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.1128/linux64/chrome-headless-shell-linux64.zip"
           sudo unzip chromedriver_linux64.zip -d /usr/local/bin
           rm chromedriver_linux64.zip
       - name: Set chromedriver path
