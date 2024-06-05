@@ -15,7 +15,7 @@ import subprocess
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-shengshi_names = ["山东", "南宁", "江西"]
+shengshi_names = ["长沙", "娄底", "衡阳", "常德", "株洲", "湘潭", "邵阳", "张家界", "益阳", "郴州", "永州", "怀化","山东", "南宁", "江西"]
 print(f'本次扫描{shengshi_names}的酒店频道。')
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 
@@ -605,10 +605,10 @@ with open("MB.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-# 写入更新日期时间
-now = datetime.now()
-file.write(f"更新时间,#genre#\n")
-file.write(f"{now.strftime("%Y-%m-%d")},url\n")
-file.write(f"{now.strftime("%H:%M:%S")},url\n")
+# # 写入更新日期时间
+# now = datetime.now()
+# file.write(f"更新时间,#genre#\n")
+# file.write(f"{now.strftime("%Y-%m-%d")},url\n")
+# file.write(f"{now.strftime("%H:%M:%S")},url\n")
 print("分类频道列表文件MB.txt分类排序完成!")
 
