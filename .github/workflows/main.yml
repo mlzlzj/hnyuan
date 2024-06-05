@@ -36,7 +36,7 @@ jobs:
 
     
       - name: Run hunan
-        run: python ${{ github.workspace }}/fofa+zoomeye.py
+        run: python ${{ github.workspace }}/hnyuan.py
                                
       - name: 提交更改
         run: |
