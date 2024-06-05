@@ -27,7 +27,7 @@ jobs:
         run: |
           LATEST_CHROMEDRIVER_VERSION=125.0.6422.141
           curl -sS -o chromedriver-linux64.zip "https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip"
-          sudo unzip chromedriver_linux64.zip -d /usr/local/bin
+          sudo unzip chromedriver-linux64.zip -d /usr/local/bin
           ls -l /usr/local/bin/chromedriver
           sudo ln -sf /usr/local/bin/chromedriver /usr/local/bin/chrome-headless-shell
       - name: Set chromedriver path
