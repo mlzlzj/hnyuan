@@ -27,12 +27,13 @@ jobs:
         run: |
           LATEST_CHROMEDRIVER_VERSION=125.0.6422.141
           curl -sS -o chromedriver-linux64.zip "https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip"
-          ls -l /usr/local/bin/chrome-headless-shell-linux64
-          sudo ln -sf /usr/local/bin/chrome-headless-shell-linux64/chrome-headless-shell /usr/local/bin/chromedriver
+          sudo unzip chromedriver_linux64.zip -d /usr/local/bin
+          ls -l /usr/local/bin/chromedriver
+          sudo ln -sf /usr/local/bin/chromedriver /usr/local/bin/chrome-headless-shell
       - name: Set chromedriver path
         run: |
-          sudo chmod +x /usr/local/bin/chrome-headless-shell-linux64/chrome-headless-shell
-          /usr/local/bin/chromedriver --versionr
+          sudo chmod +x /usr/local/bin/chromedriver
+          /usr/local/bin/chromedriver --version
 
       - name: Run hunan
       
