@@ -276,89 +276,155 @@ with open("iptv.txt", 'w', encoding='utf-8') as file:
 # 写入频道列表文件iptv.txt
 print(f"共获取到频道{len(channels)}个，频道列表文件iptv.txt生成完毕！")
 
-import eventlet
 
-eventlet.monkey_patch()
+# 对iptv.txt内所有频道列表所在的ip地址及端口进行抽检测速
+def download_m3u8(url):
+    try:
+        response = requests.get(url, timeout=15)
+        if response.status_code == 200:
+            m3u8_content = response.text
+            ts_urls = [line.strip() for line in m3u8_content.split('\n') if line and not line.startswith('#')]
 
-# 线程安全的队列，用于存储下载任务
-task_queue = Queue()
+            if not ts_urls:
+                print("Error: 没有找到任何TS文件链接", flush=True)
+                return 0
 
-# 线程安全的列表，用于存储结果
-results = []
-channels = []
-error_channels = []
+            total_size = 0
+            start_time = time.time()
+            ts_timeout = 15  # 设置每个.ts文件下载的超时值（秒）
+            for ts_url in ts_urls:
+                if (time.time() - start_time) > 30:
+                    print("Error: 总下载时间超过30秒，速度检测不合格", flush=True)
+                    return 0
 
-# 从iptv.txt文件提取cctv频道进行检测
-with open("iptv.txt", 'r', encoding='utf-8') as file:
-    lines = file.readlines()
+                if ts_url.startswith('http'):
+                    full_ts_url = ts_url
+                else:
+                    base_url = url.rsplit('/', 1)[0]
+                    if ts_url.startswith('/'):
+                        base_url = "/".join(base_url.split('/')[:-2])
+                    full_ts_url = base_url + '/' + ts_url
+
+                ts_response = requests.get(full_ts_url, timeout=ts_timeout)
+                total_size += len(ts_response.content)
+
+            end_time = time.time()
+            download_time = end_time - start_time
+            if download_time == 0:
+                print("Error: 下载时间计算为0，不能计算下载速度", flush=True)
+                return 0
+
+            speed = total_size / (download_time * 1024)  # 计算速度，单位为KB/s
+            return speed
+        else:
+            print(f"Error: 下载.m3u8文件失败, 状态码: {response.status_code}", flush=True)
+            return 0
+    except requests.exceptions.RequestException as e:
+        print("HTTP请求错误:", e, flush=True)
+        return 0
+    except Exception as e:
+        print("Error:", e, flush=True)
+        return 0
+
+
+def is_multicast_url(url):
+    return re.search(r'udp|rtp', url, re.I)
+
+
+def process_domain(domain, cctv_links, all_links):
+    if not cctv_links:
+        print(f"域 {domain} 下没有找到任何 CCTV 相关的链接，跳过。")
+        return None, domain
+
+    random.shuffle(cctv_links)
+    selected_link = cctv_links[0]
+
+    speed = download_m3u8(selected_link)
+    if speed >= 1300:  # 更改这个数值可改变要保留频道列表的最低下载速率
+        print(f"频道链接 {selected_link} 在域 {domain} 下的下载速度为：{speed:.2f} KB/s")
+        genre = "genre"
+        result = [f"下载速率{speed:.2f},#{genre}#"]
+        result.extend(f"{name},{url}" for name, url in all_links)
+        return result, domain, speed
+    else:
+        print(f"频道链接 {selected_link} 在域 {domain} 下未通过速度测试,下载速度为：{speed:.2f} KB/s。")
+        return None, domain, speed
+
+
+def process_ip_addresses(ip_data):
+    print(f"......开始抽取频道列表所在的IP地址及端口进行速率检测......\n")
+
+    channels_info = []
+    lines = ip_data.strip().split('\n')
     for line in lines:
-        line = line.strip()
-        if line:
-            channel_name, channel_url = line.split(',')
-            if 'CCTV' in channel_name:
-                channels.append((channel_name, channel_url))
+        if ',' in line:
+            channel_name, m3u8_link = line.split(',', 1)
+            channels_info.append((channel_name.strip(), m3u8_link.strip()))
+
+    if not channels_info:
+        print(f"处理数据时没有找到有效的频道，跳过测速。")
+        return []
+
+    domain_dict = {}
+    for name, link in channels_info:
+        match = re.search(r'https?://([^/]+)/', link)
+        if match:
+            domain = match.group(1)
+            if domain not in domain_dict:
+                domain_dict[domain] = []
+            domain_dict[domain].append((name, link))
+        else:
+            print(f"链接 {link} 无法提取域名，跳过。")
+
+    # 存储每个域的最快速度和频道列表
+    domain_speeds = {}
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_domain = {
+            executor.submit(process_domain, domain, [link for name, link in links if "CCTV" in name], links): domain
+            for domain, links in domain_dict.items()
+        }
+
+        for future in as_completed(future_to_domain):
+            try:
+                result, domain, speed = future.result()
+                if result:
+                    if domain not in domain_speeds or speed > domain_speeds[domain]['speed']:
+                        domain_speeds[domain] = {'speed': speed, 'channels': result}
+            except ValueError:
+                print(f"Error: 无法正确解析出结果 from domain {domain}")
+                continue
+    # 根据速度对IP进行降序排序
+    sorted_domains = sorted(domain_speeds.items(), key=lambda item: item[1]['speed'], reverse=True)
+    valid_urls = []
+    for domain, data in sorted_domains:
+        valid_urls.extend(data['channels'])
+
+    return valid_urls
 
 
-# 定义工作线程函数
-def worker():
-    while True:
-        # 从队列中获取一个任务
-        channel_name, channel_url = task_queue.get()
-        try:
-            channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])  # m3u8链接前缀
-            lines = requests.get(channel_url).text.strip().split('\n')  # 获取m3u8文件内容
-            ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]  # 获取m3u8文件下视频流后缀
-            ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])  # m3u8链接前缀
-            ts_url = channel_url_t + ts_lists[0]  # 拼接单个视频片段下载链接
+# 获取当前脚本运行的目录
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = script_dir
 
-            # 多获取的视频数据进行5秒钟限制
-            with eventlet.Timeout(5, False):
-                start_time = time.time()
-                content = requests.get(ts_url).content
-                end_time = time.time()
-                response_time = (end_time - start_time) * 1
+# 指定iptv.txt和csiptv.txt的路径
+input_file_path = os.path.join(file_path, "iptv.txt")
+output_file_path = os.path.join(file_path, "csiptv.txt")
 
-            if content:
-                with open(ts_lists_0, 'ab') as f:
-                    f.write(content)  # 写入文件
-                file_size = len(content)
-                download_speed = file_size / response_time / 1024
-                normalized_speed = min(max(download_speed / 1024, 0.001), 100)  # 将速率从kB/s转换为MB/s并限制在1~100之间
-                print(
-                    f"\n检测频道: {channel_name},{channel_url}\n下载速度：{download_speed:.3f} kB/s，标准化后的速率：{normalized_speed:.3f} MB/s")
+# 加载iptv.txt文件内频道列表数据
+with open(input_file_path, "r", encoding="utf-8") as file:
+    ip_data = file.read()
 
-                # 删除下载的文件
-                os.remove(ts_lists_0)
-                result = channel_name, channel_url, f"{normalized_speed:.3f} MB/s"
-                results.append(result)
-                numberx = (len(results) + len(error_channels)) / len(channels) * 100
-                print(
-                    f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
-        except:
-            error_channel = channel_name, channel_url
-            error_channels.append(error_channel)
-            numberx = (len(results) + len(error_channels)) / len(channels) * 100
-            print(
-                f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
-        
-        # 标记任务完成
-        task_queue.task_done()
+result = process_ip_addresses(ip_data)
+
+# 输出结果到csiptv.txt文件
+with open(output_file_path, "w", encoding="utf-8") as output_file:
+    for line in result:
+        output_file.write(line + '\n')
+
+print(f"检测合格的频道列表已写入 {output_file_path} 文件。\n", flush=True)
 
 
-# 创建多个工作线程
-num_threads = 10
-for _ in range(num_threads):
-    t = threading.Thread(target=worker, daemon=True)
-    t.start()
-
-# 添加下载任务到队列
-for channel in channels:
-    task_queue.put(channel)
-
-# 等待所有任务完成
-task_queue.join()
-
-
+# 对csiptv.txt内所有频道列表进行排序分类
 def channel_key(channel_name):
     match = re.search(r'\d+', channel_name)
     if match:
@@ -367,18 +433,25 @@ def channel_key(channel_name):
         return float('inf')  # 返回一个无穷大的数字作为关键字
 
 
+# 从csiptv.txt文件中读取频道列表
+results = []
+with open("csiptv.txt", 'r', encoding='utf-8') as file:
+    for line in file:
+        channel_info = line.strip().split(',')
+        channel_name = channel_info[0]
+        channel_url = channel_info[1]
+        results.append((channel_name, channel_url))
+
 # 对频道进行排序
-results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 results.sort(key=lambda x: channel_key(x[0]))
-
-result_counter = 10  # 每个频道需要保留的个数
-
-# 写入cctv.txt文件
-with open("cctv.txt", 'w', encoding='utf-8') as file:
+# 每个频道需要保留下来的个数
+result_counter = 10
+# 对频道进行分类
+with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
     file.write('央视频道,#genre#\n')
     for result in results:
-        channel_name, channel_url, _ = result
+        channel_name, channel_url = result
         if 'CCTV' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
@@ -389,106 +462,10 @@ with open("cctv.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-
-# 线程安全的队列，用于存储下载任务
-task_queue = Queue()
-
-# 线程安全的列表，用于存储结果
-results = []
-
-channels = []
-error_channels = []
-
-with open("iptv.txt", 'r', encoding='utf-8') as file:
-    lines = file.readlines()
-    for line in lines:
-        line = line.strip()
-        if line:
-            channel_name, channel_url = line.split(',')
-            if 'CCTV' not in channel_name:
-                channels.append((channel_name, channel_url))
-
-
-# 定义工作线程函数
-def worker():
-    while True:
-        # 从队列中获取一个任务
-        channel_name, channel_url = task_queue.get()
-        try:
-            channel_url_t = channel_url.rstrip(channel_url.split('/')[-1])  # m3u8链接前缀
-            lines = requests.get(channel_url).text.strip().split('\n')  # 获取m3u8文件内容
-            ts_lists = [line.split('/')[-1] for line in lines if line.startswith('#') == False]  # 获取m3u8文件下视频流后缀
-            ts_lists_0 = ts_lists[0].rstrip(ts_lists[0].split('.ts')[-1])  # m3u8链接前缀
-            ts_url = channel_url_t + ts_lists[0]  # 拼接单个视频片段下载链接
-
-            # 多获取的视频数据进行5秒钟限制
-            with eventlet.Timeout(5, False):
-                start_time = time.time()
-                content = requests.get(ts_url).content
-                end_time = time.time()
-                response_time = (end_time - start_time) * 1
-
-            if content:
-                with open(ts_lists_0, 'ab') as f:
-                    f.write(content)  # 写入文件
-                file_size = len(content)
-                download_speed = file_size / response_time / 1024
-                normalized_speed = min(max(download_speed / 1024, 0.001), 100)  # 将速率从kB/s转换为MB/s并限制在1~100之间
-                print(f"\n检测频道: {channel_name},{channel_url}\n下载速度：{download_speed:.3f} kB/s，标准化后的速率：{normalized_speed:.3f} MB/s")
-
-                # 删除下载的文件
-                os.remove(ts_lists_0)
-                result = channel_name, channel_url, f"{normalized_speed:.3f} MB/s"
-                results.append(result)
-                numberx = (len(results) + len(error_channels)) / len(channels) * 100
-                print(f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
-        except:
-            error_channel = channel_name, channel_url
-            error_channels.append(error_channel)
-            numberx = (len(results) + len(error_channels)) / len(channels) * 100
-            print(f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
-
-        # 标记任务完成
-        task_queue.task_done()
-
-
-# 创建多个工作线程
-num_threads = 10
-for _ in range(num_threads):
-    t = threading.Thread(target=worker, daemon=True)
-    # t = threading.Thread(target=worker, args=(event,len(channels)))  # 将工作线程设置为守护线程
-    t.start()
-    # event.set()
-
-# 添加下载任务到队列
-for channel in channels:
-    task_queue.put(channel)
-
-# 等待所有任务完成
-task_queue.join()
-
-
-def channel_key(channel_name):
-    match = re.search(r'\d+', channel_name)
-    if match:
-        return int(match.group())
-    else:
-        return float('inf')  # 返回一个无穷大的数字作为关键字
-
-
-# 对频道进行排序
-results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
-# results.sort(key=lambda x: channel_key(x[0]))
-# now_today = datetime.date.today()
-
-result_counter = 10  # 每个频道需要保留的个数
-
-# 生成txt文件
-with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
-    file.write('卫视频道,#genre#\n')
+    file.write('\n卫视频道,#genre#\n')
     for result in results:
-        channel_name, channel_url, _ = result
+        channel_name, channel_url = result
         if '卫视' in channel_name or '重温经典' in channel_name or '影迷电源' in channel_name or '凤凰' in channel_name \
                 or '家庭影院' in channel_name or '动作电源' in channel_name or 'CHC' in channel_name or '翡翠' in channel_name:
             if channel_name in channel_counters:
@@ -500,11 +477,10 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-
     channel_counters = {}
-    file.write('省内频道,#genre#\n')
+    file.write('\n湖南频道,#genre#\n')
     for result in results:
-        channel_name, channel_url, _ = result
+        channel_name, channel_url = result
         if '湖南' in channel_name or '长沙' in channel_name or '金鹰' in channel_name or '先锋乒羽' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
@@ -515,16 +491,15 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-
     channel_counters = {}
-    file.write('其他频道,#genre#\n')
+    file.write('\n其他频道,#genre#\n')
     for result in results:
-        channel_name, channel_url, _ = result
+        channel_name, channel_url = result
         if 'CCTV' not in channel_name and '卫视' not in channel_name and 'CHC' not in channel_name and '湖南' not in \
                 channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in \
                 channel_name and '下载速率' not in channel_name and '测试' not in channel_name and '重温经典' not in \
                 channel_name and '影迷电源' not in channel_name and '家庭影院' not in channel_name and '动作电源' not in \
-                channel_name and '购' not in channel_name and 'CHC' not in channel_name and '凤凰' not in channel_name:
+                channel_name and '购' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -537,7 +512,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
 
 # 合并所有的txt文件
 file_contents = []
-file_paths = ["YD-IPTV.txt", "cctv.txt", "iptv_list.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt",  "iptv_list.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -553,7 +528,7 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
     # output.write(f"{now.strftime("%H:%M:%S")},url\n")
 
 os.remove("iptv.txt")
-os.remove("cctv.txt")
+# os.remove("cctv.txt")
 os.remove("gangaotai.txt")
 
 print("任务运行完毕，分类频道列表可查看文件夹内iptv_list.txt文件！")
