@@ -15,7 +15,7 @@ import subprocess
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-shengshi_names = ["湖南", "山东"]
+shengshi_names = ["湖南"]
 print(f'本次扫描{shengshi_names}的酒店频道。')
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 
