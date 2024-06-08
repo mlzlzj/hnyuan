@@ -21,7 +21,7 @@ jobs:
           python-version: 3.x
 
       - name: Install dependencies
-        run: pip install selenium requests futures eventlet  pypinyin  bs4
+        run: pip install selenium requests futures eventlet  pypinyin  bs4 ThreadPoolExecutor datetime
 
       - name: Install Chrome WebDriver
         run: |
