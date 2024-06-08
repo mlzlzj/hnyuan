@@ -318,7 +318,7 @@ def worker():
                 end_time = time.time()
                 response_time = (end_time - start_time) * 1
 
-                        if content:
+            if content:
                 with open(ts_lists_0, 'ab') as f:
                     f.write(content)  # 写入文件
                 file_size = len(content)
