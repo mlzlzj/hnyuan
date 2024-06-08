@@ -318,15 +318,14 @@ def worker():
                 end_time = time.time()
                 response_time = (end_time - start_time) * 1
 
-            if content:
+                        if content:
                 with open(ts_lists_0, 'ab') as f:
                     f.write(content)  # 写入文件
                 file_size = len(content)
-                # print(f"文件大小：{file_size} 字节")
                 download_speed = file_size / response_time / 1024
-                print(f"{ts_url}")
                 normalized_speed = min(max(download_speed / 1024, 0.001), 100)  # 将速率从kB/s转换为MB/s并限制在1~100之间
-                print(f"下载速度为：{download_speed:.3f} kB/s，标准化后的速率为：{normalized_speed:.3f} MB/s")
+                print(
+                    f"\n检测频道: {channel_name},{channel_url}\n下载速度：{download_speed:.3f} kB/s，标准化后的速率：{normalized_speed:.3f} MB/s")
 
                 # 删除下载的文件
                 os.remove(ts_lists_0)
@@ -341,6 +340,7 @@ def worker():
             numberx = (len(results) + len(error_channels)) / len(channels) * 100
             print(
                 f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
+        
         # 标记任务完成
         task_queue.task_done()
 
