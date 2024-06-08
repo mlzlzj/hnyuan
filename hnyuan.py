@@ -340,18 +340,22 @@ def process_domain(domain, cctv_links, all_links):
     selected_link = cctv_links[0]
 
     speed = download_m3u8(selected_link)
+    # width, height, frame_rate = get_ffprobe_info(selected_link)
     if speed >= 1300:  # 更改这个数值可改变要保留频道列表的最低下载速率
-        print(f"频道链接 {selected_link} 在域 {domain} 下的下载速度为：{speed:.2f} KB/s")
+        print(f"频道链接： {selected_link} 在域 {domain} 下的下载速度为：{speed:.2f} KB/s")
+        # print(f"分辨率为：{width}x{height}，帧率为：{frame_rate}")
         genre = "genre"
         result = [f"下载速率{speed:.2f},#{genre}#"]
         result.extend(f"{name},{url}" for name, url in all_links)
         return result, domain, speed
     else:
-        print(f"频道链接 {selected_link} 在域 {domain} 下未通过速度测试,下载速度为：{speed:.2f} KB/s。")
+        print(f"频道链接: {selected_link} 在域 {domain} 下未通过速度测试,下载速度为：{speed:.2f} KB/s。")
+        # print(f"分辨率为：{width}x{height}，帧率为：{frame_rate}")
         return None, domain, speed
 
 
 def process_ip_addresses(ip_data):
+    # print(f"正在处理数据：{ip_data}\n", flush=True)
     print(f"......开始抽取频道列表所在的IP地址及端口进行速率检测......\n")
 
     channels_info = []
@@ -421,7 +425,7 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
     for line in result:
         output_file.write(line + '\n')
 
-print(f"检测合格的频道列表已写入 {output_file_path} 文件。\n", flush=True)
+print(f"\n检测合格的频道列表已写入 {output_file_path} 文件。\n", flush=True)
 
 
 # 对csiptv.txt内所有频道列表进行排序分类
@@ -447,7 +451,7 @@ results.sort(key=lambda x: channel_key(x[0]))
 # 每个频道需要保留下来的个数
 result_counter = 10
 # 对频道进行分类
-with open("iptv_list.txt", 'w', encoding='utf-8') as file:
+with open("mb_list.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
     file.write('央视频道,#genre#\n')
     for result in results:
@@ -466,8 +470,8 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     file.write('\n卫视频道,#genre#\n')
     for result in results:
         channel_name, channel_url = result
-        if '卫视' in channel_name or '重温经典' in channel_name or '影迷电源' in channel_name or '凤凰' in channel_name \
-                or '家庭影院' in channel_name or '动作电源' in channel_name or 'CHC' in channel_name or '翡翠' in channel_name:
+        if '卫视' in channel_name or '重温经典' in channel_name or '影迷电源' in channel_name \
+                or '家庭影院' in channel_name or '动作电源' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -499,7 +503,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in \
                 channel_name and '下载速率' not in channel_name and '测试' not in channel_name and '重温经典' not in \
                 channel_name and '影迷电源' not in channel_name and '家庭影院' not in channel_name and '动作电源' not in \
-                channel_name and '购' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name:
+                channel_name and '购' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
