@@ -15,8 +15,7 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
 urls = []
-shengshi_names = ["湖南", "长沙", "娄底", "衡阳", "常德", "湖北", "广东", "广西", "江西", "江苏", "浙江", "安徽",
-                  "河南", "四川", "河北", "山西", "福建", "山东", "北京", "天津", "上海", "重庆", "广西壮族自治区"]
+shengshi_names = ["湖南", "长沙", "娄底", "衡阳", "常德", "湖北", "广东",  "江西", "山东",  "南宁"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
 
@@ -26,37 +25,10 @@ provinces = ["湖南", "湖北", "广东", "广西", "江西", "江苏", "浙江
              "辽宁", "吉林", "黑龙江", "甘肃", "青海", "内蒙古自治区", "宁夏回族自治区"]
 
 # 城市名称列表
-cities = ["石家庄", "唐山, “秦皇岛", "邯郸", "邢台", "保定", "张家口", "承德", "沧州", "廊坊", "衡水",
-          "太原", "大同", "阳泉", "长治", "晋城", "朔州", "晋中", "运城", "忻州", "临汾", "吕梁",
-          "呼和浩特", "包头", "乌海", "赤峰", "通辽", "鄂尔多斯", "呼伦贝尔", "巴彦淖尔", "乌兰察布", "沈阳",
-          "大连", "鞍山", "抚顺", "本溪", "丹东", "锦州", "营口", "阜新", "辽阳", "盘锦", "铁岭", "朝阳", "葫芦岛",
-          "长春", "吉林", "四平", "辽源", "通化", "白山", "松原", "白城",
-          "哈尔滨", "齐齐哈尔", "鸡西", "鹤岗", "双鸭山", "大庆", "伊春", "佳木斯", "七台河", "牡丹江", "黑河", "绥化",
-          "南京", "无锡", "徐州", "常州", "苏州", "南通", "连云港", "淮安", "盐城", "扬州", "镇江", "泰州", "宿迁",
-          "杭州", "宁波", "温州", "嘉兴", "湖州", "绍兴", "金华", "衢州", "舟山", "台州", "丽水",
-          "合肥", "芜湖", "蚌埠", "淮南", "马鞍山", "淮北", "铜陵", "安庆", "黄山", "阜阳", "宿州", "滁州", "六安",
-          "宣城", "池州", "亳州",
-          "福州", "厦门", "莆田", "三明", "泉州", "漳州", "南平", "龙岩", "宁德",
-          "南昌", "景德镇", "萍乡", "九江", "抚州", "鹰潭", "赣州", "吉安", "宜春", "新余", "上饶",
-          "济南", "青岛", "淄博", "枣庄", "东营", "烟台", "潍坊", "济宁", "泰安", "威海", "日照", "临沂", "德州",
-          "聊城", "滨州", "菏泽",
-          "郑州", "开封", "洛阳", "平顶山", "安阳", "鹤壁", "新乡", "焦作", "濮阳", "许昌", "漯河", "三门峡", "南阳",
-          "商丘", "信阳", "周口", "驻马店",
-          "武汉", "黄石", "十堰", "宜昌", "襄阳", "鄂州", "荆门", "孝感", "荆州", "黄冈", "咸宁", "随州",
-          "长沙", "娄底", "衡阳", "常德", "株洲", "湘潭", "邵阳", "张家界", "益阳", "郴州", "永州", "怀化", "岳阳",
+cities = ["长沙", "娄底", "衡阳", "常德", "株洲", "湘潭", "邵阳", "张家界", "益阳", "郴州", "永州", "怀化", "岳阳",
+          "南宁", "贵港", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "玉林", "百色", "贺州", "河池", "来宾", "崇左",
           "广州", "韶关", "深圳", "珠海", "汕头", "佛山", "江门", "湛江", "茂名", "肇庆", "惠州", "梅州", "汕尾",
-          "河源", "阳江", "清远", "东莞", "中山", "潮州", "揭阳", "云浮",
-          "南宁", "贵港", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "玉林", "百色", "贺州", "河池", "来宾",
-          "崇左",
-          "海口", "三亚", "三沙", "儋州",
-          "成都", "自贡", "攀枝花", "泸州", "德阳", "绵阳", "广元", "遂宁", "内江", "乐山", "南充", "眉山", "宜宾",
-          "广安", "达州", "雅安", "巴中", "资阳",
-          "贵阳", "六盘水", "遵义", "安顺", "毕节", "铜仁",
-          "昆明", "曲靖", "玉溪", "保山", "昭通", "丽江", "普洱", "临沧",
-          "拉萨", "日喀则", "昌都", "林芝", "山南", "那曲",
-          "西安", "铜川", "宝鸡", "咸阳", "渭南", "延安", "汉中", "榆林", "安康", "商洛",
-          "兰州", "嘉峪关", "金昌", "白银", "天水", "武威", "张掖", "平凉", "酒泉", "庆阳", "定西", "陇南",
-          "西宁", "海东", "银川", "石嘴山", "吴忠", "固原", "中卫", "乌鲁木齐", "克拉玛依", "吐鲁番", "哈密"]
+          "河源", "阳江", "清远", "东莞", "中山", "潮州", "揭阳", "云浮"]
 
 
 # 判断一个名称是省份还是城市
@@ -294,7 +266,9 @@ for result in results:
     if result:
         channel_name, channel_url = result.split(',')
         channels.append((channel_name, channel_url))
-
+# 去重得到唯一的URL列表
+results = set(results)
+results = sorted(results)
 with open("iptv.txt", 'w', encoding='utf-8') as file:
     for result in results:
         file.write(result + "\n")
@@ -397,14 +371,14 @@ def channel_key(channel_name):
 results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 results.sort(key=lambda x: channel_key(x[0]))
 
-result_counter = 20  # 每个频道需要保留的个数
+result_counter = 10  # 每个频道需要保留的个数
 
-# 写入cctv.txt和.m3u文件
+# 写入cctv.txt文件
 with open("cctv.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
     file.write('央视频道,#genre#\n')
     for result in results:
-        channel_name, channel_url, speed = result
+        channel_name, channel_url, _ = result
         if 'CCTV' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
@@ -414,24 +388,6 @@ with open("cctv.txt", 'w', encoding='utf-8') as file:
                     channel_counters[channel_name] += 1
             else:
                 file.write(f"{channel_name},{channel_url}\n")
-                channel_counters[channel_name] = 1
-
-with open("cctv.m3u", 'w', encoding='utf-8') as file:
-    channel_counters = {}
-    file.write('#EXTM3U\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if 'CCTV' in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"#EXTINF:-1 group-title=\"央视频道\",{channel_name}\n")
-                    file.write(f"{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"#EXTINF:-1 group-title=\"央视频道\",{channel_name}\n")
-                file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
 
 # 线程安全的队列，用于存储下载任务
@@ -476,24 +432,21 @@ def worker():
                 with open(ts_lists_0, 'ab') as f:
                     f.write(content)  # 写入文件
                 file_size = len(content)
-                # print(f"文件大小：{file_size} 字节")
                 download_speed = file_size / response_time / 1024
-                print(f"{ts_url}")
                 normalized_speed = min(max(download_speed / 1024, 0.001), 100)  # 将速率从kB/s转换为MB/s并限制在1~100之间
-                print(f"下载速度为：{download_speed:.3f} kB/s，标准化后的速率为：{normalized_speed:.3f} MB/s")
+                print(f"\n检测频道: {channel_name},{channel_url}\n下载速度：{download_speed:.3f} kB/s，标准化后的速率：{normalized_speed:.3f} MB/s")
+
                 # 删除下载的文件
                 os.remove(ts_lists_0)
                 result = channel_name, channel_url, f"{normalized_speed:.3f} MB/s"
                 results.append(result)
                 numberx = (len(results) + len(error_channels)) / len(channels) * 100
-                print(
-                    f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
+                print(f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
         except:
             error_channel = channel_name, channel_url
             error_channels.append(error_channel)
             numberx = (len(results) + len(error_channels)) / len(channels) * 100
-            print(
-                f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
+            print(f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
 
         # 标记任务完成
         task_queue.task_done()
@@ -528,15 +481,16 @@ results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 # results.sort(key=lambda x: channel_key(x[0]))
 # now_today = datetime.date.today()
 
-result_counter = 20  # 每个频道需要保留的个数
+result_counter = 10  # 每个频道需要保留的个数
 
 # 生成txt文件
 with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
     file.write('卫视频道,#genre#\n')
     for result in results:
-        channel_name, channel_url, speed = result
-        if '卫视' in channel_name or '凤凰' in channel_name or '翡翠' in channel_name or 'CHC' in channel_name:
+        channel_name, channel_url, _ = result
+        if '卫视' in channel_name or '重温经典' in channel_name or '影迷电源' in channel_name or '凤凰' in channel_name \
+                or '家庭影院' in channel_name or '动作电源' in channel_name or 'CHC' in channel_name or '翡翠' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -550,7 +504,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
     file.write('省内频道,#genre#\n')
     for result in results:
-        channel_name, channel_url, speed = result
+        channel_name, channel_url, _ = result
         if '湖南' in channel_name or '长沙' in channel_name or '金鹰' in channel_name or '先锋乒羽' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
@@ -565,10 +519,12 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
     file.write('其他频道,#genre#\n')
     for result in results:
-        channel_name, channel_url, speed = result
-        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in \
-                channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '湖南' not in channel_name \
-                and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
+        channel_name, channel_url, _ = result
+        if 'CCTV' not in channel_name and '卫视' not in channel_name and 'CHC' not in channel_name and '湖南' not in \
+                channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in \
+                channel_name and '下载速率' not in channel_name and '测试' not in channel_name and '重温经典' not in \
+                channel_name and '影迷电源' not in channel_name and '家庭影院' not in channel_name and '动作电源' not in \
+                channel_name and '购' not in channel_name and 'CHC' not in channel_name and '凤凰' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -579,61 +535,9 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
 
-# 生成m3u文件
-with open("iptv_list.m3u", 'w', encoding='utf-8') as file:
-    channel_counters = {}
-    for result in results:
-        channel_name, channel_url, speed = result
-        if '卫视' in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"#EXTINF:-1 group-title=\"卫视频道\",{channel_name}\n")
-                    file.write(f"{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"#EXTINF:-1 group-title=\"卫视频道\",{channel_name}\n")
-                file.write(f"{channel_url}\n")
-                channel_counters[channel_name] = 1
-
-    channel_counters = {}
-    for result in results:
-        channel_name, channel_url, speed = result
-        if '湖南' in channel_name or '长沙' in channel_name or '金鹰' in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"#EXTINF:-1 group-title=\"地方频道\",{channel_name}\n")
-                    file.write(f"{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"#EXTINF:-1 group-title=\"地方频道\",{channel_name}\n")
-                file.write(f"{channel_url}\n")
-                channel_counters[channel_name] = 1
-
-    channel_counters = {}
-    for result in results:
-        channel_name, channel_url, speed = result
-        if 'CCTV' not in channel_name and '卫视' not in channel_name and '测试' not in channel_name and '凤凰' not in \
-                channel_name and '翡翠' not in channel_name and 'CHC' not in channel_name and '湖南' not in channel_name \
-                and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"#EXTINF:-1 group-title=\"其他频道\",{channel_name}\n")
-                    file.write(f"{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"#EXTINF:-1 group-title=\"其他频道\",{channel_name}\n")
-                file.write(f"{channel_url}\n")
-                channel_counters[channel_name] = 1
-
 # 合并所有的txt文件
 file_contents = []
-file_paths = ["cctv.txt", "iptv_list.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt", "cctv.txt", "iptv_list.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -645,23 +549,11 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
     # 写入更新日期时间
     now = datetime.now()
     output.write(f"更新时间,#genre#\n")
-    output.write(f"{now.strftime("%Y-%m-%d")},url\n")
-    output.write(f"{now.strftime("%H:%M:%S")},url\n")
+    output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
+    # output.write(f"{now.strftime("%H:%M:%S")},url\n")
 
-# 合并所有m3u文件
-file_contents = []
-file_paths = ["cctv.m3u", "iptv_list.m3u"]  # 替换为实际的文件路径列表
-for file_path in file_paths:
-    with open(file_path, 'r', encoding="utf-8") as file:
-        content = file.read()
-        file_contents.append(content)
-
-# 写入合并后m3u的文件
-with open("iptv_list.m3u", "w", encoding="utf-8") as output:
-    output.write('\n'.join(file_contents))
-
-# os.remove("iptv.txt")
+os.remove("iptv.txt")
 os.remove("cctv.txt")
-os.remove("cctv.m3u")
+os.remove("gangaotai.txt")
 
-print("任务运行完毕，分类频道列表可查看文件夹内iptv_list.txt和iptv_list.m3u文件！")
+print("任务运行完毕，分类频道列表可查看文件夹内iptv_list.txt文件！")
