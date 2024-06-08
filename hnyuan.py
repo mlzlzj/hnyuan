@@ -341,15 +341,15 @@ def process_domain(domain, cctv_links, all_links):
 
     speed = download_m3u8(selected_link)
     # width, height, frame_rate = get_ffprobe_info(selected_link)
-    if speed >= 1300:  # 更改这个数值可改变要保留频道列表的最低下载速率
-        print(f"频道链接： {selected_link} 在域 {domain} 下的下载速度为：{speed:.2f} KB/s")
+    if speed >= 1500:  # 更改这个数值可改变要保留频道列表的最低下载速率
+        print(f"频道链接 {selected_link} 在域 {domain} 下的下载速度为：{speed:.2f} KB/s")
         # print(f"分辨率为：{width}x{height}，帧率为：{frame_rate}")
         genre = "genre"
         result = [f"下载速率{speed:.2f},#{genre}#"]
         result.extend(f"{name},{url}" for name, url in all_links)
         return result, domain, speed
     else:
-        print(f"频道链接: {selected_link} 在域 {domain} 下未通过速度测试,下载速度为：{speed:.2f} KB/s。")
+        print(f"频道链接 {selected_link} 在域 {domain} 下未通过速度测试,下载速度为：{speed:.2f} KB/s。")
         # print(f"分辨率为：{width}x{height}，帧率为：{frame_rate}")
         return None, domain, speed
 
@@ -425,7 +425,7 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
     for line in result:
         output_file.write(line + '\n')
 
-print(f"\n检测合格的频道列表已写入 {output_file_path} 文件。\n", flush=True)
+print(f"检测合格的频道列表已写入 {output_file_path} 文件。\n", flush=True)
 
 
 # 对csiptv.txt内所有频道列表进行排序分类
