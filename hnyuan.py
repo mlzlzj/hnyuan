@@ -552,8 +552,8 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
     output.write('\n'.join(file_contents))
     # 写入更新日期时间
     now = datetime.now()
-    file.write(f"更新时间,#genre#\n")
-    file.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
+    output.write(f"更新时间,#genre#\n")
+    output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
 os.remove("iptv.txt")
 # os.remove("SpeedTest.txt")
 os.remove("gangaotai.txt")
