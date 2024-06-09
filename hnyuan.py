@@ -16,7 +16,7 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
 urls = []
-shengshi_names = ["长沙", "南宁", "湖南", "山东"]
+shengshi_names = ["长沙", "娄底", "衡阳", "常德", "南宁", "湖南", "山东", "江西"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
 
@@ -26,7 +26,16 @@ provinces = ["湖南", "湖北", "广东", "广西", "江西", "江苏", "浙江
              "辽宁", "吉林", "黑龙江", "甘肃", "青海", "内蒙古自治区", "宁夏回族自治区"]
 
 # 城市名称列表
-cities = ["石家庄", "唐山", "秦皇岛", "邯郸", "邢台", "保定", "张家口", "承德", "沧州", "廊坊", "衡水",
+cities = ["长沙", "娄底", "衡阳", "常德", "株洲", "湘潭", "邵阳", "张家界", "益阳", "郴州", "永州", "怀化", "岳阳",
+          "广州", "韶关", "深圳", "珠海", "汕头", "佛山", "江门", "湛江", "茂名", "肇庆", "惠州", "梅州", "汕尾",
+          "河源", "阳江", "清远", "东莞", "中山", "潮州", "揭阳", "云浮",
+          "南宁", "贵港", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "玉林", "百色", "贺州", "河池", "来宾",
+          "崇左",
+          "武汉", "黄石", "十堰", "宜昌", "襄阳", "鄂州", "荆门", "孝感", "荆州", "黄冈", "咸宁", "随州",
+          "南昌", "景德镇", "萍乡", "九江", "抚州", "鹰潭", "赣州", "吉安", "宜春", "新余", "上饶",
+          "郑州", "开封", "洛阳", "平顶山", "安阳", "鹤壁", "新乡", "焦作", "濮阳", "许昌", "漯河", "三门峡", "南阳",
+          "商丘", "信阳", "周口", "驻马店",
+          "石家庄", "唐山", "秦皇岛", "邯郸", "邢台", "保定", "张家口", "承德", "沧州", "廊坊", "衡水",
           "太原", "大同", "阳泉", "长治", "晋城", "朔州", "晋中", "运城", "忻州", "临汾", "吕梁",
           "呼和浩特", "包头", "乌海", "赤峰", "通辽", "鄂尔多斯", "呼伦贝尔", "巴彦淖尔", "乌兰察布", "沈阳",
           "大连", "鞍山", "抚顺", "本溪", "丹东", "锦州", "营口", "阜新", "辽阳", "盘锦", "铁岭", "朝阳", "葫芦岛",
@@ -37,17 +46,8 @@ cities = ["石家庄", "唐山", "秦皇岛", "邯郸", "邢台", "保定", "张
           "合肥", "芜湖", "蚌埠", "淮南", "马鞍山", "淮北", "铜陵", "安庆", "黄山", "阜阳", "宿州", "滁州", "六安",
           "宣城", "池州", "亳州",
           "福州", "厦门", "莆田", "三明", "泉州", "漳州", "南平", "龙岩", "宁德",
-          "南昌", "景德镇", "萍乡", "九江", "抚州", "鹰潭", "赣州", "吉安", "宜春", "新余", "上饶",
           "济南", "青岛", "淄博", "枣庄", "东营", "烟台", "潍坊", "济宁", "泰安", "威海", "日照", "临沂", "德州",
           "聊城", "滨州", "菏泽",
-          "郑州", "开封", "洛阳", "平顶山", "安阳", "鹤壁", "新乡", "焦作", "濮阳", "许昌", "漯河", "三门峡", "南阳",
-          "商丘", "信阳", "周口", "驻马店",
-          "武汉", "黄石", "十堰", "宜昌", "襄阳", "鄂州", "荆门", "孝感", "荆州", "黄冈", "咸宁", "随州",
-          "长沙", "娄底", "衡阳", "常德", "株洲", "湘潭", "邵阳", "张家界", "益阳", "郴州", "永州", "怀化", "岳阳",
-          "广州", "韶关", "深圳", "珠海", "汕头", "佛山", "江门", "湛江", "茂名", "肇庆", "惠州", "梅州", "汕尾",
-          "河源", "阳江", "清远", "东莞", "中山", "潮州", "揭阳", "云浮",
-          "南宁", "贵港", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "玉林", "百色", "贺州", "河池", "来宾",
-          "崇左",
           "海口", "三亚", "三沙", "儋州",
           "成都", "自贡", "攀枝花", "泸州", "德阳", "绵阳", "广元", "遂宁", "内江", "乐山", "南充", "眉山", "宜宾",
           "广安", "达州", "雅安", "巴中", "资阳",
@@ -436,9 +436,9 @@ def process_ip_addresses(ip_data):
 script_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = script_dir
 
-# 指定iptv.txt和csiptv.txt的路径
+# 指定iptv.txt和SpeedTest.txt的路径
 input_file_path = os.path.join(file_path, "iptv.txt")
-output_file_path = os.path.join(file_path, "csiptv.txt")
+output_file_path = os.path.join(file_path, "SpeedTest.txt")
 
 # 加载iptv.txt文件内频道列表数据
 with open(input_file_path, "r", encoding="utf-8") as file:
@@ -446,7 +446,7 @@ with open(input_file_path, "r", encoding="utf-8") as file:
 
 result = process_ip_addresses(ip_data)
 
-# 输出结果到csiptv.txt文件
+# 输出结果到SpeedTest.txt文件
 with open(output_file_path, "w", encoding="utf-8") as output_file:
     for line in result:
         output_file.write(line + '\n')
@@ -454,7 +454,7 @@ with open(output_file_path, "w", encoding="utf-8") as output_file:
 print(f"\n检测合格的频道列表已写入 {output_file_path} 文件。\n", flush=True)
 
 
-# 对csiptv.txt内所有频道列表进行排序分类
+# 对SpeedTest.txt内所有频道列表进行排序分类
 def channel_key(channel_name):
     match = re.search(r'\d+', channel_name)
     if match:
@@ -463,9 +463,9 @@ def channel_key(channel_name):
         return float('inf')  # 返回一个无穷大的数字作为关键字
 
 
-# 从csiptv.txt文件中读取频道列表
+# 从SpeedTest.txt文件中读取频道列表
 results = []
-with open("csiptv.txt", 'r', encoding='utf-8') as file:
+with open("SpeedTest.txt", 'r', encoding='utf-8') as file:
     for line in file:
         channel_info = line.strip().split(',')
         channel_name = channel_info[0]
@@ -477,7 +477,7 @@ results.sort(key=lambda x: channel_key(x[0]))
 # 每个频道需要保留下来的个数
 result_counter = 10
 # 对频道进行分类
-with open("mb_list.txt", 'w', encoding='utf-8') as file:
+with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
     file.write('央视频道,#genre#\n')
     for result in results:
@@ -539,13 +539,24 @@ with open("mb_list.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
+# 合并所有的txt文件
+file_contents = []
+file_paths = ["YD-IPTV.txt", "iptv_list.txt", "gangaotai.txt"]  # 替换为实际的文件路径列表
+for file_path in file_paths:
+    with open(file_path, 'r', encoding="utf-8") as file:
+        content = file.read()
+        file_contents.append(content)
 
+# 写入合并后的txt文件
+with open("iptv_list.txt", "w", encoding="utf-8") as output:
+    output.write('\n'.join(file_contents))
     # 写入更新日期时间
     now = datetime.now()
     file.write(f"更新时间,#genre#\n")
     file.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
-# os.remove("iptv.txt")
-# os.remove("csiptv.txt")
+os.remove("iptv.txt")
+# os.remove("SpeedTest.txt")
+os.remove("gangaotai.txt")
 
-print("频道分类完成已写入mb_list.txt文件。")
+print("频道分类完成已写入iptv_list.txt文件。")
 
