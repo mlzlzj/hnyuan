@@ -487,9 +487,8 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
     now = datetime.now()
     output.write(f"更新时间,#genre#\n")
     output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
-# os.remove("iptv.txt")
-# os.remove("iptv_results.txt")
-# os.remove("gangaotai.txt")
+os.remove("iptv.txt")
+os.remove("gangaotai.txt")
 
 print("频道分类完成已写入iptv_list.txt文件。")
 
