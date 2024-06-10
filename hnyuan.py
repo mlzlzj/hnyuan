@@ -431,8 +431,8 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     file.write('\n卫视频道,#genre#\n')
     for result in results:
         channel_name, channel_url, _ = result
-        if '卫视' in channel_name or '重温经典' in channel_name or '影迷电源' in channel_name or '凤凰' in channel_name \
-                or '家庭影院' in channel_name or '动作电源' in channel_name or 'CHC' in channel_name or '翡翠' in channel_name:
+        if '卫视' in channel_name or '重温经典' in channel_name or '影迷电影' in channel_name or '凤凰' in channel_name \
+                or '家庭影院' in channel_name or '动作电影' in channel_name or 'CHC' in channel_name or '翡翠' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -462,8 +462,8 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
         channel_name, channel_url, _ = result
         if 'CCTV' not in channel_name and '卫视' not in channel_name and 'CHC' not in channel_name and '湖南' not in \
                 channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in \
-                channel_name and '下载速率' not in channel_name and '测试' not in channel_name and '重温经典' not in \
-                channel_name and '影迷电源' not in channel_name and '家庭影院' not in channel_name and '动作电源' not in \
+                channel_name and 'CHC' not in channel_name and '测试' not in channel_name and '重温经典' not in \
+                channel_name and '影迷电影' not in channel_name and '家庭影院' not in channel_name and '动作电影' not in \
                 channel_name and '购' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
@@ -474,43 +474,22 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
+                
 # 合并所有的txt文件
 file_contents = []
-file_paths = ["YD-IPTV.txt", "iptv_list.txt", "gangaotai.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt", "iptv_list.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
         file_contents.append(content)
 
 # 写入合并后的txt文件
-with open("iptv_list.txt", "w", encoding="utf-8") as output:
+with open("iptv_list.txt", "w", encoding="utf-8") as file:
     output.write('\n'.join(file_contents))
     # 写入更新日期时间
     now = datetime.now()
-    output.write(f"更新时间,#genre#\n")
-    output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
-os.remove("iptv.txt")
-# os.remove("iptv_results.txt")
-os.remove("gangaotai.txt")
-
-print("频道分类完成已写入iptv_list.txt文件。")
-
-
-# 合并所有的txt文件
-file_contents = []
-file_paths = ["YD-IPTV.txt", "iptv_list.txt", "gangaotai.txt"]  # 替换为实际的文件路径列表
-for file_path in file_paths:
-    with open(file_path, 'r', encoding="utf-8") as file:
-        content = file.read()
-        file_contents.append(content)
-
-# 写入合并后的txt文件
-with open("iptv_list.txt", "w", encoding="utf-8") as output:
-    output.write('\n'.join(file_contents))
-    # 写入更新日期时间
-    now = datetime.now()
-    output.write(f"更新时间,#genre#\n")
-    output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
+    file.write(f"更新时间,#genre#\n")
+    file.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
 os.remove("iptv.txt")
 # os.remove("iptv_results.txt")
 os.remove("gangaotai.txt")
