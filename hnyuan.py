@@ -1,4 +1,3 @@
-import eventlet
 import time
 import os
 import concurrent.futures
@@ -306,6 +305,7 @@ with open("iptv.txt", 'w', encoding='utf-8') as file:
 # 写入频道列表文件iptv.txt
 print(f"共获取到频道{len(channels)}个，频道列表文件iptv.txt生成完毕！")
 
+import eventlet
 
 eventlet.monkey_patch()
 
