@@ -1,6 +1,8 @@
 import time
 import os
 import concurrent.futures
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import requests
 import re
 import base64
@@ -8,24 +10,21 @@ from datetime import datetime
 import threading
 from queue import Queue
 from pypinyin import lazy_pinyin
-from bs4 import BeautifulSoup
 import random
+import subprocess
+import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
-                  'Safari/537.36 Edg/119.0.0.0'}
-urls = []
-shengshi_names = ["长沙", "娄底", "衡阳", "常德", "南宁", "湖南", "山东", "江西"]
+shengshi_names = ["湖南", "江西", "广东", "山东", "长沙", "娄底", "衡阳", "常德", "南宁"]
+print(f'本次扫描{shengshi_names}的酒店频道。')
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
-print(f'本次查询{shengshi_names}的酒店频道。')
 
 # 省直辖市自治区名称列表
-provinces = ["湖南", "湖北", "广东", "广西", "江西", "江苏", "浙江", "安徽", "河南", "四川", "河北", "山西",
-             "福建", "山东", "北京", "天津", "上海", "重庆", "广西壮族自治区", "贵州", "云南", "陕西", "海南",
-             "辽宁", "吉林", "黑龙江", "甘肃", "青海", "内蒙古自治区", "宁夏回族自治区"]
+provinces = ["湖南", "湖北", "广东", "广西壮族自治区", "江西", "江苏", "浙江", "安徽", "河南", "四川", "河北", "山西",
+             "福建", "山东", "北京", "天津", "上海", "重庆", "广西壮族自治区", "贵州", "云南", "陕西", "海南", "辽宁",
+             "吉林", "黑龙江", "甘肃", "青海", "内蒙古自治区", "宁夏回族自治区"]
 
-# 城市名称列表
+# 省会及地级城市名称列表
 cities = ["长沙", "娄底", "衡阳", "常德", "株洲", "湘潭", "邵阳", "张家界", "益阳", "郴州", "永州", "怀化", "岳阳",
           "广州", "韶关", "深圳", "珠海", "汕头", "佛山", "江门", "湛江", "茂名", "肇庆", "惠州", "梅州", "汕尾",
           "河源", "阳江", "清远", "东莞", "中山", "潮州", "揭阳", "云浮",
@@ -75,29 +74,57 @@ operators = {
     "中国联通": "CHINA UNICOM China169 Backbone",
     # "中国移动": "China Mobile Communications Corporation"
 }
-all_urls = []
 
-for shengshi in shengshi_names:
-    pinyin_name = "".join(lazy_pinyin(shengshi, errors=lambda x: x))
-    for operator_name, org_name in operators.items():
-        # 省份查询
+
+# 获取FOFA的URL
+def get_fofa_urls(shengshi_names, operators, provinces, cities):
+    fofa_urls = []
+    for shengshi in shengshi_names:
+        pinyin_name = "".join(lazy_pinyin(shengshi, errors=lambda x: x))
+        for operator_name, org_name in operators.items():
+            search_txt = ""
+            if is_province(shengshi, provinces, cities):
+                search_txt = f'"iptv/live/zh_cn.js" && country="CN" && region="{pinyin_name}" && org="{org_name}"'
+            elif is_city(shengshi, provinces, cities):
+                search_txt = f'"iptv/live/zh_cn.js" && country="CN" && city="{pinyin_name}" && org="{org_name}"'
+            if search_txt:
+                bytes_string = search_txt.encode('utf-8')
+                encoded_search_txt = base64.b64encode(bytes_string).decode('utf-8')
+                fofa_url = f'https://fofa.info/result?qbase64={encoded_search_txt}'
+                print(f"正在扫描FOFA上 {shengshi} {operator_name}地址: {fofa_url}")
+                fofa_urls.append(fofa_url)
+    return fofa_urls
+
+
+# 获取ZoomEye的URL
+def get_zoomeye_urls(shengshi_names, provinces, cities):
+    zoomeye_urls = []
+    for shengshi in shengshi_names:
+        pinyin_name = "".join(lazy_pinyin(shengshi, errors=lambda x: x))
+        search_txt = ""
         if is_province(shengshi, provinces, cities):
-            search_txt = f'"iptv/live/zh_cn.js" && country="CN" && region="{pinyin_name}" && org="{org_name}"'
-        # 城市查询
+            search_txt = f'%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22{pinyin_name}%22'
         elif is_city(shengshi, provinces, cities):
-            search_txt = f'"iptv/live/zh_cn.js" && country="CN" && city="{pinyin_name}" && org="{org_name}"'
-        else:
-            continue  # 如果不是省份或城市，则跳过
-            # 编码和构建URL
-        bytes_string = search_txt.encode('utf-8')
-        encoded_search_txt = base64.b64encode(bytes_string).decode('utf-8')
-        url = f'https://fofa.info/result?qbase64={encoded_search_txt}'
-        print(f"正在扫描 {shengshi} {operator_name}地址: ")
-        print(f"{url}")
-        all_urls.append(url)  # 添加到所有URL的列表中
+            search_txt = f'%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bcity%3A%22{pinyin_name}%22'
+        if search_txt:
+            zoomeye_url = f'https://www.zoomeye.org/searchResult?q={search_txt}'
+            print(f"正在扫描ZoomEye上 {shengshi} 地址: {zoomeye_url}")
+            zoomeye_urls.append(zoomeye_url)
+    return zoomeye_urls
 
-    # 现在 all_urls 包含了所有省份和城市的URL
-    urls = all_urls  # 将所有查询到的URL赋值给 urls 变量
+
+fofa_urls = get_fofa_urls(shengshi_names, operators, provinces, cities)
+zoomeye_urls = get_zoomeye_urls(shengshi_names, provinces, cities)
+urls = fofa_urls + zoomeye_urls
+
+
+# 检查URL是否可访问
+def is_url_accessible(url):
+    try:
+        response = requests.get(url, timeout=0.5)
+        return response.status_code == 200
+    except requests.exceptions.RequestException:
+        return False
 
 
 def modify_urls(url):
@@ -129,8 +156,22 @@ def is_url_accessible(url):
 results = []
 
 for url in urls:
-    response = requests.get(url, headers=headers, timeout=15)
-    page_content = response.text
+    # 创建一个Chrome WebDriver实例
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+
+    driver = webdriver.Chrome(options=chrome_options)
+    # 使用WebDriver访问网页
+    driver.get(url)  # 将网址替换为你要访问的网页地址
+    time.sleep(10)
+    # 获取网页内容
+    page_content = driver.page_source
+
+    # 关闭WebDriver
+    driver.quit()
+
     # 查找所有符合指定格式的网址
     pattern = r"http://\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+"  # 设置匹配的格式，如http://8.8.8.8:8888
     urls_all = re.findall(pattern, page_content)
@@ -153,7 +194,7 @@ for url in urls:
     urls = set(x_urls)  # 去重得到唯一的URL列表
 
     valid_urls = []
-    # 多线程获取可用url
+    #   多线程获取可用url
     with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
         futures = []
         for url in urls:
@@ -169,123 +210,121 @@ for url in urls:
 
     for url in valid_urls:
         print(url)
-
-    # 遍历网址列表，获取JSON文件并解析
-    for url in valid_urls:
-        try:
-            # 发送GET请求获取JSON文件，设置超时时间为0.5秒
-            ip_start_index = url.find("//") + 2
-            ip_end_index = url.find(":", ip_start_index)
-            ip_port = url[ip_start_index:ip_end_index + 5]  # 这里获取ip地址和端口
-            print(f"获取到有效的酒店源IP地址：{ip_port}")
-            response = requests.get(url, timeout=0.5)
-            json_data = response.json()
-
+        # 遍历网址列表，获取JSON文件并解析
+        for url in valid_urls:
             try:
-                # 解析JSON文件，获取name和url字段
-                for item in json_data['data']:
-                    if isinstance(item, dict):
-                        name = item.get('name')
-                        chid = str(item.get('chid')).zfill(4)  # 补全 chid 为四位数
-                        srcid = item.get('srcid')
-                        # 替换频道名称中的特定字符串
-                        name = name.replace("中央", "CCTV")
-                        name = name.replace("高清", "")
-                        name = name.replace("超清", "")
-                        name = name.replace("HD", "")
-                        name = name.replace("标清", "")
-                        name = name.replace("超高", "")
-                        name = name.replace("频道", "")
-                        name = name.replace("-", "")
-                        name = name.replace(" ", "")
-                        name = name.replace("PLUS", "+")
-                        name = name.replace("＋", "+")
-                        name = name.replace("(", "")
-                        name = name.replace(")", "")
-                        name = name.replace("L", "")
-                        name = name.replace("CMIPTV", "")
-                        name = name.replace("cctv", "CCTV")
-                        name = re.sub(r"CCTV(\d+)台", r"CCTV\1", name)
-                        name = name.replace("CCTV1综合", "CCTV1")
-                        name = name.replace("CCTV2财经", "CCTV2")
-                        name = name.replace("CCTV3综艺", "CCTV3")
-                        name = name.replace("CCTV4国际", "CCTV4")
-                        name = name.replace("CCTV4中文国际", "CCTV4")
-                        name = name.replace("CCTV4欧洲", "CCTV4")
-                        name = name.replace("CCTV5体育", "CCTV5")
-                        name = name.replace("CCTV5+体育", "CCTV5+")
-                        name = name.replace("CCTV6电影", "CCTV6")
-                        name = name.replace("CCTV7军事", "CCTV7")
-                        name = name.replace("CCTV7军农", "CCTV7")
-                        name = name.replace("CCTV7农业", "CCTV7")
-                        name = name.replace("CCTV7国防军事", "CCTV7")
-                        name = name.replace("CCTV8电视剧", "CCTV8")
-                        name = name.replace("CCTV8纪录", "CCTV9")
-                        name = name.replace("CCTV9记录", "CCTV9")
-                        name = name.replace("CCTV9纪录", "CCTV9")
-                        name = name.replace("CCTV10科教", "CCTV10")
-                        name = name.replace("CCTV11戏曲", "CCTV11")
-                        name = name.replace("CCTV12社会与法", "CCTV12")
-                        name = name.replace("CCTV13新闻", "CCTV13")
-                        name = name.replace("CCTV新闻", "CCTV13")
-                        name = name.replace("CCTV14少儿", "CCTV14")
-                        name = name.replace("央视14少儿", "CCTV14")
-                        name = name.replace("CCTV少儿超", "CCTV14")
-                        name = name.replace("CCTV15音乐", "CCTV15")
-                        name = name.replace("CCTV音乐", "CCTV15")
-                        name = name.replace("CCTV16奥林匹克", "CCTV16")
-                        name = name.replace("CCTV17农业农村", "CCTV17")
-                        name = name.replace("CCTV17军农", "CCTV17")
-                        name = name.replace("CCTV17农业", "CCTV17")
-                        name = name.replace("CCTV5+体育赛视", "CCTV5+")
-                        name = name.replace("CCTV5+赛视", "CCTV5+")
-                        name = name.replace("CCTV5+体育赛事", "CCTV5+")
-                        name = name.replace("CCTV5+赛事", "CCTV5+")
-                        name = name.replace("CCTV5+体育", "CCTV5+")
-                        name = name.replace("CCTV5赛事", "CCTV5+")
-                        name = name.replace("凤凰中文台", "凤凰中文")
-                        name = name.replace("凤凰资讯台", "凤凰资讯")
-                        name = name.replace("CCTV4K测试）", "CCTV4")
-                        name = name.replace("CCTV164K", "CCTV16")
-                        name = name.replace("上海东方卫视", "上海卫视")
-                        name = name.replace("东方卫视", "上海卫视")
-                        name = name.replace("内蒙卫视", "内蒙古卫视")
-                        name = name.replace("福建东南卫视", "东南卫视")
-                        name = name.replace("广东南方卫视", "南方卫视")
-                        name = name.replace("金鹰卡通卫视", "金鹰卡通")
-                        name = name.replace("湖南金鹰卡通", "金鹰卡通")
-                        name = name.replace("炫动卡通", "哈哈炫动")
-                        name = name.replace("卡酷卡通", "卡酷少儿")
-                        name = name.replace("卡酷动画", "卡酷少儿")
-                        name = name.replace("BRTVKAKU少儿", "卡酷少儿")
-                        name = name.replace("优曼卡通", "优漫卡通")
-                        name = name.replace("优曼卡通", "优漫卡通")
-                        name = name.replace("嘉佳卡通", "佳嘉卡通")
-                        name = name.replace("世界地理", "地理世界")
-                        name = name.replace("CCTV世界地理", "地理世界")
-                        name = name.replace("BTV北京卫视", "北京卫视")
-                        name = name.replace("BTV冬奥纪实", "冬奥纪实")
-                        name = name.replace("东奥纪实", "冬奥纪实")
-                        name = name.replace("卫视台", "卫视")
-                        name = name.replace("湖南电视台", "湖南卫视")
-                        name = name.replace("少儿科教", "少儿")
-                        name = name.replace("影视剧", "影视")
+                # 发送GET请求获取JSON文件，设置超时时间为0.5秒
+                ip_start_index = url.find("//") + 2
+                ip_end_index = url.find(":", ip_start_index)
+                ip_port = url[ip_start_index:ip_end_index + 5]  # 这里获取ip地址和端口
+                response = requests.get(url, timeout=0.5)
+                json_data = response.json()
 
-                        if name and chid and srcid:
-                            # 格式化 URL
-                            channel_url = ('{name},http://{ip_port}/tsfile/live/{chid}_{'
-                                           'srcid}.m3u8').format(
-                                name=name,
-                                ip_port=ip_port,
-                                chid=chid,
-                                srcid=srcid
-                            )
-                            results.append(channel_url)
+                try:
+                    # 解析JSON文件，获取name和url字段
+                    for item in json_data['data']:
+                        if isinstance(item, dict):
+                            name = item.get('name')
+                            chid = str(item.get('chid')).zfill(4)  # 补全 chid 为四位数
+                            srcid = item.get('srcid')
+                            # 替换频道名称中的特定字符串
+                            name = name.replace("中央", "CCTV")
+                            name = name.replace("高清", "")
+                            name = name.replace("搞清", "")
+                            name = name.replace("HD", "")
+                            name = name.replace("标清", "")
+                            name = name.replace("超高", "")
+                            name = name.replace("频道", "")
+                            name = name.replace("-", "")
+                            name = name.replace(" ", "")
+                            name = name.replace("PLUS", "+")
+                            name = name.replace("＋", "+")
+                            name = name.replace("(", "")
+                            name = name.replace(")", "")
+                            name = name.replace("L", "")
+                            name = name.replace("CMIPTV", "")
+                            name = name.replace("cctv", "CCTV")
+                            name = re.sub(r"CCTV(\d+)台", r"CCTV\1", name)
+                            name = name.replace("CCTV1综合", "CCTV1")
+                            name = name.replace("CCTV2财经", "CCTV2")
+                            name = name.replace("CCTV3综艺", "CCTV3")
+                            name = name.replace("CCTV4国际", "CCTV4")
+                            name = name.replace("CCTV4中文国际", "CCTV4")
+                            name = name.replace("CCTV4欧洲", "CCTV4")
+                            name = name.replace("CCTV5体育", "CCTV5")
+                            name = name.replace("CCTV5+体育", "CCTV5+")
+                            name = name.replace("CCTV6电影", "CCTV6")
+                            name = name.replace("CCTV7军事", "CCTV7")
+                            name = name.replace("CCTV7军农", "CCTV7")
+                            name = name.replace("CCTV7农业", "CCTV7")
+                            name = name.replace("CCTV7国防军事", "CCTV7")
+                            name = name.replace("CCTV8电视剧", "CCTV8")
+                            name = name.replace("CCTV8纪录", "CCTV9")
+                            name = name.replace("CCTV9记录", "CCTV9")
+                            name = name.replace("CCTV9纪录", "CCTV9")
+                            name = name.replace("CCTV10科教", "CCTV10")
+                            name = name.replace("CCTV11戏曲", "CCTV11")
+                            name = name.replace("CCTV12社会与法", "CCTV12")
+                            name = name.replace("CCTV13新闻", "CCTV13")
+                            name = name.replace("CCTV新闻", "CCTV13")
+                            name = name.replace("CCTV14少儿", "CCTV14")
+                            name = name.replace("央视14少儿", "CCTV14")
+                            name = name.replace("CCTV少儿超", "CCTV14")
+                            name = name.replace("CCTV15音乐", "CCTV15")
+                            name = name.replace("CCTV音乐", "CCTV15")
+                            name = name.replace("CCTV16奥林匹克", "CCTV16")
+                            name = name.replace("CCTV17农业农村", "CCTV17")
+                            name = name.replace("CCTV17军农", "CCTV17")
+                            name = name.replace("CCTV17农业", "CCTV17")
+                            name = name.replace("CCTV5+体育赛视", "CCTV5+")
+                            name = name.replace("CCTV5+赛视", "CCTV5+")
+                            name = name.replace("CCTV5+体育赛事", "CCTV5+")
+                            name = name.replace("CCTV5+赛事", "CCTV5+")
+                            name = name.replace("CCTV5+体育", "CCTV5+")
+                            name = name.replace("CCTV5赛事", "CCTV5+")
+                            name = name.replace("凤凰中文台", "凤凰中文")
+                            name = name.replace("凤凰资讯台", "凤凰资讯")
+                            name = name.replace("CCTV4K测试）", "CCTV4")
+                            name = name.replace("CCTV164K", "CCTV16")
+                            name = name.replace("上海东方卫视", "上海卫视")
+                            name = name.replace("东方卫视", "上海卫视")
+                            name = name.replace("内蒙卫视", "内蒙古卫视")
+                            name = name.replace("福建东南卫视", "东南卫视")
+                            name = name.replace("广东南方卫视", "南方卫视")
+                            name = name.replace("金鹰卡通卫视", "金鹰卡通")
+                            name = name.replace("湖南金鹰卡通", "金鹰卡通")
+                            name = name.replace("炫动卡通", "哈哈炫动")
+                            name = name.replace("卡酷卡通", "卡酷少儿")
+                            name = name.replace("卡酷动画", "卡酷少儿")
+                            name = name.replace("BRTVKAKU少儿", "卡酷少儿")
+                            name = name.replace("优曼卡通", "优漫卡通")
+                            name = name.replace("优曼卡通", "优漫卡通")
+                            name = name.replace("嘉佳卡通", "佳嘉卡通")
+                            name = name.replace("世界地理", "地理世界")
+                            name = name.replace("CCTV世界地理", "地理世界")
+                            name = name.replace("BTV北京卫视", "北京卫视")
+                            name = name.replace("BTV冬奥纪实", "冬奥纪实")
+                            name = name.replace("东奥纪实", "冬奥纪实")
+                            name = name.replace("卫视台", "卫视")
+                            name = name.replace("湖南电视台", "湖南卫视")
+                            name = name.replace("少儿科教", "少儿")
+                            name = name.replace("影视剧", "影视")
 
+                            if name and chid and srcid:
+                                # 格式化 URL
+                                channel_url = ('{name},http://{ip_port}/tsfile/live/{chid}_{'
+                                               'srcid}.m3u8').format(
+                                    name=name,
+                                    ip_port=ip_port,
+                                    chid=chid,
+                                    srcid=srcid
+                                )
+                                results.append(channel_url)
+
+                except:
+                    continue
             except:
                 continue
-        except:
-            continue
 
 channels = []
 
@@ -302,8 +341,8 @@ with open("iptv.txt", 'w', encoding='utf-8') as file:
     for result in results:
         file.write(result + "\n")
         print(result)
-# 写入频道列表文件iptv.txt
-print(f"共获取到频道{len(channels)}个，频道列表文件iptv.txt生成完毕！")
+total_channels = len(results)
+print(f"频道列表文件iptv.txt生成完毕，共获取到{total_channels}个频道。\n")
 
 import eventlet
 
@@ -352,27 +391,29 @@ def worker():
                 file_size = len(content)
                 download_speed = file_size / response_time / 1024
                 normalized_speed = min(max(download_speed / 1024, 0.001), 100)  # 将速率从kB/s转换为MB/s并限制在1~100之间
-                print(f"\n检测频道: {channel_name},{channel_url}\n下载速度：{download_speed:.3f} kB/s，标准化后的速率：{normalized_speed:.3f} MB/s")
+                print(
+                    f"\n检测频道: {channel_name},{channel_url}\n下载速度：{download_speed:.3f} kB/s，标准化后的速率：{normalized_speed:.3f} MB/s")
 
                 # 删除下载的文件
                 os.remove(ts_lists_0)
                 result = channel_name, channel_url, f"{normalized_speed:.3f} MB/s"
                 results.append(result)
                 numberx = (len(results) + len(error_channels)) / len(channels) * 100
-                print(f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
-
+                print(
+                    f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
         except:
             error_channel = channel_name, channel_url
             error_channels.append(error_channel)
             numberx = (len(results) + len(error_channels)) / len(channels) * 100
-            print(f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
+            print(
+                f"可用频道：{len(results)} 个 , 不可用频道：{len(error_channels)} 个 , 总频道：{len(channels)} 个 ,总进度：{numberx:.2f} %。")
 
         # 标记任务完成
         task_queue.task_done()
 
 
 # 创建多个工作线程
-num_threads = 10
+num_threads = 20
 for _ in range(num_threads):
     t = threading.Thread(target=worker, daemon=True)
     t.start()
@@ -397,12 +438,12 @@ def channel_key(channel_name):
 results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 results.sort(key=lambda x: channel_key(x[0]))
 
-# # 将结果写入文件
-# with open("iptv_results.txt", 'w', encoding='utf-8') as file:
-#     for result in results:
-#         channel_name, channel_url, speed = result
-#         file.write(f"{channel_name},{channel_url},  {speed}\n")
-#
+# 将结果写入文件
+with open("iptv_results.txt", 'w', encoding='utf-8') as file:
+    for result in results:
+        channel_name, channel_url, speed = result
+        file.write(f"{channel_name},{channel_url},  {speed}\n")
+
 # with open("iptv_speed.txt", 'w', encoding='utf-8') as file:
 #     for result in results:
 #         channel_name, channel_url, speed = result
@@ -429,8 +470,8 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     file.write('\n卫视频道,#genre#\n')
     for result in results:
         channel_name, channel_url, _ = result
-        if '卫视' in channel_name or '重温经典' in channel_name or '影迷电源' in channel_name or '凤凰' in channel_name \
-                or '家庭影院' in channel_name or '动作电源' in channel_name or 'CHC' in channel_name or '翡翠' in channel_name:
+        if '卫视' in channel_name or '重温经典' in channel_name or '影迷电影' in channel_name or '凤凰' in channel_name \
+                or '家庭影院' in channel_name or '动作电影' in channel_name or 'CHC' in channel_name or '翡翠' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -461,8 +502,8 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
         if 'CCTV' not in channel_name and '卫视' not in channel_name and 'CHC' not in channel_name and '湖南' not in \
                 channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in \
                 channel_name and '下载速率' not in channel_name and '测试' not in channel_name and '重温经典' not in \
-                channel_name and '影迷电源' not in channel_name and '家庭影院' not in channel_name and '动作电源' not in \
-                channel_name and '购' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name:
+                channel_name and '影迷电影' not in channel_name and '家庭影院' not in channel_name and '动作电影' not in \
+                channel_name and '购' not in channel_name and 'CHC' not in channel_name and '凤凰' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -472,23 +513,45 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
-# 合并所有的txt文件
-file_contents = []
-file_paths = ["YD-IPTV.txt", "iptv_list.txt", "gangaotai.txt", "zdy.txt"]  # 替换为实际的文件路径列表
-for file_path in file_paths:
-    with open(file_path, 'r', encoding="utf-8") as file:
-        content = file.read()
-        file_contents.append(content)
-
-# 写入合并后的txt文件
-with open("iptv_list.txt", "w", encoding="utf-8") as output:
-    output.write('\n'.join(file_contents))
     # 写入更新日期时间
     now = datetime.now()
-    output.write(f"更新时间,#genre#\n")
-    output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
+    file.write(f"更新时间,#genre#\n")
+    file.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
+
 os.remove("iptv.txt")
-os.remove("gangaotai.txt")
+os.remove("iptv_results.txt")
+# os.remove("iptv_speed.txt")
 
-print("频道分类完成已写入iptv_list.txt文件。")
+print("\n频道分类完毕已写入iptv_list.txt和iptv_list.m3u文件。")
 
+
+# 将.txt文件转换为.m3u文件
+def txt_to_m3u(input_file, output_file):
+    # 读取txt文件内容
+    with open(input_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    # 打开m3u文件并写入内容
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write('#EXTM3U\n')
+
+        # 初始化genre变量
+        genre = ''
+
+        # 遍历txt文件内容
+        for line in lines:
+            line = line.strip()
+            if "," in line:  # 防止文件里面缺失“,”号报错
+                # if line:
+                # 检查是否是genre行
+                channel_name, channel_url = line.split(',', 1)
+                if channel_url == '#genre#':
+                    genre = channel_name
+                    print(genre)
+                else:
+                    # 将频道信息写入m3u文件
+                    f.write(f'#EXTINF:-1 group-title="{genre}",{channel_name}\n')
+                    f.write(f'{channel_url}\n')
+
+
+txt_to_m3u('iptv_list.txt', 'iptv_list.m3u')
