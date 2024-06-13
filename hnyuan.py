@@ -17,7 +17,7 @@ headers = {
                   'Safari/537.36 Edg/119.0.0.0'}
 
 shengshi_names = ["长沙", "娄底", "衡阳", "常德", "株洲", "邵阳", "益阳", "永州", "怀化", "广州", "深圳", "梅州",
-                  "南宁", "湖南", "湖北", "广东", "江西", "河南", "四川", "河北", "山东", "北京", "天津", "上海"]
+                  "南宁", "湖南", "湖北", "广东", "江西", "山东"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
 
