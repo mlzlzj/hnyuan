@@ -16,7 +16,7 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
 
-shengshi_names = ["长沙", "娄底", "衡阳", "常德", "潮州", "揭阳", "益阳", "永州", "怀化", "广州", "深圳", "梅州",
+shengshi_names = ["长沙", "娄底", "衡阳", "常德", "永州", "怀化", "广州", "深圳", "东莞", "梅州", "潮州", "揭阳",
                   "南宁", "湖南", "湖北", "广东", "江西", "山东"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
@@ -241,6 +241,9 @@ for url in urls:
                         name = name.replace("东奥纪实", "冬奥纪实")
                         name = name.replace("卫视台", "卫视")
                         name = name.replace("湖南电视台", "湖南卫视")
+                        name = name.replace("2金鹰卡通", "金鹰卡通")
+                        name = name.replace("湖南教育台", "湖南教育")
+                        name = name.replace("湖南金鹰纪实", "金鹰纪实")
                         name = name.replace("少儿科教", "少儿")
                         name = name.replace("影视剧", "影视")
 
@@ -402,8 +405,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     file.write('\n卫视频道,#genre#\n')
     for result in results:
         channel_name, channel_url, _ = result
-        if '卫视' in channel_name or '重温经典' in channel_name or '影迷电影' in channel_name or '凤凰' in channel_name \
-                or '家庭影院' in channel_name or '动作电影' in channel_name or 'CHC' in channel_name or '翡翠' in channel_name:
+        if '卫视' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -413,6 +415,22 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
             else:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
+    channel_counters = {}
+    file.write('\n港澳影视,#genre#\n')
+    for result in results:
+        channel_name, channel_url, _ = result
+        if '凤凰' in channel_name or '翡翠' in channel_name or '明珠' in channel_name or '本港' in channel_name or '星河' in channel_name \
+            or '重温经典' in channel_name or '影迷电影' in channel_name or '凤凰' in channel_name or '家庭影院' in channel_name \
+            or '动作电影' in channel_name or 'CHC' in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"{channel_name},{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"{channel_name},{channel_url}\n")
+                channel_counters[channel_name] = 1            
     channel_counters = {}
     file.write('\n湖南频道,#genre#\n')
     for result in results:
@@ -435,7 +453,8 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 channel_name and '长沙' not in channel_name and '金鹰' not in channel_name and '先锋乒羽' not in \
                 channel_name and '下载速率' not in channel_name and '测试' not in channel_name and '重温经典' not in \
                 channel_name and '影迷电影' not in channel_name and '家庭影院' not in channel_name and '动作电影' not in \
-                channel_name and '购' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name:
+                channel_name and '购' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name \
+                and '明珠' not in channel_name and '本港' not in channel_name and '星河' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
