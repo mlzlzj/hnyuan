@@ -2,7 +2,7 @@ name: hnyuan
 
 on:
   schedule:
-    - cron: '0 ,18,05 * * *'
+    - cron: '0 ,09,21 * * *'
   push:
     branches:
       - main
