@@ -16,7 +16,7 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
 
-shengshi_names = ["长沙", "娄底", "衡阳", "常德", "河南", "揭阳", "广州", "茂名", "梅州", "肇庆", "南宁", "湖南",
+shengshi_names = ["长沙", "娄底", "衡阳", "常德", "河南", "揭阳", "广州", "茂名", "梅州", "贵港", "南宁", "湖南",
                   "湖北", "广东", "江西", "山东"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
