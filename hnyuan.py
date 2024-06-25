@@ -12,6 +12,60 @@ from bs4 import BeautifulSoup
 import random
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+url = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fairy8o/IPTV/main/PDX-V4.txt"
+r = requests.get(url)
+open('DIYP-v4.txt', 'wb').write(r.content)
+
+keywords = ['TVB 翡翠台', 'TVB 无线新闻台', 'TVB PLUS', 'TVB 黄金翡翠台''TVB 黄金华剧台', 'TVB 千禧经典台',
+            'TVB 粤语片台', 'TVB 星河台', 'TVB 亚洲剧台', 'TVB 娱乐新闻台', 'TVB J2', 'TVB 华语剧台', 'HOY 资讯台',
+            'HOY TV', 'HOY国际财经', 'ViuTV', '天映频道', '天映经典', 'Thrill', '星空卫视', '香港卫视', '澳亚卫视', '澳门卫视',
+            '澳门资讯', '澳视澳门', 'HKC 18台', '港台电视 31', '港台电视 32', 'Now 财经台', 'Now 爆谷台',
+            'Now 星影台', 'Now 新闻台', 'Now 直播台', 'Now报价台', 'Now jelli紫金国际台', 'Now华剧台', 'NowViu剧集台',
+            '华丽翡翠', '翡翠台', 'J2', '明珠台', '无线新闻台', '财经资讯台', 'VIUTV6', 'VIUTV', 'TVB星河',
+            'RTHK32', 'RTHK31', 'TVN', 'TVB-Plus', '凤凰中文', '凤凰资讯', '凤凰香港', '翡翠台', '星空卫视', 'TVB星河台',
+            '无线娱乐新闻台', 'TVB功夫台', 'TVB娱乐新闻台', '凤凰卫视', '凤凰香港', 'TVB翡翠台', 'TVB明珠台', 'TVB无线新闻台',
+            'TVB J2台', 'TVB翡翠台 4K', 'TVB J1', '星空卫视', '耀才财经台HD', '香港佛陀', '面包台', '香港卫视', '香港34台全网',
+            '港台RTHK33HD', '港台RTHK34HD', '翡翠台', '无线新闻台', 'TVB Plus', '黄金翡翠台', '黄金华剧台', '千禧经典台',
+            'TVB粤语片台', 'TVB亚洲剧台', 'TVB华语剧台', 'HOY TV', 'HOY资讯台', 'Viu TV', '天映频道', '天映经典', 'Thrill',
+            '澳亚卫视', '澳门卫视', 'RTHK31', 'RTHK32', 'NOW新闻台', 'NOW财经台', 'NOW直播台', 'NOW爆谷台', 'NOW星影台',
+            'NOW紫金国际台', 'NOW华剧台', 'NowViu剧集台', 'ViuTV', '澳视澳门', '澳视葡语', '澳门资讯', '澳门macau', '明珠台',
+            '無綫新聞台', '鳳凰衛視香港台', '翡翠台', '澳视澳门', '澳视葡语', '澳门资讯', '澳门macau', ]  # 需要提取的关键字列表
+pattern = '|'.join(keywords)  # 创建正则表达式模式，匹配任意一个关键字
+with open('DIYP-v4.txt', 'r', encoding='utf-8') as file, open('HK.txt', 'w', encoding='utf-8') as HK:
+    HK.write('\n港澳频道,#genre#\n')
+    for line in file:
+        if re.search(pattern, line):  # 如果行中有任意关键字
+            HK.write(line)  # 将该行写入输出文件
+
+keywords = ['纬来体育', '纬来日本', '纬来电影', '天映频道', '探索亚洲', '探索频道', '探索', '台视新闻', '时尚频道',
+            '年代新闻', '中天综合', '中天亚洲', '中天娱乐', '中天新闻', '中视新闻', '亚洲旅游台', '三立综合台', '三立戏剧',
+            '三立台湾台', '民视新闻台', '民视台湾台', '民视第一台', '民视', '美亚电影台', '美食星球', '龙祥时代', '龙华洋片',
+            '龙华戏剧', '龙华偶像', '龙华电影', '靖天卡通', '靖天国际台', '寰宇新闻台', '华艺moc', '华纳TV', '好莱坞电影台', '非凡新闻',
+            '动物星球', '東森新闻', '東森戏剧', '東森电影台', '东森综合台', '东森洋片', '东森超视', '东森财经新闻', '大爱', '博斯运动II',
+            '博斯网球', '博斯魅力', '博斯高球II', '博斯高球I', '八大综合台', '八大戏剧台', '八大第1台', '公视', '爱奇艺', 'WWE',
+            'TVBS新闻台', 'TVBS欢乐台', 'TVBS',  'EYE戏剧', 'EYE旅游', 'ELTA综合', 'ELTA影剧', 'ELTA体育1台', 'ELTA体育2台',
+            'ELTA体育3台', 'ELTA体育4台', ]  # 需要提取的关键字列表
+pattern = '|'.join(keywords)  # 创建正则表达式模式，匹配任意一个关键字
+with open('DIYP-v4.txt', 'r', encoding='utf-8') as file, open('TW.txt', 'w', encoding='utf-8') as TW:
+    TW.write('\n台湾频道,#genre#\n')
+    for line in file:
+        if re.search(pattern, line):  # 如果行中有任意关键字
+            TW.write(line)  # 将该行写入输出文件
+
+# 读取要合并的香港频道和台湾频道文件
+file_contents = []
+file_paths = ["HK.txt", "TW.txt"]  # 替换为实际的文件路径列表
+for file_path in file_paths:
+    with open(file_path, 'r', encoding="utf-8") as file:
+        content = file.read()
+        file_contents.append(content)
+# 生成合并后的文件
+with open("GAT.txt", "w", encoding="utf-8") as output:
+    output.write('\n'.join(file_contents))
+
+print("港澳台频道文件GAT.txt生成完毕！")
+
+
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
@@ -466,7 +520,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 channel_counters[channel_name] = 1
 # 合并所有的txt文件
 file_contents = []
-file_paths = ["YD-IPTV.txt", "iptv_list.txt", "zdy.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt", "iptv_list.txt", "GAT.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -480,7 +534,11 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
     output.write(f"更新时间,#genre#\n")
     output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
 os.remove("iptv.txt")
-# os.remove("iptv_results.txt")
+os.remove("DIYP-v4.txt")
+os.remove("HK.txt")
+os.remove("TW.txt")
+os.remove("GAT.txt")
+os.remove("iptv_results.txt")
 
 print("频道分类完成已写入iptv_list.txt文件。")
 
