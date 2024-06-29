@@ -466,7 +466,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 channel_counters[channel_name] = 1
 # 合并所有的txt文件
 file_contents = []
-file_paths = ["YD-IPTV.txt", "iptv_list.txt", "GAT.txt", "zdy.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt", "iptv_list.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -480,10 +480,6 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
     output.write(f"更新时间,#genre#\n")
     output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
 os.remove("iptv.txt")
-os.remove("DIYP-v4.txt")
-os.remove("HK.txt")
-os.remove("TW.txt")
-os.remove("GAT.txt")
 # os.remove("iptv_results.txt")
 
 print("频道分类完成已写入iptv_list.txt文件。")
