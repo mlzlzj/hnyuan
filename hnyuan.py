@@ -164,6 +164,7 @@ for url in urls:
                         # 替换频道名称中的特定字符串
                         name = name.replace("中央", "CCTV")
                         name = name.replace("高清", "")
+                        name = name.replace("搞清", "")
                         name = name.replace("超清", "")
                         name = name.replace("HD", "")
                         name = name.replace("标清", "")
@@ -186,6 +187,7 @@ for url in urls:
                         name = name.replace("CCTV4中文国际", "CCTV4")
                         name = name.replace("CCTV4欧洲", "CCTV4")
                         name = name.replace("CCTV5体育", "CCTV5")
+                        name = name.replace("CCTV5测试", "信吉")
                         name = name.replace("CCTV5+体育", "CCTV5+")
                         name = name.replace("CCTV6电影", "CCTV6")
                         name = name.replace("CCTV7军事", "CCTV7")
@@ -196,6 +198,7 @@ for url in urls:
                         name = name.replace("CCTV8纪录", "CCTV9")
                         name = name.replace("CCTV9记录", "CCTV9")
                         name = name.replace("CCTV9纪录", "CCTV9")
+                        name = name.replace("CCTV9测试", "CCTV5+")
                         name = name.replace("CCTV10科教", "CCTV10")
                         name = name.replace("CCTV11戏曲", "CCTV11")
                         name = name.replace("CCTV12社会与法", "CCTV12")
@@ -207,7 +210,9 @@ for url in urls:
                         name = name.replace("CCTV15音乐", "CCTV15")
                         name = name.replace("CCTV音乐", "CCTV15")
                         name = name.replace("CCTV16奥林匹克", "CCTV16")
+                        name = name.replace("CCTV16奥运匹克", "CCTV16")
                         name = name.replace("CCTV17农业农村", "CCTV17")
+                        name = name.replace("CCTV17农村农业", "CCTV17")
                         name = name.replace("CCTV17军农", "CCTV17")
                         name = name.replace("CCTV17农业", "CCTV17")
                         name = name.replace("CCTV5+体育赛视", "CCTV5+")
@@ -246,7 +251,15 @@ for url in urls:
                         name = name.replace("湖南金鹰纪实", "金鹰纪实")
                         name = name.replace("少儿科教", "少儿")
                         name = name.replace("影视剧", "影视")
-
+                        name = name.replace("CHC电影", "影迷电影")
+                        name = name.replace("CHC动作电影", "动作电影")
+                        name = name.replace("CHC家庭影院", "家庭影院")
+                        name = name.replace("CHC家庭电影", "家庭影院")
+                        name = name.replace("本港台", "星河")
+                        name = name.replace("TVB星河", "星河")
+                        name = name.replace("天映", "天映电影")   
+                        name = name.replace("莲花台", "凤凰香港")
+                        
                         if name and chid and srcid:
                             # 格式化 URL
                             channel_url = ('{name},http://{ip_port}/tsfile/live/{chid}_{'
@@ -421,7 +434,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
         channel_name, channel_url, _ = result
         if '凤凰' in channel_name or '翡翠' in channel_name or '明珠' in channel_name or '本港' in channel_name or '星河' in channel_name \
             or '重温经典' in channel_name or '影迷电影' in channel_name or '凤凰' in channel_name or '家庭影院' in channel_name \
-            or '动作电影' in channel_name or 'CHC' in channel_name:
+            or '动作电影' in channel_name or '天映' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -454,7 +467,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 channel_name and '下载速率' not in channel_name and '测试' not in channel_name and '重温经典' not in \
                 channel_name and '影迷电影' not in channel_name and '家庭影院' not in channel_name and '动作电影' not in \
                 channel_name and '购' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name \
-                and '明珠' not in channel_name and '本港' not in channel_name and '星河' not in channel_name:
+                and '明珠' not in channel_name and '本港' not in channel_name and '星河' not in channel_name and '天映' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
