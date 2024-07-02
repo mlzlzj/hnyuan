@@ -257,7 +257,7 @@ for url in urls:
                         name = name.replace("CHC家庭电影", "家庭影院")
                         name = name.replace("本港台", "星河")
                         name = name.replace("TVB星河", "星河")
-                        name = name.replace("天映", "天映电影")   
+                        name = name.replace("天映电影", "天映")   
                         name = name.replace("莲花台", "凤凰香港")
                         
                         if name and chid and srcid:
@@ -434,7 +434,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
         channel_name, channel_url, _ = result
         if '凤凰' in channel_name or '翡翠' in channel_name or '明珠' in channel_name or '本港' in channel_name or '星河' in channel_name \
             or '重温经典' in channel_name or '影迷电影' in channel_name or '凤凰' in channel_name or '家庭影院' in channel_name \
-            or '动作电影' in channel_name or '天映' in channel_name:
+            or '动作电影' in channel_name or '天映' in channel_name or '东森' in channel_name or '龙洋' in channel_name or '新视觉' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -467,7 +467,8 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 channel_name and '下载速率' not in channel_name and '测试' not in channel_name and '重温经典' not in \
                 channel_name and '影迷电影' not in channel_name and '家庭影院' not in channel_name and '动作电影' not in \
                 channel_name and '购' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name \
-                and '明珠' not in channel_name and '本港' not in channel_name and '星河' not in channel_name and '天映' not in channel_name:
+                and '明珠' not in channel_name and '本港' not in channel_name and '星河' not in channel_name and '天映' \
+                not in channel_name and '东森' not in channel_name and '龙洋' not in channel_name and '新视觉' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
