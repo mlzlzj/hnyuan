@@ -16,8 +16,8 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
 
-shengshi_names = ["长沙", "娄底", "衡阳", "常德", "梅州", "揭阳", "河南", "贵港", "南宁", "邯郸", "保定", "山东", 
-                  "包头", "金华", "厦门", "湖北"]
+shengshi_names = ["长沙", "娄底", "衡阳", "常德", "梅州", "揭阳", "周口", "濮阳", "安阳", "平顶山", "贵港", "南宁", "邯郸",
+                  "保定", "山东", "包头", "金华", "厦门", "湖北"]
 pinyin_names = ["".join(lazy_pinyin(name, errors=lambda x: x)) for name in shengshi_names]
 print(f'本次查询{shengshi_names}的酒店频道。')
 
@@ -404,7 +404,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
     file.write('央视频道,#genre#\n')
     for result in results:
         channel_name, channel_url, _ = result
-        if 'CCTV' in channel_name:
+        if 'CCTV' in channel_name or '第一剧场' in channel_name or '风云剧场' in channel_name or '风云足球' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -434,7 +434,9 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
         channel_name, channel_url, _ = result
         if '凤凰' in channel_name or '翡翠' in channel_name or '明珠' in channel_name or '本港' in channel_name or '星河' in channel_name \
             or '重温经典' in channel_name or '影迷电影' in channel_name or '凤凰' in channel_name or '家庭影院' in channel_name \
-            or '动作电影' in channel_name or '天映' in channel_name or '东森' in channel_name or '龙详' in channel_name or '新视觉' in channel_name:
+            or '动作电影' in channel_name or '天映' in channel_name or '东森' in channel_name or '龙祥电影' in channel_name \
+            or '新视觉' in channel_name or '爱上4K' in channel_name or '热播剧场' in channel_name or '相声小品' in channel_name \
+            or '谍战剧场' in channel_name or '经典电影' in channel_name or '都市剧场' in channel_name or '环球奇观' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -443,7 +445,21 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                     channel_counters[channel_name] += 1
             else:
                 file.write(f"{channel_name},{channel_url}\n")
-                channel_counters[channel_name] = 1            
+                channel_counters[channel_name] = 1
+    channel_counters = {}
+    file.write('IPTV频道,#genre#\n')
+    for result in results:
+        channel_name, channel_url, _ = result
+        if 'IPTV' in channel_name:
+            if channel_name in channel_counters:
+                if channel_counters[channel_name] >= result_counter:
+                    continue
+                else:
+                    file.write(f"{channel_name},{channel_url}\n")
+                    channel_counters[channel_name] += 1
+            else:
+                file.write(f"{channel_name},{channel_url}\n")
+                channel_counters[channel_name] = 1
     channel_counters = {}
     file.write('\n湖南频道,#genre#\n')
     for result in results:
@@ -468,7 +484,11 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 channel_name and '影迷电影' not in channel_name and '家庭影院' not in channel_name and '动作电影' not in \
                 channel_name and '购' not in channel_name and '凤凰' not in channel_name and '翡翠' not in channel_name \
                 and '明珠' not in channel_name and '本港' not in channel_name and '星河' not in channel_name and '天映' \
-                not in channel_name and '东森' not in channel_name and '龙详' not in channel_name and '新视觉' not in channel_name:
+                not in channel_name and '东森' not in channel_name and '龙祥电影' not in channel_name and '新视觉' not in \
+                channel_name and '爱上4K' not in channel_name and '热播剧场' not in channel_name and '相声小品' not in \
+                channel_name and '第一剧场' not in channel_name and '风云剧场' not in channel_name and '风云足球' not in \
+                channel_name and '谍战剧场' not in channel_name and '经典电影' not in channel_name and '都市剧场' not in \
+                channel_name and 'IPTV' not in channel_name and '环球奇观' not in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
