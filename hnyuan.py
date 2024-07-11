@@ -446,7 +446,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
     channel_counters = {}
-    file.write('IPTV频道,#genre#\n')
+    file.write('\nIPTV频道,#genre#\n')
     for result in results:
         channel_name, channel_url, _ = result
         if 'IPTV' in channel_name:
