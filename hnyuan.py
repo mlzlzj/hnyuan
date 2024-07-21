@@ -12,6 +12,54 @@ from bs4 import BeautifulSoup
 import random
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+url = "https://mirror.ghproxy.com/https://github.com/Fairy8o/IPTV/blob/main/PDX-V4.txt"
+r = requests.get(url)
+open('PDX-V4.txt', 'wb').write(r.content)
+
+keywords = ['TVB翡翠台', 'TVB明珠台', 'TVB plus', 'HOY资讯台', 'TVB直播', '無線財經資訊台', '鳳凰香港', '鳳凰衛視', '鳳凰资讯',
+            '星空衛視', '18台', '廣東珠江', '澳門蓮花', '鳳凰電影', 'Viutv 6', '創世電視', '澳亞衛視', 'TVB亞洲劇', 'TVB粵語片',
+            'TVB功夫台', '新時代東部', '（時移）新時代東', '新時代2', '城市電視', 'TVB星河', 'TVB經典', '美亞電影', '鳳凰秀',
+            '天映經典', '国家地理（英）', 'RHK 31', 'RHK 32', 'NOW 体育 4K HDR', '香港卫视', '港台RTHK33HD', '港台RTHK34HD',
+            'NOW 体育 1台', 'NOW 体育 2台', 'NOW 体育 3台', 'NOW 体育 4台', 'NOW 体育 5台', 'NOW 体育 6台', 'NOW 体育 7台',
+            'NOW 体育 英超 1', 'NOW 体育 英超 2', 'NOW 体育 英超 3', 'NOW 体育 英超 4', 'NOW 体育 英超 5', 'NOW 体育 英超 6',
+            'NOW 体育 英超 7', '凤凰中文台', '凤凰资讯台', '凤凰香港台', 'TVB 翡翠台', 'TVB 翡翠台 4K', '无线新闻台', '娱乐新闻台',
+            'TVB 明珠台', 'Super Free', '黄金翡翠台', '创世电视台', '華麗台 HD', '歡喜台 HD', '歡喜台(備用)', 'TVB 星河台', '愛奇藝',
+            'NOW 体育 英超 8', 'NOW 体育 英超 4K 616', 'NOW 体育 英超 4K 617', 'NOW 体育 1台', 'NOW 体育 2台', 'NOW 体育 3台',
+            'NOW 体育 4台', 'NOW 体育 5台', 'NOW 体育 6台', 'NOW 体育 7台', '凤凰资讯', '凤凰中文', '重温经典', '星光视界',
+            'TVB翡翠', 'TVB翡翠2', '广电翡翠2', 'NOW星影', 'NOW爆谷', '鳳凰资讯', '翡翠台', '明珠台', '星空卫视',
+            'TVB星河台', '无线新闻台', '无线娱乐新闻台', 'TVB功夫台', 'TVB星河台', 'TVB娱乐新闻台', '凤凰卫视', '凤凰香港',
+            'TVB翡翠台', 'TVB明珠台', 'TVB无线新闻台', 'TVB J2台', 'TVB翡翠台 4K', 'TVB J1', '星空卫视', '耀才财经台HD']  # 需要提取的关键字列表
+pattern = '|'.join(keywords)  # 创建正则表达式模式，匹配任意一个关键字
+with open('PDX-V4.txt', 'r', encoding='utf-8') as file, open('HK.txt', 'w', encoding='utf-8') as HK:
+    HK.write('\n港澳频道,#genre#\n')
+    for line in file:
+        if re.search(pattern, line):  # 如果行中有任意关键字
+            HK.write(line)  # 将该行写入输出文件
+
+keywords = ['民视', '中视', '台视', '华视', '新闻台', '東森', '龙祥', '公视', '三立', '大爱', '年代', '人间卫视',
+            '人間', '大立', '八大', '緯來', '東森', '中天', '靖天', '中視', '民視', '華視', '公視', '寰宇', '台視',
+            '好萊塢', '愛爾達', '龍華', '美亞', '龍翔', '影迷數位', '采昌', '天映', 'Trill恐怖電影', '華納', '博斯', '探索',
+            '大陸尋奇', '動物星球', '視納華仁', '華藝', 'AMC电影', '半岛新闻', '韩国电影', '亚洲', '好消息', 'CATCHPLAY电影']  # 需要提取的关键字列表
+pattern = '|'.join(keywords)  # 创建正则表达式模式，匹配任意一个关键字
+with open('PDX-V4.txt', 'r', encoding='utf-8') as file, open('TW.txt', 'w', encoding='utf-8') as TW:
+    TW.write('\n台湾频道,#genre#\n')
+    for line in file:
+        if re.search(pattern, line):  # 如果行中有任意关键字
+            TW.write(line)  # 将该行写入输出文件
+
+# 读取要合并的香港频道和台湾频道文件
+file_contents = []
+file_paths = ["HK.txt", "TW.txt"]  # 替换为实际的文件路径列表
+for file_path in file_paths:
+    with open(file_path, 'r', encoding="utf-8") as file:
+        content = file.read()
+        file_contents.append(content)
+# 生成合并后的文件
+with open("GAT.txt", "w", encoding="utf-8") as output:
+    output.write('\n'.join(file_contents))
+print("港澳台频道文件GAT.txt生成完毕！")
+
+
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 '
                   'Safari/537.36 Edg/119.0.0.0'}
@@ -498,7 +546,7 @@ with open("iptv_list.txt", 'w', encoding='utf-8') as file:
                 channel_counters[channel_name] = 1
 # 合并所有的txt文件
 file_contents = []
-file_paths = ["YD-IPTV.txt", "iptv_list.txt", "zdy.txt"]  # 替换为实际的文件路径列表
+file_paths = ["YD-IPTV.txt", "iptv_list.txt", "GAT.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -511,8 +559,13 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
     now = datetime.now()
     output.write(f"更新时间,#genre#\n")
     output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
+
+os.remove("PDX-V4.txt")
+os.remove("HK.txt")
+os.remove("TW.txt")
 os.remove("iptv.txt")
-# os.remove("iptv_results.txt")
+os.remove("GAT.txt")
+os.remove("iptv_results.txt")
 
 print("频道分类完成已写入iptv_list.txt文件。")
 
