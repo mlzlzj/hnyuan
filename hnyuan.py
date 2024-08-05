@@ -219,6 +219,10 @@ for url in urls:
                         name = name.replace("超高", "")
                         name = name.replace("频道", "")
                         name = name.replace("-", "")
+                        name = name.replace("home", "")
+                        name = name.replace("unicom", "")
+                        name = name.replace("XF", "") 
+                        name = name.replace("iptv", "IPTV")         
                         name = name.replace(" ", "")
                         name = name.replace("PLUS", "+")
                         name = name.replace("＋", "+")
@@ -307,6 +311,7 @@ for url in urls:
                         name = name.replace("TVB星河", "星河")
                         name = name.replace("天映电影", "天映")   
                         name = name.replace("莲花台", "凤凰香港")
+                        name = name.replace("明珠台", "明珠")       
                         
                         if name and chid and srcid:
                             # 格式化 URL
