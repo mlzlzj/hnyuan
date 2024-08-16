@@ -1,5 +1,8 @@
 广东联通,#genre#
-CCTV1,http://gdcucc-livod.dispatcher.gitv.tv/gitv_live/G_CCTV-1-CQ/G_CCTV-1-CQ.m3u8?p=GITV&area=GD_CUCC&gMac=
+CCTV1,http://58.248.112.203:8006/GD_CUCC/G_CCTV-1-CQ.m3u8?Authinfo=L5rHxm8DtLWlFgGM0dbmtcQJmHEMzRUBrKJPimctRp8vw8NE0EPcrK4kcF0yScoC&p=GITV&area=GD_CUCC&gMac=
+CCTV2,http://58.248.112.203:8006/GD_CUCC/G_CCTV-2-CQ.m3u8?Authinfo=L5rHxm8DtLWlFgGM0dbmtSktMDQbcrKz8xjfH5H57oI8qjj84BtY29%2BkoBfR53%2F3&p=GITV&area=GD_CUCC&gMac=
+CCTV3,http://58.248.112.203:8006/GD_CUCC/G_CCTV-3-CQ.m3u8?Authinfo=L5rHxm8DtLWlFgGM0dbmtS6USnhhgx8TZ3vY5OEagLThITay9LIzp5nlBzyNlCXh&p=GITV&area=GD_CUCC&gMac=
+
 移动专网,#genre#
 CCTV1,http://tvgslb.hn.chinamobile.com:8089/180000001002/00000001000000000007000000001243/main.m3u8
 CCTV1,http://tvgslb.hn.chinamobile.com:8089/180000001001/00000000000000020000000000182562/main.m3u8
