@@ -1,3 +1,11 @@
+广东银河,#genre#
+长颈鹿-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-201.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQuvqWFpB0UIM7MPfG8qZpCUy0nNkPrIUBHA3m%2FxK4l78&p=GITV&area=GD_CUCC&gMac=
+火烈鸟-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-401.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQv4ISUiVg03ZZ5RCAXxTdKQy0nNkPrIUBHA3m%2FxK4l78&p=GITV&area=GD_CUCC&gMac=
+老虎-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-501.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQpcLGuTbmBfczRa7vQS5D2Ay0nNkPrIUBHA3m%2FxK4l78&p=GITV&area=GD_CUCC&gMac=
+大象-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-102.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQhIkfGVrGAXMGxRsnxXKezAdWwLsKeV2K84HrsImHf47&p=GITV&area=GD_CUCC&gMac=
+斑马-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-801.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQvDvScwQyTETxCfc0zcvCl8dWwLsKeV2K84HrsImHf47&p=GITV&area=GD_CUCC&gMac=
+狮子-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-901.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQg4I9reqFZl3dVuBWPhptsYdWwLsKeV2K84HrsImHf47&p=GITV&area=GD_CUCC&gMac=
+
 央视频道,#genre#
 CCTV-1,http://58.248.112.203:8006/GD_CUCC/G_CCTV-1-CQ.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQpOhGkcA%2Brc2mwukJ0Eiwkn16Gl1gLOFaBE33Mvgyh0G&p=GITV&area=GD_CUCC&gMac=
 CCTV-2,http://58.248.112.203:8006/GD_CUCC/G_CCTV-2-CQ.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQp2fbwLZxfhaPFyBTQ0aYLf16Gl1gLOFaBE33Mvgyh0G&p=GITV&area=GD_CUCC&gMac=
@@ -63,6 +71,10 @@ CCTV-NEWS,http://58.248.112.203:8006/GD_CUCC/G_CCTV-NEWS.m3u8?Authinfo=QmEf1mrTN
 
 
 其他频道,#genre#
+CETV-1,http://58.248.112.203:8006/GD_CUCC/G_CETV-1-HQ.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQsbJQ2nb3CUdJxlM0UjRwnUDLRbWBjZ9nGen9s3cbDHT&p=GITV&area=GD_CUCC&gMac=
+CETV-2,http://58.248.112.203:8006/GD_CUCC/G_CETV-2.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQhisrL%2FdOwCJUzjro%2F%2F3Pc3bD%2BsruADJtrcs8BTsVdhQ&p=GITV&area=GD_CUCC&gMac=
+CETV-3,http://58.248.112.203:8006/GD_CUCC/G_CETV-3.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQp5VmRUdnTzltbo4VagchEvbD%2BsruADJtrcs8BTsVdhQ&p=GITV&area=GD_CUCC&gMac=
+CETV-4,http://58.248.112.203:8006/GD_CUCC/G_CETV-4.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQnxNWI9fN%2BZxIUOFXk5eYD7bD%2BsruADJtrcs8BTsVdhQ&p=GITV&area=GD_CUCC&gMac=
 北京奥运纪实,http://58.248.112.203:8006/GD_CUCC/G_BEIJINGJS-CQ.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQlqqd8HLKWN9yv5NoaCSBtxhVGbCb0ZmJdQocEwEx5vu&p=GITV&area=GD_CUCC&gMac=
 家庭理财,http://58.248.112.203:8006/GD_CUCC/G_JIATINGLC.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQs%2FiRxQhfLj0nkKLOT%2F6UO4XLs%2F97Smm4%2B3tx2M4IoeD&p=GITV&area=GD_CUCC&gMac=
 金鹰卡通,http://58.248.112.203:8006/GD_CUCC/G_JINYING.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQiY9dJfCEJNjlInjsuODaVQOKBtOhchVmmplRCQedtXC&p=GITV&area=GD_CUCC&gMac=
@@ -70,10 +82,6 @@ CCTV-NEWS,http://58.248.112.203:8006/GD_CUCC/G_CCTV-NEWS.m3u8?Authinfo=QmEf1mrTN
 女性时尚,http://58.248.112.203:8006/GD_CUCC/G_NVXINGSS-CQ.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQj6%2FGriC8y3OKTsyZWzciYtZ8vRJslbMTqRbmedhGF2w&p=GITV&area=GD_CUCC&gMac=
 炫动卡通,http://58.248.112.203:8006/GD_CUCC/G_XUANDONG.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQhqDTC%2BFSZYM14vvge1v7iNecNVBApdrUlfHPw7nNEBC&p=GITV&area=GD_CUCC&gMac=
 优漫卡通,http://58.248.112.203:8006/GD_CUCC/G_YOUMAN.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQmiTtT%2FDwcILn2DEe098%2FZHbD%2BsruADJtrcs8BTsVdhQ&p=GITV&area=GD_CUCC&gMac=
-CETV-1,http://58.248.112.203:8006/GD_CUCC/G_CETV-1-HQ.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQsbJQ2nb3CUdJxlM0UjRwnUDLRbWBjZ9nGen9s3cbDHT&p=GITV&area=GD_CUCC&gMac=
-CETV-2,http://58.248.112.203:8006/GD_CUCC/G_CETV-2.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQhisrL%2FdOwCJUzjro%2F%2F3Pc3bD%2BsruADJtrcs8BTsVdhQ&p=GITV&area=GD_CUCC&gMac=
-CETV-3,http://58.248.112.203:8006/GD_CUCC/G_CETV-3.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQp5VmRUdnTzltbo4VagchEvbD%2BsruADJtrcs8BTsVdhQ&p=GITV&area=GD_CUCC&gMac=
-CETV-4,http://58.248.112.203:8006/GD_CUCC/G_CETV-4.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQnxNWI9fN%2BZxIUOFXk5eYD7bD%2BsruADJtrcs8BTsVdhQ&p=GITV&area=GD_CUCC&gMac=
 中华美食,http://58.248.112.203:8006/GD_CUCC/G_ZHONGHUAMS.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQl3PU3p0Usv8FjOEENDSW4zxgnKyt0qdOS1LzhN9zKGk&p=GITV&area=GD_CUCC&gMac=
 天元围棋,http://58.248.112.203:8006/GD_CUCC/G_TIANYUANWQ.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQihOv%2BYcLGXjIDOSPvEdjQHxgnKyt0qdOS1LzhN9zKGk&p=GITV&area=GD_CUCC&gMac=
 早期教育,http://58.248.112.203:8006/GD_CUCC/G_CETV-ZQJY-CQ.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQpgEcPJzku%2FK%2BhOejG8m3LKjrT0Hlt68ubGBYLuywl8q&p=GITV&area=GD_CUCC&gMac=
@@ -86,12 +94,6 @@ CGTN俄语频道,http://58.248.112.203:8006/GD_CUCC/G_CGTN-PYCCNN.m3u8?Authinfo=
 CGTN西班牙语频道,http://58.248.112.203:8006/GD_CUCC/G_CGTN-ESPANOL.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQurjCl9SrL2xMoAnaLQjVYqxO%2FLDKLP0IetuPJ1qCkl0&p=GITV&area=GD_CUCC&gMac=
 CGTN法语频道,http://58.248.112.203:8006/GD_CUCC/G_CGTN-FRANCAIS.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQkXZ4k2I2F%2BmA1iESQA8yYH3Qq6Or6lQoCFi8xDxJqXd&p=GITV&area=GD_CUCC&gMac=
 CGTN阿拉伯语,http://58.248.112.203:8006/GD_CUCC/G_CGTN_A.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQiGADgoCPml7oua6EqWKchumdJhZVmZFvWpSgtP3eJwe&p=GITV&area=GD_CUCC&gMac=
-长颈鹿-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-201.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQuvqWFpB0UIM7MPfG8qZpCUy0nNkPrIUBHA3m%2FxK4l78&p=GITV&area=GD_CUCC&gMac=
-火烈鸟-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-401.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQv4ISUiVg03ZZ5RCAXxTdKQy0nNkPrIUBHA3m%2FxK4l78&p=GITV&area=GD_CUCC&gMac=
-老虎-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-501.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQpcLGuTbmBfczRa7vQS5D2Ay0nNkPrIUBHA3m%2FxK4l78&p=GITV&area=GD_CUCC&gMac=
-大象-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-102.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQhIkfGVrGAXMGxRsnxXKezAdWwLsKeV2K84HrsImHf47&p=GITV&area=GD_CUCC&gMac=
-斑马-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-801.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQvDvScwQyTETxCfc0zcvCl8dWwLsKeV2K84HrsImHf47&p=GITV&area=GD_CUCC&gMac=
-狮子-云游动物园,http://58.248.112.203:8006/GD_CUCC/G_ZOO-901.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQg4I9reqFZl3dVuBWPhptsYdWwLsKeV2K84HrsImHf47&p=GITV&area=GD_CUCC&gMac=
 徐闻综合,http://58.248.112.203:8006/GD_CUCC/zanjiang01.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQgfy49PhQ06DSlf1qGYxJ1kaegFzqFAhK2CnUsjS9srD&p=GITV&area=GD_CUCC&gMac=
 梅州综合,http://58.248.112.203:8006/GD_CUCC/meizhou1.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQkdtTd6bVY65jwBAiCHMEhhxeslIp1TfAuCT4XAJud%2FB&p=GITV&area=GD_CUCC&gMac=
 客家生活,http://58.248.112.203:8006/GD_CUCC/meizhou2.m3u8?Authinfo=QmEf1mrTNujka56TPb7bQo0qxwr1RIRnupwe4JPpVJJxeslIp1TfAuCT4XAJud%2FB&p=GITV&area=GD_CUCC&gMac=
