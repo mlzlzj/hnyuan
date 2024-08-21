@@ -1,4 +1,4 @@
-华视美达,#green#
+鍗庤缇庤揪,#genre#
 1,http://60.223.224.176:8888/newlive/live/hls/1/live.m3u8
 2,http://60.223.224.176:8888/newlive/live/hls/2/live.m3u8
 3,http://60.223.224.176:8888/newlive/live/hls/3/live.m3u8
