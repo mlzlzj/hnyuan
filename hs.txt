@@ -1,5 +1,7 @@
 华视美达,#genre#
 美国,http://60.223.224.176:8888/newlive/live/hls/1/live.m3u8
+
+央视频道,#genre#
 CCTV1,http://60.223.224.176:8888/newlive/live/hls/2/live.m3u8
 CCTV2,http://60.223.224.176:8888/newlive/live/hls/3/live.m3u8
 CCTV3,http://60.223.224.176:8888/newlive/live/hls/4/live.m3u8
@@ -16,6 +18,8 @@ CCTV12,http://60.223.224.176:8888/newlive/live/hls/14/live.m3u8
 CCTV13,http://60.223.224.176:8888/newlive/live/hls/15/live.m3u8
 CCTV14,http://60.223.224.176:8888/newlive/live/hls/16/live.m3u8
 CCTV15,http://60.223.224.176:8888/newlive/live/hls/17/live.m3u8
+
+卫视频道,#genre#
 北京卫视,http://60.223.224.176:8888/newlive/live/hls/18/live.m3u8
 东方卫视,http://60.223.224.176:8888/newlive/live/hls/19/live.m3u8
 广东卫视,http://60.223.224.176:8888/newlive/live/hls/20/live.m3u8
