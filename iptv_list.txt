@@ -1522,44 +1522,169 @@ KAKU少儿,http://110.7.131.162:9901/tsfile/live/1006_1.m3u8
 齐鲁,http://119.163.60.10:9901/tsfile/live/0018_1.m3u8
 
 港台频道,#genre#
-凤凰中文,http://58.144.154.93/qctv.fengshows.cn/live/0701pcc72.m3u8#http://125.126.201.93:9999/rtp/233.50.200.191:5140#http://117.27.190.42:9998/tsfile/live/23280_1.m3u8#http://tianhewan.top/ZIPP.php?url=http://211.72.65.236:8577/.m3u8#http://php.jdshipin.com/TVOD/iptv.php?id=fhzw#https://stream1.freetv.fun/2b657a181daa345025199e7d6b8de95a1a87b19abceafbd16e2499a49da33c6f.m3u8#http://zjrtv.vip/live/?tbs=fhzw#http://www.91dos.cn:4022/udp/239.61.5.48:1025#http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhzw#http://pi.0472.org/tv/cbn.php?id=xfjcHD
-凤凰香港,http://58.144.154.93/qctv.fengshows.cn/live/0701phk72.m3u8#https://epg.pw/stream/5f16dc7fc8aaaed3205516c63e4a8c24bca9dbba1181684244729cf574505b0e.m3u8#http://58.144.154.93:80/qctv.fengshows.cn/0701phk72.m3u8#https://epg.pw/stream/8352ad260441ed0064f63f7a25eb3a7268a68b391f08a345b9bdbefd51aa330f.m3u8#http://php.jdshipin.com/TVOD/iptv.php?id=fhhk#http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhhk#http://zjrtv.vip/live/?tbs=fhxg
-面包台,https://video.bread-tv.com:8091/hls-live24/online/index.m3u8?$官源
-点掌财经,https://wsvideo.aniu.tv/live/aniu/playlist.m3u8
-TVBS 欢乐,http://37.27.111.214:8080/live/24/hls.m3u8#http://tianhewan.top/ZIPP.php?url=http://211.72.65.236:8532/.m3u8#http://litv.zapi.us.kg/?id=4gtv-4gtv068
-澳门莲花,http://php.jdshipin.com:8880/amlh.php#https://epg.pw/stream/5499880d623a69122a59f962ddc7e383ee4f633ddcee32ba133ac25e98f125e2.ctv
-番薯台,http://61.216.67.119:1935/TWHG/E1/chunklist_w70581102.m3u8#http://61.216.67.119:1935/TWHG/E1/chunklist_w7058102.m3u8?#http://61.216.67.119:1935/TWHG/E1/chunklist_w705811302.m3u8?#http://61.216.67.119:1935/TWHG/E1/chunklist_w70581102.m3u8?#http://61.216.67.119:1935/TWHG/E1/chunklist_w705811302.m3u8
-翡翠台,http://php.jdshipin.com:8880/smt.php?id=jade_twn#http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct#http://zw9999.cnstream.top:80/play/ubI0Nrlni6TwusjXuSxNxA5oJl8b5Icz-0MXK7POxcc/ts#http://58.250.155.2:8180/TV00000000000000000032@HHZT#https://pi.0472.org/tv/fct.php?auth=230918#http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct3#http://php.jdshipin.com/TVOD/iptv.php?id=fct3
-凤凰资讯,http://tianhewan.top/ZIPP.php?url=http://211.72.65.236:8576/.m3u8#http://ayolee.com:5253/udp/239.93.0.118:2191#http://zjrtv.vip/live/?tbs=fhzx#http://php.jdshipin.com/TVOD/iptv.php?id=fhzx#http://58.144.154.93/qctv.fengshows.cn/live/0701pin72.m3u8#https://stream1.freetv.fun/5fb13a1ac8acfc0fbc7121568b65c78e0383919949c35c2a7f278a1ddd081e2b.m3u8#https://stream1.freetv.fun/a5857ad51b58a0f7a8c9cbdf291571692b0eed9f5ab2cfce97a211260533c0d8.m3u8#http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhzx
-民视,http://37.27.111.214:8080/live/6/hls.m3u8#http://litv.zapi.us.kg/?id=4gtv-4gtv002#https://litv.zapi.us.kg/?id=4gtv-4gtv002#http://litv.zapi.us.kg/?id=4gtv-4gtv155
-明珠台,http://zw9999.cnstream.top:80/play/ubI0Nrlni6TwusjXuSxNxEzv3SLBhKEUmYG73triGDY/ts#https://pi.0472.org/tv/mzt.php?auth=2309081833
-香港佛陀,http://js1.amtb.cn/liveedge/_definst_/livetv/chunklist.m3u8#https://js1.amtb.cn/liveedge/_definst_/livetv/playlist.m3u8
-有线新闻台,http://61.10.2.141/live_freedirect/freehd209_h.live/playlist.m3u8#http://61.10.2.140:80/live_freedirect/freehd209_h.live/chunklist_w135209556.m3u8
-TVBS 新闻,http://litv.zapi.us.kg/?id=4gtv-4gtv072
-TVB 星河,http://php.jdshipin.com:8880/smt.php?id=Xinhe
-三立都会台,https://epg.pw/stream/6b49e3faa38adda85abab446f032dc1e686baa0760a9cfa66e2df8fd6fe3b445.m3u8
-三立综合台,http://37.27.111.214:8080/live/31/hls.m3u8
-台视新闻,https://litv.zapi.us.kg/?id=4gtv-4gtv051
-大爱二台,https://pulltv2.wanfudaluye.com/live/tv2.m3u8
-中天新闻台,https://litv.zapi.us.kg/?id=4gtv-4gtv009#https://litv.zapi.us.kg/?id=4gtv-4gtv009#p3p://173.208.176.178:19806/613dba64000abeb1c801c02934bb45fc
-中天综合,http://tianhewan.top/ZIPP.php?url=http://211.72.65.236:8526/.m3u8
-中视新闻,http://litv.zapi.us.kg/?id=4gtv-4gtv074#https://litv.zapi.us.kg/?id=4gtv-4gtv074
-中视菁采台,https://litv.zapi.us.kg/?id=4gtv-4gtv064
-中视经典,https://litv.zapi.us.kg/?id=4gtv-4gtv080#http://litv.zapi.us.kg/?id=4gtv-4gtv080
-非凡新闻,https://litv.zapi.us.kg/?id=4gtv-4gtv010#http://litv.zapi.us.kg/?id=4gtv-4gtv010
-民视新闻,https://litv.zapi.us.kg/?id=litv-ftv13
-民视台湾台,https://litv.zapi.us.kg/?id=4gtv-4gtv156#https://litv.zapi.us.kg/?id=4gtv-4gtv001
-民视第一台,https://litv.zapi.us.kg/?id=4gtv-4gtv003#http://litv.zapi.us.kg/?id=4gtv-4gtv003
-民视综艺台,https://litv.zapi.us.kg/?id=4gtv-4gtv004
-东森新闻,https://litv.zapi.us.kg/?id=4gtv-4gtv152#http://litv.zapi.us.kg/?id=4gtv-4gtv152#http://37.27.111.214:8080/live/20/hls.m3u8#http://211.72.65.236:8540/.m3u8
-亚洲新闻,https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_4.m3u8#https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8
-华视新闻,http://37.27.111.214:8080/live/8/hls.m3u8#https://litv.zapi.us.kg/?id=4gtv-4gtv052#http://litv.zapi.us.kg/?id=4gtv-4gtv052
-影视频道,#genre#
-CHC动作电影,,http://110.53.52.63:8888/newlive/live/hls/53/live.m3u8#https://pi.0472.org/chc/dz.m3u8#http://119.98.37.169:85/rtp/239.69.1.242:11094#https://epg.pw/stream/a9e49885cb3e631c34781283c45119db7bc5431c547d78b748880c9f3952fc04.m3u8#http://cg0.hunancatv.cn:9090/live/CHCDZDY_8000.m3u8?deviceid=866265039837531&sid=Yp6brv0MWYukAl4oJr9yrw%3D%3D&nonce=Ri1TgJg9dlAK&acl=0111&hlsSessionID=11082234455604316076&srchost=172.16.22.158:8060&gid=ZF3q5L%2FmYWch1qWqTIPAjw%3D%3D#http://php.jdshipin.com/TVOD/iptv.php?id=chcdzdy#http://221.232.13.58:4022/rtp/239.69.1.242:11094#http://cg1.hunancatv.cn:9090/live/CHCDZDY_8000.m3u8?t=GybtsMb6rF4QAbWTetat6g%3D%3D&u=HNTV01YU00021202&p=8&cid=100000189&pid=&l=1&d=48555E45F7FC&ip=192.168.197.8&n=CHCDZDY_8000&errorcode=0&sid=Cr7LfDpXE67QA0Nus2tGvg%3D%3D&r=20231212111337&e=20231212151337&nc=RcaFZlcDLlzv&a=1111&pd=60&errorReason=0&v=2&project=WNTV&hlsSessionID=4379470835422696805&srchost=172.16.22.158:8060&gid=f1hKFIYFjbQUf%2BTk5FhuTg%3D%3D
-CHC家庭影院,http://110.53.52.63:8888/newlive/live/hls/51/live.m3u8#http://php.jdshipin.com/TVOD/iptv.php?id=chcjtyy#http://cg14.hunancatv.cn:9090/live/CHCJTYY_8000.m3u8?t=D360byGt%2BpZL3Wo1xiFxAw%3D%3D&u=HNTV01YU00021202&p=8&cid=100000190&pid=&l=1&d=48555E45F7FC&ip=192.168.197.125&n=CHCJTYY_8000&errorcode=0&sid=dc0dvd1mPBtLnOcG8ia8jA%3D%3D&r=20231212111401&e=20231212151401&nc=XOLY5A6gm03W&a=1111&pd=60&errorReason=0&v=2&project=WNTV&hlsSessionID=4379470835422697120&srchost=172.16.22.158:8060&gid=DHldhfgdMMpjpVp6NSOZqw%3D%3D#https://pi.0472.org/chc/jt.m3u8
-CHC影迷电影,http://cg6.hunancatv.cn:9090/live/CHCGQ_8000.m3u8?t=VwFiKC8%2Fi8f%2B6CDdOS5f5A%3D%3D&u=HNTV01YU00021202&p=8&cid=10000081&pid=&l=1&d=48555E45F7FC&ip=192.168.197.127&n=CHCGQ_8000&errorcode=0&sid=MlE%2BuV%2FON7MM6310fiBTpg%3D%3D&r=20231212111248&e=20231212151248&nc=bHZFrU2ASl02&a=1111&pd=60&errorReason=0&v=2&project=WNTV&hlsSessionID=4379470835422696237&srchost=172.16.22.158:8060&gid=P%2BUM0yvAUJ7cFgaqUZr56A%3D%3D#https://pi.0472.org/chc/ym.m3u8#http://cg14.hunancatv.cn:9090/live/CHCGQ_8000.m3u8?deviceid=866265039837531&sid=Yp6brv0MWYukAl4oJr9yrw%3D%3D&nonce=Ri1TgJg9dlAK&acl=0111&hlsSessionID=11082234455604315487&srchost=172.16.22.158:8060&gid=QTVto%2BZu6pkkcNYy4OxcMg%3D%3D
-黑莓电影,http://gslbservzqhsw.itv.cmvideo.cn/1000000004000019624/1.m3u8?channel-id=ystenlive&Contentid=1000000004000019624&livemode=1&stbId=3
-家庭影院,http://ygbh666.cn/aikmigu.php?id=chcjt#http://cg11.hunancatv.cn:9090/live/CHCJTYY_8000.m3u8?deviceid=866265039837531&sid=Yp6brv0MWYukAl4oJr9yrw%3D%3D&nonce=Ri1TgJg9dlAK&acl=0111&hlsSessionID=11082234455604316833&srchost=172.16.22.158:8060&gid=c%2BNqgq8pR1ZQ7ZzcmkS8%2BQ%3D%3D
+星空卫视,http://wouu.net:9977/udp/239.93.0.156:2193
+星光视界,http://ali.hlspull.yximgs.com/live/zxcvbnm9852.flv
+环球电视,http://zb.xzxwhcb.com:9999/hls/world.m3u8
+半岛新闻,http://live-hls-web-aje.getaj.net/AJE/01.m3u8
+无线星河频道,http://v2h.jdshipin.com/xinghe/xinghe.stream/chunklist.m3u8
+耀才财经频道,https://v3.mediacast.hk/webcast/bshdlive-pc/chunklist_w99771165.m3u8
+耀才财经频道,http://202.69.67.66:443/webcast/bshdlive-pc/playlist.m3u8
+RTHK33 频道,https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream04/streamPlaylist.m3u8
+RTHK33 频道,https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream03/streamPlaylist.m3u8
+RTHK34 频道,https://rthktv34-live.akamaized.net/hls/live/2101642/RTHKTV34/stream04/streamPlaylist.m3u8
+RTHK34 频道,https://rthktv34-live.akamaized.net/hls/live/2101642/RTHKTV34/stream05/streamPlaylist.m3u8
+RTHK35 频道,https://rthktv35-live.akamaized.net/hls/live/2101643/RTHKTV35/stream02/streamPlaylist.m3u8
+RTHK35 频道,https://rthktv35-live.akamaized.net/hls/live/2101643/RTHKTV35/stream04/streamPlaylist.m3u8
+中視HD,rtmp://f13h.mine.nu/sat/tv091
+華視HD,rtmp://f13h.mine.nu/sat/tv111
+緯來日本,rtmp://f13h.mine.nu/sat/tv771
+緯來育樂,rtmp://f13h.mine.nu/sat/tv701
+中天娱乐,http://61.221.215.25:8800/hls/47/index.m3u8
+GTV八大戏剧台HD,http://61.221.215.25:8800/hls/39/index.m3u8 
+GTV八大第1台HD,http://61.221.215.25:8800/hls/55/index.m3u8 
+GTV八大综合台HD,http://61.221.215.25:8800/hls/56/index.m3u8 
+纬来精采台,http://61.221.215.25:8800/hls/48/index.m3u8
+三立戏剧台,http://61.221.215.25:8800/hls/41/index.m3u8
+TVBS新闻台,http://61.221.215.25:8800/hls/9/index.m3u8
+民视,rtmp://f13h.mine.nu/sat/tv051
+台视,rtmp://f13h.mine.nu/sat/tv071
+香港麵包台,https://video.bread-tv.com:8091/hls-live24/online/index.m3u8
+八大戏剧,http://61.221.215.25:8800/hls/39/index.m3u8
+民視,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv155
+民視第一台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv003
+中視,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv040
+中天亞洲台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv109
+靖天綜合台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv046
+靖天日本台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv047
+台視,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv066
+Arirang TV,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv079
+Bloomberg TV,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/283
+民視新聞台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-ftv13
+中視新聞台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv074
+中天新聞台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv009
+華視新聞,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv052
+靖天資訊台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv065
+寰宇新聞台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn14
+寰宇新聞台灣台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn15
+寰宇財經台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn23
+TVBS 新聞台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv072
+三立新聞,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/229
+台視新聞台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv051
+台視財經台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv056
+東森新聞,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv152
+東森財經新聞,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv153
+非凡新聞台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv010
+非凡商業台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv048
+鏡電視新聞台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv075
+CNBC Asia 財經台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/235
+VOA 美國之音,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-ftv03
+DW德國之聲,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/226
+SBN 全球財經台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/224
+半島國際新聞台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-ftv10
+第1商業台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv104
+民視影劇台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-ftv09
+中視經典台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv080
+靖天戲劇台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv058
+靖天電影台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv061
+龍華戲劇台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn18
+龍華經典台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn21
+龍華電影台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn03
+靖洋戲劇台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv045
+TVBS 台劇台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/285
+影迷數位紀實台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/212
+影迷數位電影台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv011
+AMC 最愛電影,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv017
+CatchPlay 電影台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv076
+My Cinema Europe HD 我的歐洲電影,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/176
+公視戲劇台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv042
+采昌影劇台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv049
+台灣戲劇台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn22
+戲劇免費看 1台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/270
+戲劇免費看 2台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/244
+經典電影台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/201
+電影免費看 2台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/245
+電影原聲台 CMusic,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/218
+花系列 經典劇場,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/279
+CinemaWorld,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/225
+HITS 頻道,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/186
+Rock Action,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/180
+Rock Entertainment,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/275
+金光布袋戲,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/236
+霹靂布袋戲,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/301
+民視旅遊台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-ftv07
+ELTA 生活旅遊,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/237
+ELTA生活英語,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn20
+亞洲旅遊台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn17
+Global Trekker,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/252
+Globetrotter 環遊旅行家,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv016
+LUXE TV,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/175
+Pet Club TV,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/182
+TV5MONDE Style,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/178
+車迷 TV,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/160
+Love Nature,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/139
+Fun 探索娛樂台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/274
+幸福空間居家台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/168
+民視綜藝台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv004
+靖天育樂台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv062
+靖天歡樂台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv054
+龍華偶像台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn12
+龍華日韓台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn11
+TVBS 綜藝台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/284
+TVBS 歡樂台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv068
+TVBS 精采台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv067
+八大精彩台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv034
+八大綜藝台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv039
+ELTA 娛樂台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv070
+Classica 古典樂,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv059
+Lifetime 娛樂頻道,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/217
+MTV Live HD 音樂頻道,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/213
+Mezzo Live,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv083
+豬哥亮歌廳秀,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv006
+Trace Urban,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv082
+靖天映畫台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv055
+靖天卡通台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv044
+龍華卡通台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn01
+靖洋卡通 Nice Bingo,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv057
+DreamWorks 夢工廠動畫,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/282
+Nickelodeon,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/185
+Nick Jr. 兒童頻道,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/219
+i-Fun 動漫台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-ftv15
+兒童卡通台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/269
+精選動漫台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/204
+經典卡通台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/202
+達文西頻道,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv018
+超人力霸王整套看,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/278
+MOMO 親子台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/231
+LiveABC 互動英語台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/188
+TVBS,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv073
+History 歷史頻道,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/214
+CI 罪案偵查頻道,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/215
+Smart 知識台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn19
+視納華仁紀實頻道,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv013
+原住民族電視台,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/273
+客家電視台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv043
+滾動力 Rollor,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/249
+好消息,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-ftv16
+好消息2台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-ftv17
+大愛電視,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/209
+大愛電視2,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/230
+人間衛視,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/210
+國會頻道1,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv084
+國會頻道2,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv085
+博斯運動一台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn07
+博斯運動二台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn08
+博斯無限台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn10
+博斯無限二台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn13
+博斯網球台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn09
+博斯高球台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn05
+博斯高球二台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn06
+博斯魅力台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/litv-longturn04
+GINX Esports TV,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv053
+TechStorm,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/181
+時尚運動X,http://45.145.229.220:8080/http:/127.0.0.1:5000/4gtv/277
+智林體育台,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv101
+TraceSports,http://45.145.229.220:8080/http:/127.0.0.1:5000/litv/4gtv-4gtv077
+
 
 经典电影,#genre#
 001锂X（英语）,https://vip.lz-cdn3.com/20220918/13743_ca63ece3/index.m3u8
