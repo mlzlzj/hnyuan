@@ -519,7 +519,6 @@ with open("iptv_list.txt", "w", encoding="utf-8") as output:
 
 os.remove("iptv.txt")
 os.remove("iptv_results.txt")
-os.remove("huoqu.txt")
 
 print("频道分类完成已写入iptv_list.txt文件。")
 
