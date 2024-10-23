@@ -510,13 +510,14 @@ for file_path in file_paths:
         content = file.read()
         file_contents.append(content)
 
-# 写入合并后的txt文件
+# 获取当前时间
+now = datetime.now()
+update_time_line = f"更新时间,#genre#\n{now.strftime('%Y-%m-%d %H:%M:%S')},url\n"
+
+# 写入合并后的txt文件，首先写入更新时间
 with open("iptv_list.txt", "w", encoding="utf-8") as output:
+    output.write(update_time_line)
     output.write('\n'.join(file_contents))
-    # 写入更新日期时间
-    now = datetime.now()
-    output.write(f"更新时间,#genre#\n")
-    output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
 
 os.remove("iptv.txt")
 os.remove("iptv_results.txt")
