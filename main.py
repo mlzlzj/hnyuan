@@ -308,7 +308,7 @@ def group_and_sort_channels(channels):
 
 if __name__ == "__main__":
     # 定义一个列表，包含要获取IP的地方
-    places_to_get_ip = ["长沙", "湖南", "娄底", "怀化", "邵阳", "梅州"]
+    places_to_get_ip = ["北京", "湖南"]
     ip_list = {ip for place in places_to_get_ip for ip in get_ip(place)}
     if ip_list:
         iptv_list = get_iptv(ip_list)
