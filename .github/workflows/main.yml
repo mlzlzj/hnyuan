@@ -22,23 +22,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python.exe -m pip install --upgrade pip
-
-      - name: Install 1
-        run: pip install requests
-      - name: Install 2
-        run: pip install bs4
-      - name: Install 3
-        run: pip install random
-      - name: Install 4
-        run: pip install threading
-      - name: Install 5
-        run: pip install Queue   
-      - name: Install 6
-        run: pip install eventlet
-      - name: Install 7
-        run: pip install datetime 
-        
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 random threading Queue datetime eventlet
+          
       - name: Install Chrome WebDriver
         run: |
           LATEST_CHROMEDRIVER_VERSION=125.0.6422.141
@@ -49,9 +35,16 @@ jobs:
         run: |
           sudo ln -sf /usr/local/bin/chrome-headless-shell-linux64/chrome-headless-shell /usr/local/bin/chromedriver
           sudo chmod +x /usr/local/bin/chromedriver
-                        
-      - name: Run hunan
-        run: python ${{ github.workspace }}/main.py
+
+      - name: Run the main.py
+        run: |
+          run: python ${{ github.workspace }}/main.py
+
+      - name: List files
+        run: ls -la  # 列出文件，方便调试
+        
+      # - name: Run hunan
+      #   run: python ${{ github.workspace }}/main.py
                                
       - name: 提交更改
         run: |
