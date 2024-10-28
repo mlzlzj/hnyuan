@@ -589,7 +589,7 @@ with open("hotel_list.txt", 'w', encoding='utf-8') as file:
 
 # 合并所有的txt文件
 file_contents = []
-file_paths = ["hotel_cctv.txt", "hotel_list.txt"]  # 替换为实际的文件路径列表
+file_paths = ["hotel_cctv.txt", "hotel_list.txt", "zdy.txt"]  # 替换为实际的文件路径列表
 for file_path in file_paths:
     with open(file_path, 'r', encoding="utf-8") as file:
         content = file.read()
