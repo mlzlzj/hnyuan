@@ -50,7 +50,6 @@ def ip_exists(ip):
     return False
 
 
-
 def get_ip(diqu):
     """获取ip"""
     base_url = "http://tonkiang.us/hoteliptv.php"
@@ -89,11 +88,10 @@ def get_iptv(ip_list):
 
     for ip in ip_list:
         if ip_exists(ip):
-            print(f"IP {ip} 已存在，不需要重复获取。")
+            print(f"\nIP {ip} 已存在，不需要重复获取。")
             continue  # 如果 IP 存在，则跳过
 
         base_url = f"http://tonkiang.us/allllist.php?s={ip}&c=false"
-
         headers = {
             "User-Agent": get_ua(),
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -133,8 +131,7 @@ def get_iptv(ip_list):
                                 seen_urls.add(url)
                                 results.append((channel_name, url))
 
-                # 打印当前 IP 的频道列表
-                print(f"解析ip{ip} 下的频道列表：")
+                print(f"\nIP {ip} 解析到 {len(results)} 条频道信息")
                 for channel_name, url in results:
                     print(f"{channel_name},{url}")
 
@@ -142,7 +139,7 @@ def get_iptv(ip_list):
                     all_results.extend(results)
 
         except eventlet.timeout.Timeout:
-            print(f"获取 IP {ip} 的频道列表超时，跳过。")
+            print(f"解析 IP {ip} 的频道列表超时，跳过。")
         except requests.exceptions.RequestException as e:
             print(f"无法访问: {base_url}, 错误: {e}")
 
@@ -276,10 +273,12 @@ def group_and_sort_channels(channels):
         else:
             groups['其他频道,#genre#'].append((name, url, speed))
 
-    # 对每组进行排序
-    for group in groups.values():
-        group.sort(key=lambda x: (natural_key(x[0]),  # 名称自然排序
-                                  -x[2] if x[2] is not None else float('-inf')))  # 速度从高到低排序
+        # 对每组进行排序
+        for group in groups.values():
+            group.sort(key=lambda x: (
+                natural_key(x[0]),  # 名称自然排序
+                -x[2] if x[2] is not None else float('-inf')  # 速度从高到低排序
+            ))
 
     # 筛选相同名称的频道，只保存10个
     filtered_groups = {}
@@ -309,7 +308,7 @@ def group_and_sort_channels(channels):
 
 if __name__ == "__main__":
     # 定义一个列表，包含要获取IP的地方
-    places_to_get_ip = ["湖南", "长沙", "娄底", "怀化", "衡阳", "邵阳", "常德", "梅州", "南宁", "玉林", "揭阳", "五华"]
+    places_to_get_ip = ["长沙", "湖南", "娄底", "怀化", "邵阳", "梅州"]
     ip_list = {ip for place in places_to_get_ip for ip in get_ip(place)}
     if ip_list:
         iptv_list = get_iptv(ip_list)
@@ -337,7 +336,6 @@ if __name__ == "__main__":
                 f.write("\n")  # 打印空行分隔组
 
         print("组播频道列表已保存到itv_list.txt文件")
-
 
 # 线程安全的队列，用于存储下载任务
 task_queue = Queue()
@@ -537,7 +535,6 @@ def channel_key(channel_name):
 
 # 对频道进行下载速率降序排序
 results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
-# results.sort(key=lambda x: channel_key(x[0]))
 
 result_counter = 10  # 每个频道需要保留下来的个数
 
