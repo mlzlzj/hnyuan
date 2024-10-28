@@ -22,7 +22,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          # python -m pip install --upgrade pip
+          python.exe -m pip install --upgrade pip
 
       - name: Install 1
         run: pip install requests
