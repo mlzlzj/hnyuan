@@ -21,6 +21,10 @@ jobs:
           python-version: 3.x
 
       - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          
+      - name: Install depend
         run: pip install selenium requests futures eventlet  pypinyin  bs4 random threading datetime Queue
 
       - name: Install Chrome WebDriver
