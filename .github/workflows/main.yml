@@ -23,10 +23,22 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          
-      - name: Install depend
-        run: pip install selenium requests futures eventlet  pypinyin  bs4 random threading datetime Queue
 
+      - name: Install 1
+        run: pip install requests
+      - name: Install 2
+        run: pip install bs4
+      - name: Install 3
+        run: pip install random
+      - name: Install 4
+        run: pip install threading
+      - name: Install 5
+        run: pip install Queue   
+      - name: Install 6
+        run: pip install eventlet
+      - name: Install 7
+        run: pip install datetime 
+        
       - name: Install Chrome WebDriver
         run: |
           LATEST_CHROMEDRIVER_VERSION=125.0.6422.141
