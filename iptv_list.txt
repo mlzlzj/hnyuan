@@ -101,7 +101,7 @@ CCTV1,http://171.38.79.159:8181/tsfile/live/0001_1.m3u8
 CCTV1,http://222.241.154.37:9901/tsfile/live/23001_1.m3u8
 CCTV1,http://223.166.234.114:7777/tsfile/live/0001_1.m3u8
 CCTV1,http://223.166.234.149:7777/tsfile/live/0001_1.m3u8
-﻿CCTV1,http://220.249.114.102:9901/tsfile/live/1000_1.m3u8
+CCTV1,http://220.249.114.102:9901/tsfile/live/1000_1.m3u8
 CCTV2,http://1.199.235.140:9901/tsfile/live/0002_1.m3u8
 CCTV2,http://222.142.67.101:9901/tsfile/live/0002_1.m3u8
 CCTV2,http://113.220.234.101:9999/tsfile/live/0018_1.m3u8
@@ -6166,4 +6166,3 @@ kaku少儿,http://106.118.70.14:9901/tsfile/live/1012_1.m3u8
 黑龙江新闻法治,http://112.101.78.50:9901/tsfile/live/1010_1.m3u8
 黑龙江都市,http://112.101.78.50:9901/tsfile/live/1005_1.m3u8
 齐鲁,http://124.128.73.58:9901/tsfile/live/1000_1.m3u8
-
