@@ -1823,9 +1823,9 @@ CCTV16,http://113.57.109.48:1111/tsfile/live/1014_1.m3u8
 CCTV16,http://121.19.134.139:808/tsfile/live/0016_1.m3u8
 CCTV16,http://220.164.192.48:50085/tsfile/live/0017_1.m3u8
 CCTV16,http://119.62.109.200:9901/tsfile/live/0016_1.m3u8
-CCTV16奥运匹克,http://116.1.184.209:8181/tsfile/live/1003_1.m3u8
-CCTV16奥运匹克,http://116.1.184.18:8181/tsfile/live/1003_1.m3u8
-CCTV16奥运匹克,http://116.1.184.117:8181/tsfile/live/1003_1.m3u8
+CCTV16,http://116.1.184.209:8181/tsfile/live/1003_1.m3u8
+CCTV16,http://116.1.184.18:8181/tsfile/live/1003_1.m3u8
+CCTV16,http://116.1.184.117:8181/tsfile/live/1003_1.m3u8
 CCTV17,http://113.57.109.48:1111/tsfile/live/1015_1.m3u8
 CCTV17,http://163.177.122.29:9901/tsfile/live/1036_1.m3u8
 CCTV17,http://58.17.116.69:9908/tsfile/live/0001_18.m3u8
@@ -1898,7 +1898,7 @@ CCTV风云剧场,http://121.19.134.139:808/tsfile/live/1034_1.m3u8
 南方卫视粤语节目9,http://116.1.184.209:8181/tsfile/live/1020_1.m3u8
 南方卫视粤语节目9,http://116.1.184.18:8181/tsfile/live/1020_1.m3u8
 南方卫视粤语节目9,http://116.1.184.117:8181/tsfile/live/1020_1.m3u8
-BTV卫视,http://175.16.180.250:9901/tsfile/live/1002_1.m3u8
+北京卫视,http://175.16.180.250:9901/tsfile/live/1002_1.m3u8
 CHC动作电影,http://59.173.243.210:9901/tsfile/live/1012_1.m3u8
 CHC动作电影,http://113.57.109.48:1111/tsfile/live/1045_1.m3u8
 CHC动作电影,http://183.94.146.109:2222/tsfile/live/1019_1.m3u8
@@ -2284,7 +2284,7 @@ CHC影迷电影,http://113.57.109.48:1111/tsfile/live/1046_1.m3u8
 凤凰中文,http://171.38.42.252:8181/tsfile/live/1001_1.m3u8
 凤凰卫视,http://114.105.185.143:9901/tsfile/live/1054_1.m3u8
 凤凰卫视,http://114.105.185.143:9901/tsfile/live/1063_1.m3u8
-凤凰卫视香港,http://114.105.185.143:9901/tsfile/live/1034_1.m3u8
+凤凰香港,http://114.105.185.143:9901/tsfile/live/1034_1.m3u8
 凤凰资讯,http://114.105.185.143:9901/tsfile/live/1071_1.m3u8
 凤凰资讯,http://114.105.185.143:9901/tsfile/live/1064_1.m3u8
 凤凰资讯,http://171.38.42.252:8181/tsfile/live/1000_1.m3u8
